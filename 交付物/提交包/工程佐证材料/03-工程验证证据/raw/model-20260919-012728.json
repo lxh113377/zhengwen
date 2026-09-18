@@ -1,0 +1,1234 @@
+[
+  {
+    "ok": true,
+    "query": "5号线开通后客流多少？",
+    "answer": "5号线一期开通首周，线路日均客流约21.3万人次［ev-metro-02-p1］［ev-metro-01-p3］。该首周客流低于可研报告预期的26万人次，运营方表示客流培育期通常为6至12个月［ev-metro-01-p3］。\n\n需要显式指出的差异：关于5号线一期客流预期口径，同一组数字存在两种表述——官方通稿称首周客流「低于可研报告预期的26万人次」［ev-metro-01-p3］，而技术说明指出26万为预测区间上限、中值为24万；仅引用上限会使预期显得偏高。此外，关于5号线开通成效评价，官方通稿侧重通行效率提升（早高峰主干道平均车速可提升约12%、城东产业园通勤时间平均缩短约18分钟）［ev-metro-01-p2］，独立报道侧重换乘接驳痛点（换乘通道早高峰排队、最长等待约7分钟）［ev-metro-02-p3］；两者事实并不冲突，但侧重点不同，单一来源会呈现不完整图景。\n\n已核验引用：ev-metro-02-p1、ev-metro-01-p3、ev-metro-01-p2、ev-metro-02-p3。",
+    "mode": "model",
+    "provider": "DeepSeek",
+    "model": "deepseek-chat",
+    "refused": false,
+    "refuse_reason": "",
+    "confidence": 0.4641,
+    "threshold": 0.34,
+    "citations": [
+      {
+        "id": "ev-metro-02-p1",
+        "doc_title": "5号线开通首周：换乘接驳仍是主要痛点",
+        "publisher": "城市观察周刊（合成）"
+      },
+      {
+        "id": "ev-metro-01-p2",
+        "doc_title": "滨江市轨道交通5号线一期开通试运营",
+        "publisher": "滨江日报（合成）"
+      },
+      {
+        "id": "ev-metro-01-p3",
+        "doc_title": "滨江市轨道交通5号线一期开通试运营",
+        "publisher": "滨江日报（合成）"
+      },
+      {
+        "id": "ev-metro-02-p3",
+        "doc_title": "5号线开通首周：换乘接驳仍是主要痛点",
+        "publisher": "城市观察周刊（合成）"
+      }
+    ],
+    "dropped_citations": [],
+    "degraded_reason": null,
+    "divergences": [
+      {
+        "id": "dv-metro-flow",
+        "topic": "5号线一期客流预期口径",
+        "summary": "同一组数字存在两种表述：官方通稿称首周客流「低于可研报告预期的26万人次」，而技术说明指出26万为预测区间上限、中值为24万；仅引用上限会使预期显得偏高。",
+        "sides": [
+          {
+            "evidence_id": "ev-metro-01-p3",
+            "doc_title": "滨江市轨道交通5号线一期开通试运营",
+            "publisher": "滨江日报（合成）",
+            "text": "开通首周日均客流约21.3万人次，低于可研报告预期的26万人次，运营方表示客流培育期通常为6至12个月。",
+            "in_retrieved": true
+          },
+          {
+            "evidence_id": "ev-metro-03-p2",
+            "doc_title": "轨道交通新线客流预测方法说明",
+            "publisher": "市交通研究院技术说明（合成）",
+            "text": "预测结果以区间形式给出，5号线一期开通首年日均客流预测区间为22万至26万人次，中值24万人次。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-metro-03-p3",
+            "doc_title": "轨道交通新线客流预测方法说明",
+            "publisher": "市交通研究院技术说明（合成）",
+            "text": "可研报告披露的26万人次为预测区间上限，非中值；对外表述中若仅引用上限，会造成预期偏高的印象。",
+            "in_retrieved": false
+          }
+        ]
+      },
+      {
+        "id": "dv-metro-focus",
+        "topic": "5号线开通成效评价",
+        "summary": "官方通稿侧重通行效率提升（车速+12%、通勤-18分钟），独立报道侧重换乘接驳痛点（步行11分钟、换乘排队7分钟）。两者事实并不冲突，但**侧重点不同**，单一来源会呈现不完整图景。",
+        "sides": [
+          {
+            "evidence_id": "ev-metro-01-p2",
+            "doc_title": "滨江市轨道交通5号线一期开通试运营",
+            "publisher": "滨江日报（合成）",
+            "text": "市交通研究院预测，5号线一期开通后，早高峰主干道平均车速可提升约12%，城东产业园通勤时间平均缩短约18分钟。",
+            "in_retrieved": true
+          },
+          {
+            "evidence_id": "ev-metro-02-p2",
+            "doc_title": "5号线开通首周：换乘接驳仍是主要痛点",
+            "publisher": "城市观察周刊（合成）",
+            "text": "记者在早高峰实测，从5号线城东产业园站出站至最近公交接驳站步行约11分钟，其间需穿越一处无信号灯的辅路路口。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-metro-02-p3",
+            "doc_title": "5号线开通首周：换乘接驳仍是主要痛点",
+            "publisher": "城市观察周刊（合成）",
+            "text": "多位受访乘客表示，5号线与既有2号线的换乘通道在早高峰出现排队，最长等待约7分钟。",
+            "in_retrieved": true
+          }
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev-metro-02-p1",
+        "text": "5号线一期开通首周，线路日均客流约21.3万人次，与官方公布数据一致；但乘客反馈集中在换乘接驳环节。",
+        "doc_id": "doc-metro-02",
+        "doc_title": "5号线开通首周：换乘接驳仍是主要痛点",
+        "publisher": "城市观察周刊（合成）",
+        "published": "2026-03-19",
+        "kind": "独立报道",
+        "license": "原创，归本项目所有（参赛团队）",
+        "source_id": "S0",
+        "source_url": "",
+        "attribution": "",
+        "score": 14.9632,
+        "matched": [
+          "号线",
+          "客流",
+          "开通",
+          "线开"
+        ]
+      },
+      {
+        "id": "ev-metro-01-p2",
+        "text": "市交通研究院预测，5号线一期开通后，早高峰主干道平均车速可提升约12%，城东产业园通勤时间平均缩短约18分钟。",
+        "doc_id": "doc-metro-01",
+        "doc_title": "滨江市轨道交通5号线一期开通试运营",
+        "publisher": "滨江日报（合成）",
+        "published": "2026-03-12",
+        "kind": "官方通稿",
+        "license": "原创，归本项目所有（参赛团队）",
+        "source_id": "S0",
+        "source_url": "",
+        "attribution": "",
+        "score": 12.4834,
+        "matched": [
+          "号线",
+          "开通",
+          "通后"
+        ]
+      },
+      {
+        "id": "ev-metro-01-p3",
+        "text": "开通首周日均客流约21.3万人次，低于可研报告预期的26万人次，运营方表示客流培育期通常为6至12个月。",
+        "doc_id": "doc-metro-01",
+        "doc_title": "滨江市轨道交通5号线一期开通试运营",
+        "publisher": "滨江日报（合成）",
+        "published": "2026-03-12",
+        "kind": "官方通稿",
+        "license": "原创，归本项目所有（参赛团队）",
+        "source_id": "S0",
+        "source_url": "",
+        "attribution": "",
+        "score": 11.6799,
+        "matched": [
+          "号线",
+          "客流",
+          "开通"
+        ]
+      },
+      {
+        "id": "ev-metro-02-p3",
+        "text": "多位受访乘客表示，5号线与既有2号线的换乘通道在早高峰出现排队，最长等待约7分钟。",
+        "doc_id": "doc-metro-02",
+        "doc_title": "5号线开通首周：换乘接驳仍是主要痛点",
+        "publisher": "城市观察周刊（合成）",
+        "published": "2026-03-19",
+        "kind": "独立报道",
+        "license": "原创，归本项目所有（参赛团队）",
+        "source_id": "S0",
+        "source_url": "",
+        "attribution": "",
+        "score": 11.6551,
+        "matched": [
+          "号线",
+          "开通",
+          "线开"
+        ]
+      }
+    ],
+    "trace": [
+      {
+        "step": "查询理解",
+        "detail": "归一化出 7 个检索词：号线 / 线开 / 开通 / 通后 / 后客 / 客流 / 流多",
+        "ms": 0.02
+      },
+      {
+        "step": "语料范围检查",
+        "detail": "5/7 个检索词存在于语料词表",
+        "ms": 0.0
+      },
+      {
+        "step": "语义检索",
+        "detail": "倒排索引命中 12 条候选证据（5/5 个有效检索词得到匹配）",
+        "ms": 0.03
+      },
+      {
+        "step": "区分度检查",
+        "detail": "仅命中 1 个高区分度实词（要求 ≥2，IDF 阈值 P70 = 4.60） → 置信度按 0.6 折算",
+        "ms": 0.0
+      },
+      {
+        "step": "依据充分性闸门",
+        "detail": "查询原始词命中 5 个（≥2）→ 通过：号线 / 线开 / 开通 / 通后 / 客流",
+        "ms": 0.0
+      },
+      {
+        "step": "拒答闸门",
+        "detail": "置信度 0.46 ≥ 阈值 0.34 → 放行",
+        "ms": 0.0
+      },
+      {
+        "step": "多源一致性比对",
+        "detail": "检出 2 组多源分歧",
+        "ms": 0.01
+      }
+    ],
+    "timing": {
+      "server_total_ms": 1548.0,
+      "generate_ms": 1547.91
+    },
+    "corpus": "自建合成新闻语料 ＋ 世界银行开放数据（WDI）真实指标"
+  },
+  {
+    "ok": true,
+    "query": "加装电梯业主需要出多少钱？",
+    "answer": "依据现有证据，业主需要承担的是扣除补贴后的自筹部分：扣除20万元补贴后，单部电梯业主自筹部分仍需25万至40万元［ev-lift-02-p3］。分摊方式为按楼层系数分摊，六层住户单户负担约4万至8万元［ev-lift-02-p3］。补贴标准为每部电梯不超过20万元，补贴资金由市、区两级按6:4分担［ev-lift-01-p2］；单部电梯建安成本通常在45万至60万元区间［ev-lift-01-p2］。\n\n需要指出，证据之间存在表述差异：［ev-lift-01-p2］给出的是建安成本45万至60万元与补贴不超过20万元，［ev-lift-02-p3］给出的是扣除20万元补贴后自筹25万至40万元，两者未就同一口径直接对应，本回答不将其合并为单一结论。\n\n已核验引用：ev-lift-02-p3、ev-lift-01-p2。",
+    "mode": "model",
+    "provider": "DeepSeek",
+    "model": "deepseek-chat",
+    "refused": false,
+    "refuse_reason": "",
+    "confidence": 0.8614,
+    "threshold": 0.34,
+    "citations": [
+      {
+        "id": "ev-lift-02-p3",
+        "doc_title": "加装电梯落地难：钱从哪来，低层为什么不同意",
+        "publisher": "城市观察周刊（合成）"
+      },
+      {
+        "id": "ev-lift-01-p2",
+        "doc_title": "老旧小区加装电梯实施细则发布",
+        "publisher": "市住房与建设局（合成）"
+      }
+    ],
+    "dropped_citations": [],
+    "degraded_reason": null,
+    "divergences": [],
+    "evidence": [
+      {
+        "id": "ev-lift-02-p3",
+        "text": "扣除20万元补贴后，单部电梯业主自筹部分仍需25万至40万元；按楼层系数分摊，六层住户单户负担约4万至8万元。",
+        "doc_id": "doc-lift-02",
+        "doc_title": "加装电梯落地难：钱从哪来，低层为什么不同意",
+        "publisher": "城市观察周刊（合成）",
+        "published": "2026-05-14",
+        "kind": "独立报道",
+        "license": "原创，归本项目所有（参赛团队）",
+        "source_id": "S0",
+        "source_url": "",
+        "attribution": "",
+        "score": 29.5277,
+        "matched": [
+          "万元",
+          "业主",
+          "加装",
+          "梯业",
+          "电梯",
+          "补贴",
+          "装电"
+        ]
+      },
+      {
+        "id": "ev-lift-01-p2",
+        "text": "财政补贴标准为每部电梯不超过20万元，补贴资金由市、区两级按6:4分担；单部电梯建安成本通常在45万至60万元区间。",
+        "doc_id": "doc-lift-01",
+        "doc_title": "老旧小区加装电梯实施细则发布",
+        "publisher": "市住房与建设局（合成）",
+        "published": "2026-04-08",
+        "kind": "政策文件",
+        "license": "原创，归本项目所有（参赛团队）",
+        "source_id": "S0",
+        "source_url": "",
+        "attribution": "",
+        "score": 26.9765,
+        "matched": [
+          "万元",
+          "加装",
+          "成本",
+          "电梯",
+          "补贴",
+          "装电"
+        ]
+      },
+      {
+        "id": "ev-lift-02-p1",
+        "text": "细则发布一个月后，记者走访6个老旧小区，其中4个小区仍卡在业主协商阶段。",
+        "doc_id": "doc-lift-02",
+        "doc_title": "加装电梯落地难：钱从哪来，低层为什么不同意",
+        "publisher": "城市观察周刊（合成）",
+        "published": "2026-05-14",
+        "kind": "独立报道",
+        "license": "原创，归本项目所有（参赛团队）",
+        "source_id": "S0",
+        "source_url": "",
+        "attribution": "",
+        "score": 14.0326,
+        "matched": [
+          "业主",
+          "加装",
+          "电梯",
+          "装电"
+        ]
+      },
+      {
+        "id": "ev-lift-01-p3",
+        "text": "业主同意比例执行现行规定：本单元专有部分面积占比三分之二以上且占总户数三分之二以上业主同意，并妥善处理相邻关系。",
+        "doc_id": "doc-lift-01",
+        "doc_title": "老旧小区加装电梯实施细则发布",
+        "publisher": "市住房与建设局（合成）",
+        "published": "2026-04-08",
+        "kind": "政策文件",
+        "license": "原创，归本项目所有（参赛团队）",
+        "source_id": "S0",
+        "source_url": "",
+        "attribution": "",
+        "score": 13.2839,
+        "matched": [
+          "业主",
+          "加装",
+          "电梯",
+          "装电"
+        ]
+      }
+    ],
+    "trace": [
+      {
+        "step": "查询理解",
+        "detail": "归一化出 10 个检索词：加装 / 装电 / 电梯 / 梯业 / 业主 / 主需 / 需要 / 要出 / 出多 / 少钱",
+        "ms": 0.01
+      },
+      {
+        "step": "同义扩展",
+        "detail": "补充 4 个书面表达检索词：万元 / 补贴 / 成本 / 票价",
+        "ms": 0.0
+      },
+      {
+        "step": "语料范围检查",
+        "detail": "9/14 个检索词存在于语料词表",
+        "ms": 0.0
+      },
+      {
+        "step": "语义检索",
+        "detail": "倒排索引命中 10 条候选证据（9/9 个有效检索词得到匹配）",
+        "ms": 0.02
+      },
+      {
+        "step": "区分度检查",
+        "detail": "命中 3 个高区分度实词（≥2）→ 通过",
+        "ms": 0.0
+      },
+      {
+        "step": "依据充分性闸门",
+        "detail": "查询原始词命中 5 个（≥2）→ 通过：加装 / 装电 / 电梯 / 梯业 / 业主",
+        "ms": 0.0
+      },
+      {
+        "step": "拒答闸门",
+        "detail": "置信度 0.86 ≥ 阈值 0.34 → 放行",
+        "ms": 0.0
+      },
+      {
+        "step": "多源一致性比对",
+        "detail": "未检出多源分歧",
+        "ms": 0.0
+      }
+    ],
+    "timing": {
+      "server_total_ms": 1316.67,
+      "generate_ms": 1316.59
+    },
+    "corpus": "自建合成新闻语料 ＋ 世界银行开放数据（WDI）真实指标"
+  },
+  {
+    "ok": true,
+    "query": "2024 年中国城镇人口占总人口比重是多少？",
+    "answer": "2024 年，中国的城镇人口占总人口比重为 65.9%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%）［ev-wb-urban-chn-sp-urb-totl-in-zs-2024］。\n\n需显式指出的差异：世界银行 WDI 对「城镇人口占比」有明确口径提示，各国对城镇的定义不同（行政区划、人口密度、建成区标准各异），因此中国的数值与全球合计值并列展示，但不应被当作「谁更城市化」的单一结论；系统并列两个口径并标注差异成因，由使用者自行判断。\n\n已核验引用：［ev-wb-urban-chn-sp-urb-totl-in-zs-2024］",
+    "mode": "model",
+    "provider": "DeepSeek",
+    "model": "deepseek-chat",
+    "refused": false,
+    "refuse_reason": "",
+    "confidence": 0.5003,
+    "threshold": 0.34,
+    "citations": [
+      {
+        "id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2024",
+        "doc_title": "世界银行数据：中国 · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+        "publisher": "世界银行开放数据（World Bank Open Data）"
+      }
+    ],
+    "dropped_citations": [],
+    "degraded_reason": null,
+    "divergences": [
+      {
+        "id": "dv-wb-urban-scope",
+        "topic": "城镇人口占比：中国口径与全球口径不可直接比较",
+        "summary": "世界银行 WDI 对「城镇人口占比」有明确口径提示：各国对城镇的定义不同（行政区划、人口密度、建成区标准各异），因此中国的数值与全球合计值并列展示，但不应被当作「谁更城市化」的单一结论。系统并列两个口径并标注差异成因，由使用者自行判断。",
+        "sides": [
+          {
+            "evidence_id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2021",
+            "doc_title": "世界银行数据：中国 · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2021 年，中国的城镇人口占总人口比重为 64.7%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": true
+          },
+          {
+            "evidence_id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2022",
+            "doc_title": "世界银行数据：中国 · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2022 年，中国的城镇人口占总人口比重为 65.2%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": true
+          },
+          {
+            "evidence_id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2023",
+            "doc_title": "世界银行数据：中国 · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2023 年，中国的城镇人口占总人口比重为 65.5%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": true
+          },
+          {
+            "evidence_id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2024",
+            "doc_title": "世界银行数据：中国 · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2024 年，中国的城镇人口占总人口比重为 65.9%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": true
+          },
+          {
+            "evidence_id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2025",
+            "doc_title": "世界银行数据：中国 · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2025 年，中国的城镇人口占总人口比重为 66.3%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-wld-sp-urb-totl-in-zs-2021",
+            "doc_title": "世界银行数据：全球（世界银行口径） · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2021 年，全球（世界银行口径）的城镇人口占总人口比重为 56.8%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-wld-sp-urb-totl-in-zs-2022",
+            "doc_title": "世界银行数据：全球（世界银行口径） · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2022 年，全球（世界银行口径）的城镇人口占总人口比重为 57.1%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-wld-sp-urb-totl-in-zs-2023",
+            "doc_title": "世界银行数据：全球（世界银行口径） · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2023 年，全球（世界银行口径）的城镇人口占总人口比重为 57.3%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-wld-sp-urb-totl-in-zs-2024",
+            "doc_title": "世界银行数据：全球（世界银行口径） · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2024 年，全球（世界银行口径）的城镇人口占总人口比重为 57.6%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-wld-sp-urb-totl-in-zs-2025",
+            "doc_title": "世界银行数据：全球（世界银行口径） · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2025 年，全球（世界银行口径）的城镇人口占总人口比重为 57.8%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-method-p1",
+            "doc_title": "口径说明：城镇人口占比的跨国比较限制（依据世行 WDI 指标元数据）",
+            "publisher": "证闻项目组（依据世界银行 WDI 指标元数据撰写）",
+            "text": "世界银行 WDI 对「城镇人口占总人口比重」有方法论提示：各国对「城镇」的定义不同（行政区划、人口密度、建成区标准各异），该指标在不同国家或地区之间直接比较会引入口径差异。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-method-p2",
+            "doc_title": "口径说明：城镇人口占比的跨国比较限制（依据世行 WDI 指标元数据）",
+            "publisher": "证闻项目组（依据世界银行 WDI 指标元数据撰写）",
+            "text": "证闻项目组据此标注：中国的城镇人口占比与全球合计值可以并列展示，但不应被当作「谁更城市化」的单一结论；本系统对这类跨口径比较只做并列，不做合并。",
+            "in_retrieved": false
+          }
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2021",
+        "text": "2021 年，中国的城镇人口占总人口比重为 64.7%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+        "doc_id": "doc-wb-urban-sp-urb-totl-in-zs-chn",
+        "doc_title": "世界银行数据：中国 · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+        "publisher": "世界银行开放数据（World Bank Open Data）",
+        "published": "2025",
+        "kind": "开放数据指标",
+        "license": "CC BY 4.0",
+        "source_id": "WB",
+        "source_url": "https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=CHN",
+        "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=200",
+        "score": 23.3087,
+        "matched": [
+          "中国",
+          "人口",
+          "占总",
+          "口占",
+          "口比",
+          "城镇",
+          "总人",
+          "比重"
+        ]
+      },
+      {
+        "id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2022",
+        "text": "2022 年，中国的城镇人口占总人口比重为 65.2%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+        "doc_id": "doc-wb-urban-sp-urb-totl-in-zs-chn",
+        "doc_title": "世界银行数据：中国 · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+        "publisher": "世界银行开放数据（World Bank Open Data）",
+        "published": "2025",
+        "kind": "开放数据指标",
+        "license": "CC BY 4.0",
+        "source_id": "WB",
+        "source_url": "https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=CHN",
+        "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=200",
+        "score": 23.3087,
+        "matched": [
+          "中国",
+          "人口",
+          "占总",
+          "口占",
+          "口比",
+          "城镇",
+          "总人",
+          "比重"
+        ]
+      },
+      {
+        "id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2023",
+        "text": "2023 年，中国的城镇人口占总人口比重为 65.5%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+        "doc_id": "doc-wb-urban-sp-urb-totl-in-zs-chn",
+        "doc_title": "世界银行数据：中国 · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+        "publisher": "世界银行开放数据（World Bank Open Data）",
+        "published": "2025",
+        "kind": "开放数据指标",
+        "license": "CC BY 4.0",
+        "source_id": "WB",
+        "source_url": "https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=CHN",
+        "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=200",
+        "score": 23.3087,
+        "matched": [
+          "中国",
+          "人口",
+          "占总",
+          "口占",
+          "口比",
+          "城镇",
+          "总人",
+          "比重"
+        ]
+      },
+      {
+        "id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2024",
+        "text": "2024 年，中国的城镇人口占总人口比重为 65.9%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+        "doc_id": "doc-wb-urban-sp-urb-totl-in-zs-chn",
+        "doc_title": "世界银行数据：中国 · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+        "publisher": "世界银行开放数据（World Bank Open Data）",
+        "published": "2025",
+        "kind": "开放数据指标",
+        "license": "CC BY 4.0",
+        "source_id": "WB",
+        "source_url": "https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=CHN",
+        "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=200",
+        "score": 23.3087,
+        "matched": [
+          "中国",
+          "人口",
+          "占总",
+          "口占",
+          "口比",
+          "城镇",
+          "总人",
+          "比重"
+        ]
+      }
+    ],
+    "trace": [
+      {
+        "step": "查询理解",
+        "detail": "归一化出 13 个检索词：年中 / 中国 / 国城 / 城镇 / 镇人 / 人口 / 口占 / 占总 / 总人 / 口比 / 比重 / 重是",
+        "ms": 0.01
+      },
+      {
+        "step": "语料范围检查",
+        "detail": "9/13 个检索词存在于语料词表",
+        "ms": 0.0
+      },
+      {
+        "step": "语义检索",
+        "detail": "倒排索引命中 93 条候选证据（9/9 个有效检索词得到匹配）",
+        "ms": 0.1
+      },
+      {
+        "step": "区分度检查",
+        "detail": "仅命中 0 个高区分度实词（要求 ≥2，IDF 阈值 P70 = 4.60） → 置信度按 0.6 折算",
+        "ms": 0.0
+      },
+      {
+        "step": "依据充分性闸门",
+        "detail": "查询原始词命中 9 个（≥2）→ 通过：中国 / 城镇 / 镇人 / 人口 / 口占 / 占总 / 总人 / 口比",
+        "ms": 0.0
+      },
+      {
+        "step": "拒答闸门",
+        "detail": "置信度 0.50 ≥ 阈值 0.34 → 放行",
+        "ms": 0.0
+      },
+      {
+        "step": "多源一致性比对",
+        "detail": "检出 1 组多源分歧",
+        "ms": 0.01
+      }
+    ],
+    "timing": {
+      "server_total_ms": 1157.5,
+      "generate_ms": 1157.33
+    },
+    "corpus": "自建合成新闻语料 ＋ 世界银行开放数据（WDI）真实指标"
+  },
+  {
+    "ok": true,
+    "query": "城镇化率的中国口径和全球口径能直接比吗？",
+    "answer": "不能直接比。世界银行 WDI 对「城镇人口占总人口比重」有方法论提示：各国对「城镇」的定义不同（行政区划、人口密度、建成区标准各异），该指标在不同国家或地区之间直接比较会引入口径差异［ev-wb-urban-method-p1］。就已检出的多源差异而言，世界银行 WDI 对「城镇人口占比」有明确口径提示：各国对城镇的定义不同（行政区划、人口密度、建成区标准各异），因此中国的数值与全球合计值并列展示，但不应被当作「谁更城市化」的单一结论；系统并列两个口径并标注差异成因，由使用者自行判断。\n\n需显式指出的差异：证据中给出的全球数值为城镇人口总数（SP.URB.TOTL，人），2021 年为 44.99 亿人［ev-wb-urban-wld-sp-urb-totl-2021］、2022 年为 45.59 亿人［ev-wb-urban-wld-sp-urb-totl-2022］、2023 年为 46.21 亿人［ev-wb-urban-wld-sp-urb-totl-2023］，与「城镇人口占总人口比重」并非同一指标表述，二者不可合并为同一结论。\n\n已核验引用：ev-wb-urban-method-p1、ev-wb-urban-wld-sp-urb-totl-2021、ev-wb-urban-wld-sp-urb-totl-2022、ev-wb-urban-wld-sp-urb-totl-2023。",
+    "mode": "model",
+    "provider": "DeepSeek",
+    "model": "deepseek-chat",
+    "refused": false,
+    "refuse_reason": "",
+    "confidence": 0.7689,
+    "threshold": 0.34,
+    "citations": [
+      {
+        "id": "ev-wb-urban-method-p1",
+        "doc_title": "口径说明：城镇人口占比的跨国比较限制（依据世行 WDI 指标元数据）",
+        "publisher": "证闻项目组（依据世界银行 WDI 指标元数据撰写）"
+      },
+      {
+        "id": "ev-wb-urban-wld-sp-urb-totl-2021",
+        "doc_title": "世界银行数据：全球（世界银行口径） · 城镇人口总数（SP.URB.TOTL）",
+        "publisher": "世界银行开放数据（World Bank Open Data）"
+      },
+      {
+        "id": "ev-wb-urban-wld-sp-urb-totl-2022",
+        "doc_title": "世界银行数据：全球（世界银行口径） · 城镇人口总数（SP.URB.TOTL）",
+        "publisher": "世界银行开放数据（World Bank Open Data）"
+      },
+      {
+        "id": "ev-wb-urban-wld-sp-urb-totl-2023",
+        "doc_title": "世界银行数据：全球（世界银行口径） · 城镇人口总数（SP.URB.TOTL）",
+        "publisher": "世界银行开放数据（World Bank Open Data）"
+      }
+    ],
+    "dropped_citations": [],
+    "degraded_reason": null,
+    "divergences": [
+      {
+        "id": "dv-wb-urban-scope",
+        "topic": "城镇人口占比：中国口径与全球口径不可直接比较",
+        "summary": "世界银行 WDI 对「城镇人口占比」有明确口径提示：各国对城镇的定义不同（行政区划、人口密度、建成区标准各异），因此中国的数值与全球合计值并列展示，但不应被当作「谁更城市化」的单一结论。系统并列两个口径并标注差异成因，由使用者自行判断。",
+        "sides": [
+          {
+            "evidence_id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2021",
+            "doc_title": "世界银行数据：中国 · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2021 年，中国的城镇人口占总人口比重为 64.7%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2022",
+            "doc_title": "世界银行数据：中国 · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2022 年，中国的城镇人口占总人口比重为 65.2%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2023",
+            "doc_title": "世界银行数据：中国 · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2023 年，中国的城镇人口占总人口比重为 65.5%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2024",
+            "doc_title": "世界银行数据：中国 · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2024 年，中国的城镇人口占总人口比重为 65.9%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2025",
+            "doc_title": "世界银行数据：中国 · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2025 年，中国的城镇人口占总人口比重为 66.3%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-wld-sp-urb-totl-in-zs-2021",
+            "doc_title": "世界银行数据：全球（世界银行口径） · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2021 年，全球（世界银行口径）的城镇人口占总人口比重为 56.8%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-wld-sp-urb-totl-in-zs-2022",
+            "doc_title": "世界银行数据：全球（世界银行口径） · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2022 年，全球（世界银行口径）的城镇人口占总人口比重为 57.1%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-wld-sp-urb-totl-in-zs-2023",
+            "doc_title": "世界银行数据：全球（世界银行口径） · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2023 年，全球（世界银行口径）的城镇人口占总人口比重为 57.3%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-wld-sp-urb-totl-in-zs-2024",
+            "doc_title": "世界银行数据：全球（世界银行口径） · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2024 年，全球（世界银行口径）的城镇人口占总人口比重为 57.6%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-wld-sp-urb-totl-in-zs-2025",
+            "doc_title": "世界银行数据：全球（世界银行口径） · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+            "publisher": "世界银行开放数据（World Bank Open Data）",
+            "text": "2025 年，全球（世界银行口径）的城镇人口占总人口比重为 57.8%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+            "in_retrieved": false
+          },
+          {
+            "evidence_id": "ev-wb-urban-method-p1",
+            "doc_title": "口径说明：城镇人口占比的跨国比较限制（依据世行 WDI 指标元数据）",
+            "publisher": "证闻项目组（依据世界银行 WDI 指标元数据撰写）",
+            "text": "世界银行 WDI 对「城镇人口占总人口比重」有方法论提示：各国对「城镇」的定义不同（行政区划、人口密度、建成区标准各异），该指标在不同国家或地区之间直接比较会引入口径差异。",
+            "in_retrieved": true
+          },
+          {
+            "evidence_id": "ev-wb-urban-method-p2",
+            "doc_title": "口径说明：城镇人口占比的跨国比较限制（依据世行 WDI 指标元数据）",
+            "publisher": "证闻项目组（依据世界银行 WDI 指标元数据撰写）",
+            "text": "证闻项目组据此标注：中国的城镇人口占比与全球合计值可以并列展示，但不应被当作「谁更城市化」的单一结论；本系统对这类跨口径比较只做并列，不做合并。",
+            "in_retrieved": false
+          }
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev-wb-urban-method-p1",
+        "text": "世界银行 WDI 对「城镇人口占总人口比重」有方法论提示：各国对「城镇」的定义不同（行政区划、人口密度、建成区标准各异），该指标在不同国家或地区之间直接比较会引入口径差异。",
+        "doc_id": "doc-wb-method-urban-scope",
+        "doc_title": "口径说明：城镇人口占比的跨国比较限制（依据世行 WDI 指标元数据）",
+        "publisher": "证闻项目组（依据世界银行 WDI 指标元数据撰写）",
+        "published": "2026-09-18",
+        "kind": "口径说明",
+        "license": "本项目撰写（引用世界银行 WDI 方法论，非世行原文）",
+        "source_id": "WB",
+        "source_url": "https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS",
+        "attribution": "依据 The World Bank: World Development Indicators: SP.URB.TOTL.IN.ZS 指标元数据撰写；世行未参与本项目",
+        "score": 14.5041,
+        "matched": [
+          "人口",
+          "口径",
+          "城镇",
+          "接比",
+          "直接",
+          "镇人"
+        ]
+      },
+      {
+        "id": "ev-wb-urban-wld-sp-urb-totl-2021",
+        "text": "2021 年，全球（世界银行口径）的城镇人口总数为 44.99 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+        "doc_id": "doc-wb-urban-sp-urb-totl-wld",
+        "doc_title": "世界银行数据：全球（世界银行口径） · 城镇人口总数（SP.URB.TOTL）",
+        "publisher": "世界银行开放数据（World Bank Open Data）",
+        "published": "2025",
+        "kind": "开放数据指标",
+        "license": "CC BY 4.0",
+        "source_id": "WB",
+        "source_url": "https://data.worldbank.org/indicator/SP.URB.TOTL?locations=WLD",
+        "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/WLD/indicator/SP.URB.TOTL?format=json&per_page=200",
+        "score": 8.442,
+        "matched": [
+          "人口",
+          "全球",
+          "口径",
+          "城镇",
+          "镇人"
+        ]
+      },
+      {
+        "id": "ev-wb-urban-wld-sp-urb-totl-2022",
+        "text": "2022 年，全球（世界银行口径）的城镇人口总数为 45.59 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+        "doc_id": "doc-wb-urban-sp-urb-totl-wld",
+        "doc_title": "世界银行数据：全球（世界银行口径） · 城镇人口总数（SP.URB.TOTL）",
+        "publisher": "世界银行开放数据（World Bank Open Data）",
+        "published": "2025",
+        "kind": "开放数据指标",
+        "license": "CC BY 4.0",
+        "source_id": "WB",
+        "source_url": "https://data.worldbank.org/indicator/SP.URB.TOTL?locations=WLD",
+        "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/WLD/indicator/SP.URB.TOTL?format=json&per_page=200",
+        "score": 8.442,
+        "matched": [
+          "人口",
+          "全球",
+          "口径",
+          "城镇",
+          "镇人"
+        ]
+      },
+      {
+        "id": "ev-wb-urban-wld-sp-urb-totl-2023",
+        "text": "2023 年，全球（世界银行口径）的城镇人口总数为 46.21 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+        "doc_id": "doc-wb-urban-sp-urb-totl-wld",
+        "doc_title": "世界银行数据：全球（世界银行口径） · 城镇人口总数（SP.URB.TOTL）",
+        "publisher": "世界银行开放数据（World Bank Open Data）",
+        "published": "2025",
+        "kind": "开放数据指标",
+        "license": "CC BY 4.0",
+        "source_id": "WB",
+        "source_url": "https://data.worldbank.org/indicator/SP.URB.TOTL?locations=WLD",
+        "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/WLD/indicator/SP.URB.TOTL?format=json&per_page=200",
+        "score": 8.442,
+        "matched": [
+          "人口",
+          "全球",
+          "口径",
+          "城镇",
+          "镇人"
+        ]
+      }
+    ],
+    "trace": [
+      {
+        "step": "查询理解",
+        "detail": "归一化出 17 个检索词：城镇 / 镇化 / 化率 / 率的 / 的中 / 中国 / 国口 / 口径 / 径和 / 和全 / 全球 / 球口",
+        "ms": 0.01
+      },
+      {
+        "step": "同义扩展",
+        "detail": "补充 2 个书面表达检索词：镇人 / 人口",
+        "ms": 0.0
+      },
+      {
+        "step": "语料范围检查",
+        "detail": "8/19 个检索词存在于语料词表",
+        "ms": 0.0
+      },
+      {
+        "step": "语义检索",
+        "detail": "倒排索引命中 122 条候选证据（8/8 个有效检索词得到匹配）",
+        "ms": 0.09
+      },
+      {
+        "step": "区分度检查",
+        "detail": "命中 2 个高区分度实词（≥2）→ 通过",
+        "ms": 0.0
+      },
+      {
+        "step": "依据充分性闸门",
+        "detail": "查询原始词命中 6 个（≥2）→ 通过：城镇 / 中国 / 口径 / 全球 / 直接 / 接比",
+        "ms": 0.0
+      },
+      {
+        "step": "拒答闸门",
+        "detail": "置信度 0.77 ≥ 阈值 0.34 → 放行",
+        "ms": 0.0
+      },
+      {
+        "step": "多源一致性比对",
+        "detail": "检出 1 组多源分歧",
+        "ms": 0.01
+      }
+    ],
+    "timing": {
+      "server_total_ms": 1965.63,
+      "generate_ms": 1965.46
+    },
+    "corpus": "自建合成新闻语料 ＋ 世界银行开放数据（WDI）真实指标"
+  },
+  {
+    "ok": true,
+    "query": "社区图书馆延时开放效果如何？",
+    "answer": "现有证据只能说明试点已开展并给出了首月部分数据，尚不足以对延时开放的整体效果作出评价。\n\n试点安排方面：自6月起全市12家社区图书馆开展延长开放时间试点，工作日闭馆时间由18:00延后至21:00，周末开放时间提前至9:00［ev-library-01-p1］；试点周期为6个月，延时时段的到馆人次、借阅量与满意度将作为是否全市推广的依据［ev-library-01-p2］；市文化旅游局安排的试点专项经费为每馆每月1.2万元，主要用于延时人力与水电支出［ev-library-01-p3］。\n\n首月运行数据方面：延时开放满月，12家试点馆晚间18:00至21:00时段合计到馆人次约1.1万，占全时段到馆人次的9.3%［ev-library-02-p1］。\n\n需要指出的差异与信息缺口：证据中仅有晚间到馆人次一项首月数据，借阅量与满意度均未给出结果，因此无法判断试点是否达到全市推广的依据标准［ev-library-01-p2］；同时，报道标题称晚间到馆人次「低于预期」［ev-library-02-p1］，但证据中未给出预期数值，无法据此判断差距大小，也无法与试点方案中的目标口径相互印证［ev-library-01-p2］。\n\n已核验引用：ev-library-01-p1、ev-library-01-p2、ev-library-01-p3、ev-library-02-p1。",
+    "mode": "model",
+    "provider": "DeepSeek",
+    "model": "deepseek-chat",
+    "refused": false,
+    "refuse_reason": "",
+    "confidence": 0.5201,
+    "threshold": 0.34,
+    "citations": [
+      {
+        "id": "ev-library-01-p1",
+        "doc_title": "社区图书馆延长开放时间试点方案",
+        "publisher": "市文化旅游局（合成）"
+      },
+      {
+        "id": "ev-library-01-p2",
+        "doc_title": "社区图书馆延长开放时间试点方案",
+        "publisher": "市文化旅游局（合成）"
+      },
+      {
+        "id": "ev-library-01-p3",
+        "doc_title": "社区图书馆延长开放时间试点方案",
+        "publisher": "市文化旅游局（合成）"
+      },
+      {
+        "id": "ev-library-02-p1",
+        "doc_title": "延时开放满月：晚间到馆人次低于预期",
+        "publisher": "滨江日报（合成）"
+      }
+    ],
+    "dropped_citations": [],
+    "degraded_reason": null,
+    "divergences": [],
+    "evidence": [
+      {
+        "id": "ev-library-01-p1",
+        "text": "自6月起，全市12家社区图书馆开展延长开放时间试点，工作日闭馆时间由18:00延后至21:00，周末开放时间提前至9:00。",
+        "doc_id": "doc-library-01",
+        "doc_title": "社区图书馆延长开放时间试点方案",
+        "publisher": "市文化旅游局（合成）",
+        "published": "2026-06-02",
+        "kind": "政策文件",
+        "license": "原创，归本项目所有（参赛团队）",
+        "source_id": "S0",
+        "source_url": "",
+        "attribution": "",
+        "score": 31.0689,
+        "matched": [
+          "书馆",
+          "区图",
+          "图书",
+          "开放",
+          "社区",
+          "试点",
+          "馆延"
+        ]
+      },
+      {
+        "id": "ev-library-01-p2",
+        "text": "试点周期为6个月，延时时段的到馆人次、借阅量与满意度将作为是否全市推广的依据。",
+        "doc_id": "doc-library-01",
+        "doc_title": "社区图书馆延长开放时间试点方案",
+        "publisher": "市文化旅游局（合成）",
+        "published": "2026-06-02",
+        "kind": "政策文件",
+        "license": "原创，归本项目所有（参赛团队）",
+        "source_id": "S0",
+        "source_url": "",
+        "attribution": "",
+        "score": 29.1134,
+        "matched": [
+          "书馆",
+          "区图",
+          "图书",
+          "延时",
+          "开放",
+          "社区",
+          "试点",
+          "馆延"
+        ]
+      },
+      {
+        "id": "ev-library-01-p3",
+        "text": "市文化旅游局安排的试点专项经费为每馆每月1.2万元，主要用于延时人力与水电支出。",
+        "doc_id": "doc-library-01",
+        "doc_title": "社区图书馆延长开放时间试点方案",
+        "publisher": "市文化旅游局（合成）",
+        "published": "2026-06-02",
+        "kind": "政策文件",
+        "license": "原创，归本项目所有（参赛团队）",
+        "source_id": "S0",
+        "source_url": "",
+        "attribution": "",
+        "score": 28.63,
+        "matched": [
+          "书馆",
+          "区图",
+          "图书",
+          "延时",
+          "开放",
+          "社区",
+          "试点",
+          "馆延"
+        ]
+      },
+      {
+        "id": "ev-library-02-p1",
+        "text": "延时开放满月，12家试点馆晚间18:00至21:00时段合计到馆人次约1.1万，占全时段到馆人次的9.3%。",
+        "doc_id": "doc-library-02",
+        "doc_title": "延时开放满月：晚间到馆人次低于预期",
+        "publisher": "滨江日报（合成）",
+        "published": "2026-07-04",
+        "kind": "官方通稿",
+        "license": "原创，归本项目所有（参赛团队）",
+        "source_id": "S0",
+        "source_url": "",
+        "attribution": "",
+        "score": 14.9407,
+        "matched": [
+          "延时",
+          "开放",
+          "时开",
+          "试点"
+        ]
+      }
+    ],
+    "trace": [
+      {
+        "step": "查询理解",
+        "detail": "归一化出 11 个检索词：社区 / 区图 / 图书 / 书馆 / 馆延 / 延时 / 时开 / 开放 / 放效 / 效果 / 果如",
+        "ms": 0.01
+      },
+      {
+        "step": "同义扩展",
+        "detail": "补充 2 个书面表达检索词：试点 / 占",
+        "ms": 0.0
+      },
+      {
+        "step": "语料范围检查",
+        "detail": "9/13 个检索词存在于语料词表",
+        "ms": 0.0
+      },
+      {
+        "step": "语义检索",
+        "detail": "倒排索引命中 127 条候选证据（9/9 个有效检索词得到匹配）",
+        "ms": 0.05
+      },
+      {
+        "step": "区分度检查",
+        "detail": "仅命中 0 个高区分度实词（要求 ≥2，IDF 阈值 P70 = 4.60） → 置信度按 0.6 折算",
+        "ms": 0.0
+      },
+      {
+        "step": "依据充分性闸门",
+        "detail": "查询原始词命中 8 个（≥2）→ 通过：社区 / 区图 / 图书 / 书馆 / 馆延 / 延时 / 时开 / 开放",
+        "ms": 0.0
+      },
+      {
+        "step": "拒答闸门",
+        "detail": "置信度 0.52 ≥ 阈值 0.34 → 放行",
+        "ms": 0.0
+      },
+      {
+        "step": "多源一致性比对",
+        "detail": "未检出多源分歧",
+        "ms": 0.0
+      }
+    ],
+    "timing": {
+      "server_total_ms": 2028.98,
+      "generate_ms": 2028.85
+    },
+    "corpus": "自建合成新闻语料 ＋ 世界银行开放数据（WDI）真实指标"
+  },
+  {
+    "ok": true,
+    "query": "今天天气怎么样？",
+    "answer": "语料中未收录与该问题相关的内容，因此不作回答。\n（拒答依据：查询中的 5 个检索词均不在语料词表内，判定为超出语料范围）",
+    "mode": "rule",
+    "provider": null,
+    "model": null,
+    "refused": true,
+    "refuse_reason": "查询中的 5 个检索词均不在语料词表内，判定为超出语料范围",
+    "confidence": 0.0,
+    "threshold": 0.34,
+    "citations": [],
+    "dropped_citations": [],
+    "degraded_reason": "拒答闸门：语料中无充分依据",
+    "divergences": [],
+    "evidence": [],
+    "trace": [
+      {
+        "step": "查询理解",
+        "detail": "归一化出 5 个检索词：今天 / 天天 / 天气 / 气怎 / 么样",
+        "ms": 0.01
+      },
+      {
+        "step": "拒答闸门",
+        "detail": "查询中的 5 个检索词均不在语料词表内，判定为超出语料范围 → 明确拒答，不生成回答",
+        "ms": 0.0
+      }
+    ],
+    "timing": {
+      "server_total_ms": 0.02,
+      "generate_ms": 0.0
+    },
+    "corpus": "自建合成新闻语料 ＋ 世界银行开放数据（WDI）真实指标"
+  },
+  {
+    "ok": true,
+    "query": "苹果手机最新款多少钱",
+    "answer": "语料中未收录与该问题相关的内容，因此不作回答。\n（拒答依据：查询原始词仅命中 0 个（要求 ≥2），另有 6 个命中来自同义扩展词；同义扩展只用于提升召回，不作为「语料中有依据」的证据 → 判定为语料中无充分依据）",
+    "mode": "rule",
+    "provider": null,
+    "model": null,
+    "refused": true,
+    "refuse_reason": "查询原始词仅命中 0 个（要求 ≥2），另有 6 个命中来自同义扩展词；同义扩展只用于提升召回，不作为「语料中有依据」的证据 → 判定为语料中无充分依据",
+    "confidence": 0.7838,
+    "threshold": 0.34,
+    "citations": [],
+    "dropped_citations": [],
+    "degraded_reason": "拒答闸门：语料中无充分依据",
+    "divergences": [],
+    "evidence": [
+      {
+        "id": "ev-lift-01-p2",
+        "text": "财政补贴标准为每部电梯不超过20万元，补贴资金由市、区两级按6:4分担；单部电梯建安成本通常在45万至60万元区间。",
+        "doc_id": "doc-lift-01",
+        "doc_title": "老旧小区加装电梯实施细则发布",
+        "publisher": "市住房与建设局（合成）",
+        "published": "2026-04-08",
+        "kind": "政策文件",
+        "license": "原创，归本项目所有（参赛团队）",
+        "source_id": "S0",
+        "source_url": "",
+        "attribution": "",
+        "score": 16.0554,
+        "matched": [
+          "万元",
+          "成本",
+          "补贴"
+        ]
+      },
+      {
+        "id": "ev-lift-02-p3",
+        "text": "扣除20万元补贴后，单部电梯业主自筹部分仍需25万至40万元；按楼层系数分摊，六层住户单户负担约4万至8万元。",
+        "doc_id": "doc-lift-02",
+        "doc_title": "加装电梯落地难：钱从哪来，低层为什么不同意",
+        "publisher": "城市观察周刊（合成）",
+        "published": "2026-05-14",
+        "kind": "独立报道",
+        "license": "原创，归本项目所有（参赛团队）",
+        "source_id": "S0",
+        "source_url": "",
+        "attribution": "",
+        "score": 10.3514,
+        "matched": [
+          "万元",
+          "补贴"
+        ]
+      },
+      {
+        "id": "ev-wb-digital-chn-it-cel-sets-p2-2020",
+        "text": "2020 年，中国的每百人移动蜂窝电话订阅数为 120.5（世界银行 WDI 指标 IT.CEL.SETS.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+        "doc_id": "doc-wb-digital-it-cel-sets-p2-chn",
+        "doc_title": "世界银行数据：中国 · 每百人移动蜂窝电话订阅数（IT.CEL.SETS.P2）",
+        "publisher": "世界银行开放数据（World Bank Open Data）",
+        "published": "2024",
+        "kind": "开放数据指标",
+        "license": "CC BY 4.0",
+        "source_id": "WB",
+        "source_url": "https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=CHN",
+        "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/IT.CEL.SETS.P2?format=json&per_page=200",
+        "score": 7.4496,
+        "matched": [
+          "电话",
+          "蜂窝"
+        ]
+      },
+      {
+        "id": "ev-wb-digital-chn-it-cel-sets-p2-2021",
+        "text": "2021 年，中国的每百人移动蜂窝电话订阅数为 121.5（世界银行 WDI 指标 IT.CEL.SETS.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。",
+        "doc_id": "doc-wb-digital-it-cel-sets-p2-chn",
+        "doc_title": "世界银行数据：中国 · 每百人移动蜂窝电话订阅数（IT.CEL.SETS.P2）",
+        "publisher": "世界银行开放数据（World Bank Open Data）",
+        "published": "2024",
+        "kind": "开放数据指标",
+        "license": "CC BY 4.0",
+        "source_id": "WB",
+        "source_url": "https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=CHN",
+        "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/IT.CEL.SETS.P2?format=json&per_page=200",
+        "score": 7.4496,
+        "matched": [
+          "电话",
+          "蜂窝"
+        ]
+      }
+    ],
+    "trace": [
+      {
+        "step": "查询理解",
+        "detail": "归一化出 8 个检索词：苹果 / 果手 / 手机 / 机最 / 最新 / 新款 / 款多 / 少钱",
+        "ms": 0.01
+      },
+      {
+        "step": "同义扩展",
+        "detail": "补充 6 个书面表达检索词：蜂窝 / 电话 / 万元 / 补贴 / 成本 / 票价",
+        "ms": 0.0
+      },
+      {
+        "step": "语料范围检查",
+        "detail": "6/14 个检索词存在于语料词表",
+        "ms": 0.0
+      },
+      {
+        "step": "语义检索",
+        "detail": "倒排索引命中 15 条候选证据（6/6 个有效检索词得到匹配）",
+        "ms": 0.02
+      },
+      {
+        "step": "区分度检查",
+        "detail": "命中 2 个高区分度实词（≥2）→ 通过",
+        "ms": 0.0
+      },
+      {
+        "step": "依据充分性闸门",
+        "detail": "查询原始词仅命中 0 个（要求 ≥2），另有 6 个命中来自同义扩展词；同义扩展只用于提升召回，不作为「语料中有依据」的证据 → 判定为语料中无充分依据 → 明确拒答",
+        "ms": 0.0
+      }
+    ],
+    "timing": {
+      "server_total_ms": 0.07,
+      "generate_ms": 0.0
+    },
+    "corpus": "自建合成新闻语料 ＋ 世界银行开放数据（WDI）真实指标"
+  }
+]

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>证闻 · 静态快照兜底站</title>
+<meta name="description" content="证闻对话式新闻智能体 · 静态快照（离线可打开，非实时系统）">
+<style>
+:root{--ink:#09090B;--sec:#3F3F46;--line:rgba(9,9,11,.12);--bg:#FAFAFA;--accent:#EC4899;--ok:#15803D}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}
+header{background:var(--ink);color:#FAFAFA;padding:40px 24px}
+header .w{max-width:960px;margin:0 auto}
+h1{font-size:34px;margin:0 0 8px;letter-spacing:-.02em}
+h2{font-size:22px;margin:36px 0 12px;letter-spacing:-.01em}
+h3{font-size:18px;margin:0 0 6px}
+h4{font-size:14px;margin:18px 0 8px;letter-spacing:.04em;text-transform:uppercase;color:var(--sec)}
+main{max-width:960px;margin:0 auto;padding:0 24px 80px}
+.banner{background:var(--accent);color:var(--ink);padding:10px 24px;font-size:13.5px;font-weight:600;text-align:center}
+.hint{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);padding:14px 16px;margin:20px 0;font-size:14.5px}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#fff;font-weight:600}
+.card{background:#fff;border:1px solid var(--line);padding:18px 20px;margin:16px 0}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 12px}
+.b{font-size:12px;padding:2px 8px;border:1px solid var(--line);border-radius:999px;color:var(--sec)}
+.b-rule{border-color:#B45309;color:#B45309}
+.b-model{border-color:var(--ok);color:var(--ok)}
+.b-refuse{border-color:#B91C1C;color:#B91C1C}
+.answer{white-space:pre-wrap;font:14px/1.75 inherit;background:#FAFAFA;border:1px solid var(--line);padding:12px 14px;margin:8px 0;overflow-wrap:anywhere}
+.note{font-size:13.5px;color:#B45309}
+.blk{margin:14px 0}
+ul.ev,ul.dv,ul.trace{margin:8px 0;padding-left:20px}
+ul.ev li,ul.dv li,ul.trace li{font-size:14px;margin-bottom:8px}
+.src{display:block;color:var(--sec);font-size:12.5px}
+.trace li span{margin-right:10px}
+figure{margin:0 0 18px}
+img{width:100%;border:1px solid var(--line);display:block}
+figcaption{font-size:12.5px;color:var(--sec);margin-top:6px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:13px;color:var(--sec)}
+a{color:#B91C1C}
+</style>
+</head>
+<body>
+<div class="banner">静态快照 · 非实时 ｜ 本页为离线兜底形态：可查看界面、问答流程与证据溯源，但不能实时提问</div>
+<header><div class="w">
+<h1>证闻 · 对话式新闻智能体</h1>
+<p>把新闻从「单向阅读」变成「可追问、可溯源」—— 每一条结论都能点回原文。</p>
+<p style="opacity:.8;font-size:14px">静态快照生成于 2026-09-18 ｜ 源服务：本地演示实例（快照时状态如下）</p>
+</div></header>
+
+<main>
+<div class="hint">
+<b>与真实系统的差异（如实说明）：</b>本页是快照，不能实时提问；真实系统为可运行服务（Python 标准库实现，零第三方依赖），
+支持实时检索、拒答判定、多源分歧提示与决策轨迹。静态页用于「线上环境不可达」时仍能看到系统行为与证据链。
+</div>
+
+<h2>一、运行状态（快照时刻）</h2>
+<table>
+<tr><th>项</th><th>值</th></tr>
+<tr><td>服务</td><td>证闻 · 对话式新闻智能体</td></tr>
+<tr><td>语料</td><td>自建合成新闻语料 ＋ 世界银行开放数据（WDI）真实指标（mixed）</td></tr>
+<tr><td>语料徽章</td><td>合成演示 + 公开来源</td></tr>
+<tr><td>规模</td><td>7 主题 / 32 来源 / 148 条证据 / 4 组分歧</td></tr>
+<tr><td>生成路径</td><td>未配置模型凭据 → 规则版（界面如实标注，不冒充 AI 生成）</td></tr>
+<tr><td>拒答阈值</td><td>0.34</td></tr>
+<tr><td>依据闸门</td><td>查询原始词命中 ≥ 2 个（同义扩展词不计入依据判定）</td></tr>
+</table>
+
+<h2>二、语料来源与许可（逐源标注）</h2>
+<table>
+<tr><th>编号</th><th>来源</th><th>许可</th><th>条款</th></tr>
+<tr><td>S0</td><td>自建合成新闻语料</td><td>原创，归本项目所有（参赛团队）</td><td>—</td></tr><tr><td>WB</td><td>世界银行开放数据（WDI）真实指标</td><td>CC BY 4.0</td><td>https://data.worldbank.org/summary-terms-of-use</td></tr>
+</table>
+<p style="font-size:13.5px;color:var(--sec)">合成语料为演示主力（边界场景可控）；世界银行数据为真实数值补充（CC BY 4.0，允许商用，义务为署名 + 不暗示背书 + 不使用其名称与标识）。两类内容在界面与证据中始终分开标注。</p>
+
+<h2>三、问答快照（三类结果各取样）</h2>
+<article class="card"><h3>5号线开通后客流多少？</h3><p class="meta"><span class="b b-rule">规则版</span><span class="b b-conf">置信度 0.4641 / 阈值 0.34</span></p><pre class="answer">以下内容全部来自检索到的原文片段，未做改写：
+1. 5号线一期开通首周，线路日均客流约21.3万人次，与官方公布数据一致；但乘客反馈集中在换乘接驳环节。［ev-metro-02-p1］
+2. 市交通研究院预测，5号线一期开通后，早高峰主干道平均车速可提升约12%，城东产业园通勤时间平均缩短约18分钟。［ev-metro-01-p2］
+3. 开通首周日均客流约21.3万人次，低于可研报告预期的26万人次，运营方表示客流培育期通常为6至12个月。［ev-metro-01-p3］
+4. 多位受访乘客表示，5号线与既有2号线的换乘通道在早高峰出现排队，最长等待约7分钟。［ev-metro-02-p3］
+
+需要提请注意：本问题涉及多来源表述差异，详见「分歧」区块。</pre><p class="note">降级说明：未配置模型凭据 → 使用规则版</p><div class="blk"><h4>证据（每条都能点回原文）</h4><ul class="ev"><li><code>ev-metro-02-p1</code> 5号线一期开通首周，线路日均客流约21.3万人次，与官方公布数据一致；但乘客反馈集中在换乘接驳环节。<span class="src">— 5号线开通首周：换乘接驳仍是主要痛点｜城市观察周刊（合成）｜许可：原创，归本项目所有（参赛团队） </span></li><li><code>ev-metro-01-p2</code> 市交通研究院预测，5号线一期开通后，早高峰主干道平均车速可提升约12%，城东产业园通勤时间平均缩短约18分钟。<span class="src">— 滨江市轨道交通5号线一期开通试运营｜滨江日报（合成）｜许可：原创，归本项目所有（参赛团队） </span></li><li><code>ev-metro-01-p3</code> 开通首周日均客流约21.3万人次，低于可研报告预期的26万人次，运营方表示客流培育期通常为6至12个月。<span class="src">— 滨江市轨道交通5号线一期开通试运营｜滨江日报（合成）｜许可：原创，归本项目所有（参赛团队） </span></li><li><code>ev-metro-02-p3</code> 多位受访乘客表示，5号线与既有2号线的换乘通道在早高峰出现排队，最长等待约7分钟。<span class="src">— 5号线开通首周：换乘接驳仍是主要痛点｜城市观察周刊（合成）｜许可：原创，归本项目所有（参赛团队） </span></li></ul></div><div class="blk"><h4>多源差异（不替你合并成单一结论）</h4><ul class="dv"><li><b>5号线一期客流预期口径</b><br>同一组数字存在两种表述：官方通稿称首周客流「低于可研报告预期的26万人次」，而技术说明指出26万为预测区间上限、中值为24万；仅引用上限会使预期显得偏高。</li><li><b>5号线开通成效评价</b><br>官方通稿侧重通行效率提升（车速+12%、通勤-18分钟），独立报道侧重换乘接驳痛点（步行11分钟、换乘排队7分钟）。两者事实并不冲突，但**侧重点不同**，单一来源会呈现不完整图景。</li></ul></div><details class="blk"><summary>决策轨迹（7 步 · 全过程留痕）</summary><ul class="trace"><li><span>查询理解</span><span>归一化出 7 个检索词：号线 / 线开 / 开通 / 通后 / 后客 / 客流 / 流多</span></li><li><span>语料范围检查</span><span>5/7 个检索词存在于语料词表</span></li><li><span>语义检索</span><span>倒排索引命中 12 条候选证据（5/5 个有效检索词得到匹配）</span></li><li><span>区分度检查</span><span>仅命中 1 个高区分度实词（要求 ≥2，IDF 阈值 P70 = 4.60） → 置信度按 0.6 折算</span></li><li><span>依据充分性闸门</span><span>查询原始词命中 5 个（≥2）→ 通过：号线 / 线开 / 开通 / 通后 / 客流</span></li><li><span>拒答闸门</span><span>置信度 0.46 ≥ 阈值 0.34 → 放行</span></li><li><span>多源一致性比对</span><span>检出 2 组多源分歧</span></li></ul></details></article><article class="card"><h3>加装电梯业主需要出多少钱？</h3><p class="meta"><span class="b b-rule">规则版</span><span class="b b-conf">置信度 0.8614 / 阈值 0.34</span></p><pre class="answer">以下内容全部来自检索到的原文片段，未做改写：
+1. 扣除20万元补贴后，单部电梯业主自筹部分仍需25万至40万元；按楼层系数分摊，六层住户单户负担约4万至8万元。［ev-lift-02-p3］
+2. 财政补贴标准为每部电梯不超过20万元，补贴资金由市、区两级按6:4分担；单部电梯建安成本通常在45万至60万元区间。［ev-lift-01-p2］
+3. 细则发布一个月后，记者走访6个老旧小区，其中4个小区仍卡在业主协商阶段。［ev-lift-02-p1］
+4. 业主同意比例执行现行规定：本单元专有部分面积占比三分之二以上且占总户数三分之二以上业主同意，并妥善处理相邻关系。［ev-lift-01-p3］</pre><p class="note">降级说明：未配置模型凭据 → 使用规则版</p><div class="blk"><h4>证据（每条都能点回原文）</h4><ul class="ev"><li><code>ev-lift-02-p3</code> 扣除20万元补贴后，单部电梯业主自筹部分仍需25万至40万元；按楼层系数分摊，六层住户单户负担约4万至8万元。<span class="src">— 加装电梯落地难：钱从哪来，低层为什么不同意｜城市观察周刊（合成）｜许可：原创，归本项目所有（参赛团队） </span></li><li><code>ev-lift-01-p2</code> 财政补贴标准为每部电梯不超过20万元，补贴资金由市、区两级按6:4分担；单部电梯建安成本通常在45万至60万元区间。<span class="src">— 老旧小区加装电梯实施细则发布｜市住房与建设局（合成）｜许可：原创，归本项目所有（参赛团队） </span></li><li><code>ev-lift-02-p1</code> 细则发布一个月后，记者走访6个老旧小区，其中4个小区仍卡在业主协商阶段。<span class="src">— 加装电梯落地难：钱从哪来，低层为什么不同意｜城市观察周刊（合成）｜许可：原创，归本项目所有（参赛团队） </span></li><li><code>ev-lift-01-p3</code> 业主同意比例执行现行规定：本单元专有部分面积占比三分之二以上且占总户数三分之二以上业主同意，并妥善处理相邻关系。<span class="src">— 老旧小区加装电梯实施细则发布｜市住房与建设局（合成）｜许可：原创，归本项目所有（参赛团队） </span></li></ul></div><details class="blk"><summary>决策轨迹（8 步 · 全过程留痕）</summary><ul class="trace"><li><span>查询理解</span><span>归一化出 10 个检索词：加装 / 装电 / 电梯 / 梯业 / 业主 / 主需 / 需要 / 要出 / 出多 / 少钱</span></li><li><span>同义扩展</span><span>补充 4 个书面表达检索词：万元 / 补贴 / 成本 / 票价</span></li><li><span>语料范围检查</span><span>9/14 个检索词存在于语料词表</span></li><li><span>语义检索</span><span>倒排索引命中 10 条候选证据（9/9 个有效检索词得到匹配）</span></li><li><span>区分度检查</span><span>命中 3 个高区分度实词（≥2）→ 通过</span></li><li><span>依据充分性闸门</span><span>查询原始词命中 5 个（≥2）→ 通过：加装 / 装电 / 电梯 / 梯业 / 业主</span></li><li><span>拒答闸门</span><span>置信度 0.86 ≥ 阈值 0.34 → 放行</span></li><li><span>多源一致性比对</span><span>未检出多源分歧</span></li></ul></details></article><article class="card"><h3>社区图书馆延时开放效果如何？</h3><p class="meta"><span class="b b-rule">规则版</span><span class="b b-conf">置信度 0.5201 / 阈值 0.34</span></p><pre class="answer">以下内容全部来自检索到的原文片段，未做改写：
+1. 自6月起，全市12家社区图书馆开展延长开放时间试点，工作日闭馆时间由18:00延后至21:00，周末开放时间提前至9:00。［ev-library-01-p1］
+2. 试点周期为6个月，延时时段的到馆人次、借阅量与满意度将作为是否全市推广的依据。［ev-library-01-p2］
+3. 市文化旅游局安排的试点专项经费为每馆每月1.2万元，主要用于延时人力与水电支出。［ev-library-01-p3］
+4. 延时开放满月，12家试点馆晚间18:00至21:00时段合计到馆人次约1.1万，占全时段到馆人次的9.3%。［ev-library-02-p1］</pre><p class="note">降级说明：未配置模型凭据 → 使用规则版</p><div class="blk"><h4>证据（每条都能点回原文）</h4><ul class="ev"><li><code>ev-library-01-p1</code> 自6月起，全市12家社区图书馆开展延长开放时间试点，工作日闭馆时间由18:00延后至21:00，周末开放时间提前至9:00。<span class="src">— 社区图书馆延长开放时间试点方案｜市文化旅游局（合成）｜许可：原创，归本项目所有（参赛团队） </span></li><li><code>ev-library-01-p2</code> 试点周期为6个月，延时时段的到馆人次、借阅量与满意度将作为是否全市推广的依据。<span class="src">— 社区图书馆延长开放时间试点方案｜市文化旅游局（合成）｜许可：原创，归本项目所有（参赛团队） </span></li><li><code>ev-library-01-p3</code> 市文化旅游局安排的试点专项经费为每馆每月1.2万元，主要用于延时人力与水电支出。<span class="src">— 社区图书馆延长开放时间试点方案｜市文化旅游局（合成）｜许可：原创，归本项目所有（参赛团队） </span></li><li><code>ev-library-02-p1</code> 延时开放满月，12家试点馆晚间18:00至21:00时段合计到馆人次约1.1万，占全时段到馆人次的9.3%。<span class="src">— 延时开放满月：晚间到馆人次低于预期｜滨江日报（合成）｜许可：原创，归本项目所有（参赛团队） </span></li></ul></div><details class="blk"><summary>决策轨迹（8 步 · 全过程留痕）</summary><ul class="trace"><li><span>查询理解</span><span>归一化出 11 个检索词：社区 / 区图 / 图书 / 书馆 / 馆延 / 延时 / 时开 / 开放 / 放效 / 效果 / 果如</span></li><li><span>同义扩展</span><span>补充 2 个书面表达检索词：试点 / 占</span></li><li><span>语料范围检查</span><span>9/13 个检索词存在于语料词表</span></li><li><span>语义检索</span><span>倒排索引命中 127 条候选证据（9/9 个有效检索词得到匹配）</span></li><li><span>区分度检查</span><span>仅命中 0 个高区分度实词（要求 ≥2，IDF 阈值 P70 = 4.60） → 置信度按 0.6 折算</span></li><li><span>依据充分性闸门</span><span>查询原始词命中 8 个（≥2）→ 通过：社区 / 区图 / 图书 / 书馆 / 馆延 / 延时 / 时开 / 开放</span></li><li><span>拒答闸门</span><span>置信度 0.52 ≥ 阈值 0.34 → 放行</span></li><li><span>多源一致性比对</span><span>未检出多源分歧</span></li></ul></details></article><article class="card"><h3>5号线客流预测口径有没有矛盾？</h3><p class="meta"><span class="b b-rule">规则版</span><span class="b b-conf">置信度 0.4985 / 阈值 0.34</span></p><pre class="answer">以下内容全部来自检索到的原文片段，未做改写：
+1. 预测结果以区间形式给出，5号线一期开通首年日均客流预测区间为22万至26万人次，中值24万人次。［ev-metro-03-p2］
+2. 新线客流预测采用四阶段法，包含出行生成、出行分布、方式划分与客流分配四个步骤，基准年为开通前一年。［ev-metro-03-p1］
+3. 可研报告披露的26万人次为预测区间上限，非中值；对外表述中若仅引用上限，会造成预期偏高的印象。［ev-metro-03-p3］
+4. 车速提升预测基于路网容量模型，假设机动车保有量年增长不超过3%，该假设需在年度复核中更新。［ev-metro-03-p4］
+
+需要提请注意：本问题涉及多来源表述差异，详见「分歧」区块。</pre><p class="note">降级说明：未配置模型凭据 → 使用规则版</p><div class="blk"><h4>证据（每条都能点回原文）</h4><ul class="ev"><li><code>ev-metro-03-p2</code> 预测结果以区间形式给出，5号线一期开通首年日均客流预测区间为22万至26万人次，中值24万人次。<span class="src">— 轨道交通新线客流预测方法说明｜市交通研究院技术说明（合成）｜许可：原创，归本项目所有（参赛团队） </span></li><li><code>ev-metro-03-p1</code> 新线客流预测采用四阶段法，包含出行生成、出行分布、方式划分与客流分配四个步骤，基准年为开通前一年。<span class="src">— 轨道交通新线客流预测方法说明｜市交通研究院技术说明（合成）｜许可：原创，归本项目所有（参赛团队） </span></li><li><code>ev-metro-03-p3</code> 可研报告披露的26万人次为预测区间上限，非中值；对外表述中若仅引用上限，会造成预期偏高的印象。<span class="src">— 轨道交通新线客流预测方法说明｜市交通研究院技术说明（合成）｜许可：原创，归本项目所有（参赛团队） </span></li><li><code>ev-metro-03-p4</code> 车速提升预测基于路网容量模型，假设机动车保有量年增长不超过3%，该假设需在年度复核中更新。<span class="src">— 轨道交通新线客流预测方法说明｜市交通研究院技术说明（合成）｜许可：原创，归本项目所有（参赛团队） </span></li></ul></div><div class="blk"><h4>多源差异（不替你合并成单一结论）</h4><ul class="dv"><li><b>5号线一期客流预期口径</b><br>同一组数字存在两种表述：官方通稿称首周客流「低于可研报告预期的26万人次」，而技术说明指出26万为预测区间上限、中值为24万；仅引用上限会使预期显得偏高。</li></ul></div><details class="blk"><summary>决策轨迹（7 步 · 全过程留痕）</summary><ul class="trace"><li><span>查询理解</span><span>归一化出 12 个检索词：号线 / 线客 / 客流 / 流预 / 预测 / 测口 / 口径 / 径有 / 有没 / 没有 / 有矛 / 矛盾</span></li><li><span>语料范围检查</span><span>6/12 个检索词存在于语料词表</span></li><li><span>语义检索</span><span>倒排索引命中 74 条候选证据（6/6 个有效检索词得到匹配）</span></li><li><span>区分度检查</span><span>仅命中 0 个高区分度实词（要求 ≥2，IDF 阈值 P70 = 4.60） → 置信度按 0.6 折算</span></li><li><span>依据充分性闸门</span><span>查询原始词命中 6 个（≥2）→ 通过：号线 / 线客 / 客流 / 流预 / 预测 / 口径</span></li><li><span>拒答闸门</span><span>置信度 0.50 ≥ 阈值 0.34 → 放行</span></li><li><span>多源一致性比对</span><span>检出 1 组多源分歧</span></li></ul></details></article><article class="card"><h3>城镇化率的中国口径和全球口径能直接比吗？</h3><p class="meta"><span class="b b-rule">规则版</span><span class="b b-conf">置信度 0.7689 / 阈值 0.34</span></p><pre class="answer">以下内容全部来自检索到的原文片段，未做改写：
+1. 世界银行 WDI 对「城镇人口占总人口比重」有方法论提示：各国对「城镇」的定义不同（行政区划、人口密度、建成区标准各异），该指标在不同国家或地区之间直接比较会引入口径差异。［ev-wb-urban-method-p1］
+2. 2021 年，全球（世界银行口径）的城镇人口总数为 44.99 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。［ev-wb-urban-wld-sp-urb-totl-2021］
+3. 2022 年，全球（世界银行口径）的城镇人口总数为 45.59 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。［ev-wb-urban-wld-sp-urb-totl-2022］
+4. 2023 年，全球（世界银行口径）的城镇人口总数为 46.21 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。［ev-wb-urban-wld-sp-urb-totl-2023］
+
+需要提请注意：本问题涉及多来源表述差异，详见「分歧」区块。</pre><p class="note">降级说明：未配置模型凭据 → 使用规则版</p><div class="blk"><h4>证据（每条都能点回原文）</h4><ul class="ev"><li><code>ev-wb-urban-method-p1</code> 世界银行 WDI 对「城镇人口占总人口比重」有方法论提示：各国对「城镇」的定义不同（行政区划、人口密度、建成区标准各异），该指标在不同国家或地区之间直接比较会引入口径差异。<span class="src">— 口径说明：城镇人口占比的跨国比较限制（依据世行 WDI 指标元数据）｜证闻项目组（依据世界银行 WDI 指标元数据撰写）｜许可：本项目撰写（引用世界银行 WDI 方法论，非世行原文） <a href="https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS" target="_blank" rel="noopener noreferrer">原文入口</a></span></li><li><code>ev-wb-urban-wld-sp-urb-totl-2021</code> 2021 年，全球（世界银行口径）的城镇人口总数为 44.99 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。<span class="src">— 世界银行数据：全球（世界银行口径） · 城镇人口总数（SP.URB.TOTL）｜世界银行开放数据（World Bank Open Data）｜许可：CC BY 4.0 <a href="https://data.worldbank.org/indicator/SP.URB.TOTL?locations=WLD" target="_blank" rel="noopener noreferrer">原文入口</a></span></li><li><code>ev-wb-urban-wld-sp-urb-totl-2022</code> 2022 年，全球（世界银行口径）的城镇人口总数为 45.59 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。<span class="src">— 世界银行数据：全球（世界银行口径） · 城镇人口总数（SP.URB.TOTL）｜世界银行开放数据（World Bank Open Data）｜许可：CC BY 4.0 <a href="https://data.worldbank.org/indicator/SP.URB.TOTL?locations=WLD" target="_blank" rel="noopener noreferrer">原文入口</a></span></li><li><code>ev-wb-urban-wld-sp-urb-totl-2023</code> 2023 年，全球（世界银行口径）的城镇人口总数为 46.21 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。<span class="src">— 世界银行数据：全球（世界银行口径） · 城镇人口总数（SP.URB.TOTL）｜世界银行开放数据（World Bank Open Data）｜许可：CC BY 4.0 <a href="https://data.worldbank.org/indicator/SP.URB.TOTL?locations=WLD" target="_blank" rel="noopener noreferrer">原文入口</a></span></li></ul></div><div class="blk"><h4>多源差异（不替你合并成单一结论）</h4><ul class="dv"><li><b>城镇人口占比：中国口径与全球口径不可直接比较</b><br>世界银行 WDI 对「城镇人口占比」有明确口径提示：各国对城镇的定义不同（行政区划、人口密度、建成区标准各异），因此中国的数值与全球合计值并列展示，但不应被当作「谁更城市化」的单一结论。系统并列两个口径并标注差异成因，由使用者自行判断。</li></ul></div><details class="blk"><summary>决策轨迹（8 步 · 全过程留痕）</summary><ul class="trace"><li><span>查询理解</span><span>归一化出 17 个检索词：城镇 / 镇化 / 化率 / 率的 / 的中 / 中国 / 国口 / 口径 / 径和 / 和全 / 全球 / 球口</span></li><li><span>同义扩展</span><span>补充 2 个书面表达检索词：镇人 / 人口</span></li><li><span>语料范围检查</span><span>8/19 个检索词存在于语料词表</span></li><li><span>语义检索</span><span>倒排索引命中 122 条候选证据（8/8 个有效检索词得到匹配）</span></li><li><span>区分度检查</span><span>命中 2 个高区分度实词（≥2）→ 通过</span></li><li><span>依据充分性闸门</span><span>查询原始词命中 6 个（≥2）→ 通过：城镇 / 中国 / 口径 / 全球 / 直接 / 接比</span></li><li><span>拒答闸门</span><span>置信度 0.77 ≥ 阈值 0.34 → 放行</span></li><li><span>多源一致性比对</span><span>检出 1 组多源分歧</span></li></ul></details></article><article class="card"><h3>中国互联网使用人口占比是多少？</h3><p class="meta"><span class="b b-rule">规则版</span><span class="b b-conf">置信度 0.5087 / 阈值 0.34</span></p><pre class="answer">以下内容全部来自检索到的原文片段，未做改写：
+1. 2021 年，中国的互联网使用人口占比为 73.1%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。［ev-wb-digital-chn-it-net-user-zs-2021］
+2. 2022 年，中国的互联网使用人口占比为 75.6%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。［ev-wb-digital-chn-it-net-user-zs-2022］
+3. 2023 年，中国的互联网使用人口占比为 90.6%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。［ev-wb-digital-chn-it-net-user-zs-2023］
+4. 2024 年，中国的互联网使用人口占比为 92.0%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。［ev-wb-digital-chn-it-net-user-zs-2024］</pre><p class="note">降级说明：未配置模型凭据 → 使用规则版</p><div class="blk"><h4>证据（每条都能点回原文）</h4><ul class="ev"><li><code>ev-wb-digital-chn-it-net-user-zs-2021</code> 2021 年，中国的互联网使用人口占比为 73.1%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。<span class="src">— 世界银行数据：中国 · 互联网使用人口占比（IT.NET.USER.ZS）｜世界银行开放数据（World Bank Open Data）｜许可：CC BY 4.0 <a href="https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=CHN" target="_blank" rel="noopener noreferrer">原文入口</a></span></li><li><code>ev-wb-digital-chn-it-net-user-zs-2022</code> 2022 年，中国的互联网使用人口占比为 75.6%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。<span class="src">— 世界银行数据：中国 · 互联网使用人口占比（IT.NET.USER.ZS）｜世界银行开放数据（World Bank Open Data）｜许可：CC BY 4.0 <a href="https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=CHN" target="_blank" rel="noopener noreferrer">原文入口</a></span></li><li><code>ev-wb-digital-chn-it-net-user-zs-2023</code> 2023 年，中国的互联网使用人口占比为 90.6%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。<span class="src">— 世界银行数据：中国 · 互联网使用人口占比（IT.NET.USER.ZS）｜世界银行开放数据（World Bank Open Data）｜许可：CC BY 4.0 <a href="https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=CHN" target="_blank" rel="noopener noreferrer">原文入口</a></span></li><li><code>ev-wb-digital-chn-it-net-user-zs-2024</code> 2024 年，中国的互联网使用人口占比为 92.0%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。<span class="src">— 世界银行数据：中国 · 互联网使用人口占比（IT.NET.USER.ZS）｜世界银行开放数据（World Bank Open Data）｜许可：CC BY 4.0 <a href="https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=CHN" target="_blank" rel="noopener noreferrer">原文入口</a></span></li></ul></div><details class="blk"><summary>决策轨迹（8 步 · 全过程留痕）</summary><ul class="trace"><li><span>查询理解</span><span>归一化出 12 个检索词：中国 / 国互 / 互联 / 联网 / 网使 / 使用 / 用人 / 人口 / 口占 / 占比 / 比是 / 是多</span></li><li><span>同义扩展</span><span>补充 1 个书面表达检索词：比重</span></li><li><span>语料范围检查</span><span>10/13 个检索词存在于语料词表</span></li><li><span>语义检索</span><span>倒排索引命中 98 条候选证据（10/10 个有效检索词得到匹配）</span></li><li><span>区分度检查</span><span>仅命中 0 个高区分度实词（要求 ≥2，IDF 阈值 P70 = 4.60） → 置信度按 0.6 折算</span></li><li><span>依据充分性闸门</span><span>查询原始词命中 9 个（≥2）→ 通过：中国 / 互联 / 联网 / 网使 / 使用 / 用人 / 人口 / 口占</span></li><li><span>拒答闸门</span><span>置信度 0.51 ≥ 阈值 0.34 → 放行</span></li><li><span>多源一致性比对</span><span>未检出多源分歧</span></li></ul></details></article><article class="card"><h3>今天天气怎么样？（越界测试）</h3><p class="meta"><span class="b b-refuse">已拒答</span><span class="b b-conf">置信度 0.0 / 阈值 0.34</span></p><pre class="answer">语料中未收录与该问题相关的内容，因此不作回答。
+（拒答依据：查询中的 8 个检索词均不在语料词表内，判定为超出语料范围）</pre><p class="note">拒答依据：查询中的 8 个检索词均不在语料词表内，判定为超出语料范围</p><details class="blk"><summary>决策轨迹（2 步 · 全过程留痕）</summary><ul class="trace"><li><span>查询理解</span><span>归一化出 8 个检索词：今天 / 天天 / 天气 / 气怎 / 么样 / 越界 / 界测 / 测试</span></li><li><span>拒答闸门</span><span>查询中的 8 个检索词均不在语料词表内，判定为超出语料范围 → 明确拒答，不生成回答</span></li></ul></details></article><article class="card"><h3>苹果手机最新款多少钱</h3><p class="meta"><span class="b b-refuse">已拒答</span><span class="b b-conf">置信度 0.7838 / 阈值 0.34</span></p><pre class="answer">语料中未收录与该问题相关的内容，因此不作回答。
+（拒答依据：查询原始词仅命中 0 个（要求 ≥2），另有 6 个命中来自同义扩展词；同义扩展只用于提升召回，不作为「语料中有依据」的证据 → 判定为语料中无充分依据）</pre><p class="note">拒答依据：查询原始词仅命中 0 个（要求 ≥2），另有 6 个命中来自同义扩展词；同义扩展只用于提升召回，不作为「语料中有依据」的证据 → 判定为语料中无充分依据</p><details class="blk"><summary>决策轨迹（6 步 · 全过程留痕）</summary><ul class="trace"><li><span>查询理解</span><span>归一化出 8 个检索词：苹果 / 果手 / 手机 / 机最 / 最新 / 新款 / 款多 / 少钱</span></li><li><span>同义扩展</span><span>补充 6 个书面表达检索词：蜂窝 / 电话 / 万元 / 补贴 / 成本 / 票价</span></li><li><span>语料范围检查</span><span>6/14 个检索词存在于语料词表</span></li><li><span>语义检索</span><span>倒排索引命中 15 条候选证据（6/6 个有效检索词得到匹配）</span></li><li><span>区分度检查</span><span>命中 2 个高区分度实词（≥2）→ 通过</span></li><li><span>依据充分性闸门</span><span>查询原始词仅命中 0 个（要求 ≥2），另有 6 个命中来自同义扩展词；同义扩展只用于提升召回，不作为「语料中有依据」的证据 → 判定为语料中无充分依据 → 明确拒答</span></li></ul></details></article>
+
+<h2>四、界面实拍（三视口与降级）</h2>
+<figure><img src="assets/viewport-1440-s1.png" alt="桌面 1440 · 首屏" loading="lazy"><figcaption>桌面 1440 · 首屏</figcaption></figure><figure><img src="assets/viewport-768-s1.png" alt="平板 768 · 首屏" loading="lazy"><figcaption>平板 768 · 首屏</figcaption></figure><figure><img src="assets/viewport-375-s3.png" alt="手机 375 · 分歧面板" loading="lazy"><figcaption>手机 375 · 分歧面板</figcaption></figure><figure><img src="assets/reduced-motion-1440.png" alt="开启「减少动效」→ 自动降级为静态版面" loading="lazy"><figcaption>开启「减少动效」→ 自动降级为静态版面</figcaption></figure>
+
+<h2>五、如何运行真实系统</h2>
+<ol style="font-size:14.5px">
+<li>解压源码包，进入 <code>src/</code> 目录</li>
+<li>直接启动：<code>python app.py</code>（零第三方依赖，Python 3.10+）</li>
+<li>只读演示入口：<code>python app.py --readonly</code>（或设置 <code>READONLY=1</code>）</li>
+<li>浏览器访问 <code>http://127.0.0.1:8848/</code>（只读模式另有 <code>/demo</code>）</li>
+<li>自检回归：<code>python rag.py</code>（输出 23/23 通过）</li>
+</ol>
+
+<footer>
+本快照由 <code>src/tools/build_snapshot.py</code> 依据运行中的服务状态生成；页面为单文件自包含，无外部依赖，可离线打开。<br>
+世界银行数据按 CC BY 4.0 使用，署名格式：The World Bank: World Development Indicators；世界银行未参与、未背书本项目。
+</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{
+  "source": {
+    "name": "国家政务服务平台 · 商标公告查询服务（本服务由国家知识产权局提供）",
+    "url": "https://app.gjzwfw.gov.cn/jmopen/webapp/html5/sbggcxfw/index.html",
+    "scope_limit": "仅覆盖商标公告；不含已受理未公告申请；数据非实时，不具法律效力"
+  },
+  "results": [
+    {
+      "keyword": "证闻",
+      "queried_at": "2026-09-19T00:54:35+08:00",
+      "requests": [
+        {
+          "url": "https://app.gjzwfw.gov.cn/jimps/link.do",
+          "method": "POST",
+          "post_data": "param=%7B%22from%22%3A%221%22%2C%22key%22%3A%222f734b9954de4a03839f7ac35ca2ace7%22%2C%22requestTime%22%3A1789750439073%2C%22sign%22%3A%220862fbbf917ac922e3c31022d99c2cf0%22%2C%22raw%22%3A%7B%22tmName%22%3A%22%E8%AF%81%E9%97%BB%22%2C%22annNum%22%3A%22%22%2C%22regNum%22%3A%22%22%2C%22regName%22%3A%22%22%2C%22annType%22%3A%22%22%2C%22annDateBegin%22%3A%22%22%2C%22annDateEnd%22%3A%22%22%2C%22pageNo%22%3A1%2C%22pageSize%22%3A12%7D%7D",
+          "resource_type": "xhr"
+        },
+        {
+          "url": "https://app.gjzwfw.gov.cn/jimps/link.do",
+          "status": 200,
+          "method": "POST",
+          "post_data": "param=%7B%22from%22%3A%221%22%2C%22key%22%3A%222f734b9954de4a03839f7ac35ca2ace7%22%2C%22requestTime%22%3A1789750439073%2C%22sign%22%3A%220862fbbf917ac922e3c31022d99c2cf0%22%2C%22raw%22%3A%7B%22tmName%22%3A%22%E8%AF%81%E9%97%BB%22%2C%22annNum%22%3A%22%22%2C%22regNum%22%3A%22%22%2C%22regName%22%3A%22%22%2C%22annType%22%3A%22%22%2C%22annDateBegin%22%3A%22%22%2C%22annDateEnd%22%3A%22%22%2C%22pageNo%22%3A1%2C%22pageSize%22%3A12%7D%7D",
+          "resource_type": "xhr",
+          "body_head": "{\"reason\":\"wsgg.sbj.cnipa.gov.cn: unknown error\",\"error_code\":\"10000\"}"
+        }
+      ],
+      "table": [
+        [
+          "公告类型",
+          "公告期号",
+          "商标名称",
+          "注册号",
+          "公告日期",
+          "商标持有人名称",
+          "公告图样"
+        ]
+      ],
+      "row_count": 0,
+      "no_hit_markers": []
+    },
+    {
+      "keyword": "华为",
+      "queried_at": "2026-09-19T00:54:41+08:00",
+      "requests": [
+        {
+          "url": "https://app.gjzwfw.gov.cn/jimps/link.do",
+          "method": "POST",
+          "post_data": "param=%7B%22from%22%3A%221%22%2C%22key%22%3A%222f734b9954de4a03839f7ac35ca2ace7%22%2C%22requestTime%22%3A1789750475107%2C%22sign%22%3A%2236ff9668c574e18bacd811954b152144%22%2C%22raw%22%3A%7B%22tmName%22%3A%22%E5%8D%8E%E4%B8%BA%22%2C%22annNum%22%3A%22%22%2C%22regNum%22%3A%22%22%2C%22regName%22%3A%22%22%2C%22annType%22%3A%22%22%2C%22annDateBegin%22%3A%22%22%2C%22annDateEnd%22%3A%22%22%2C%22pageNo%22%3A1%2C%22pageSize%22%3A12%7D%7D",
+          "resource_type": "xhr"
+        },
+        {
+          "url": "https://app.gjzwfw.gov.cn/jimps/link.do",
+          "status": 200,
+          "method": "POST",
+          "post_data": "param=%7B%22from%22%3A%221%22%2C%22key%22%3A%222f734b9954de4a03839f7ac35ca2ace7%22%2C%22requestTime%22%3A1789750475107%2C%22sign%22%3A%2236ff9668c574e18bacd811954b152144%22%2C%22raw%22%3A%7B%22tmName%22%3A%22%E5%8D%8E%E4%B8%BA%22%2C%22annNum%22%3A%22%22%2C%22regNum%22%3A%22%22%2C%22regName%22%3A%22%22%2C%22annType%22%3A%22%22%2C%22annDateBegin%22%3A%22%22%2C%22annDateEnd%22%3A%22%22%2C%22pageNo%22%3A1%2C%22pageSize%22%3A12%7D%7D",
+          "resource_type": "xhr",
+          "body_head": "{\"reason\":\"wsgg.sbj.cnipa.gov.cn: unknown error\",\"error_code\":\"10000\"}"
+        }
+      ],
+      "table": [
+        [
+          "公告类型",
+          "公告期号",
+          "商标名称",
+          "注册号",
+          "公告日期",
+          "商标持有人名称",
+          "公告图样"
+        ]
+      ],
+      "row_count": 0,
+      "no_hit_markers": []
+    }
+  ]
+}

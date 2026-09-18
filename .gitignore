@@ -12,11 +12,6 @@ memory/
 .codebuddy/
 archive/
 
-# 参赛材料与提交包：默认**不公开**（提交前避免材料外流；如需公开，删掉下面这行即可）
-交付物/
-
 # 密钥与本地环境（任何情况下不得入库）
 .env
 *.key
-run-readonly.cmd
-run.cmd

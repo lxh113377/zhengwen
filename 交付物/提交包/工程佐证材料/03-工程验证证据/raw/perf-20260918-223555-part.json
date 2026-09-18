@@ -1,0 +1,1325 @@
+{
+  "meta": {
+    "generated_at": "2026-09-18 22:33:27",
+    "target_url": "http://127.0.0.1:8848/",
+    "browser": "Microsoft Edge (playwright channel=msedge)",
+    "gl_note": "headless 走 SwiftShader 软件光栅；headed 使用真实 GPU 与合成器",
+    "health": {
+      "ok": true,
+      "model_available": false,
+      "readonly": false,
+      "sessions_tracked": 0,
+      "refuse_threshold": 0.34,
+      "min_original_hits": 2
+    },
+    "health_stats": {
+      "topics": 7,
+      "sources": 32,
+      "evidence": 148,
+      "divergences": 4
+    },
+    "headless_control_fps": null,
+    "headless_unthrottled": false,
+    "fps_usage_rule": "本次为补测（未跑帧率），无帧率口径结论",
+    "perf_only": [
+      "HANG-ROUTE"
+    ]
+  },
+  "load_matrix": [
+    {
+      "scenario": "C3-desktop-1440-cold-fonts-HANG-ROUTE",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "dpr": 1,
+      "block_fonts": false,
+      "hang_mode": "route-pending",
+      "warm": false,
+      "hang_timeline": [
+        {
+          "t_wall_ms": 14,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 528,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 1040,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 1558,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 2072,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 2586,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 3099,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 3616,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 4129,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 4636,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 5138,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 5652,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 6155,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 6660,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 7165,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 7669,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 8173,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 8679,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 9182,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 9698,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 10201,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 10705,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 11209,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 11711,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 12226,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 12735,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 13242,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 13747,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 14249,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 14754,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 15269,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 15785,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 16288,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 16795,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 17300,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 17806,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 18308,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 18812,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 19321,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 19836,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 20351,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 20868,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 21370,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 21873,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 22390,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 22906,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 23421,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 23936,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 24453,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 24970,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 25486,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 26002,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 26507,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 27020,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 27522,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 28038,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 28553,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 29056,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 29572,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 30082,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 30586,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 31102,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 31615,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 32132,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 32646,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 33162,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 33678,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 34179,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 34692,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 35209,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 35713,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 36218,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 36723,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 37240,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 37757,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 38272,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 38786,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 39300,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 39818,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        }
+      ],
+      "load_state_error": "TimeoutError: Timeout 30000ms exceeded.",
+      "perf": {
+        "t0": 14.400000000372529,
+        "fcp": null,
+        "lcp": null,
+        "bootDone": null,
+        "sceneReady": null
+      },
+      "nav": {
+        "ttfb": 6.5,
+        "domContentLoaded": 0,
+        "load": 0,
+        "domInteractive": 0
+      },
+      "scene": {
+        "ok": false,
+        "reason": null,
+        "nodes": null
+      },
+      "canvas": {
+        "width": 300,
+        "height": 150,
+        "clientWidth": 1440,
+        "clientHeight": 900,
+        "display": "block",
+        "pixelRatio": 0.21
+      },
+      "story": {
+        "scrollHeight": 4500,
+        "panels": 5,
+        "firstHeading": "你说的每一句都能点回原文。",
+        "loadingClass": true,
+        "statSources": "—"
+      },
+      "resources": [
+        {
+          "name": "http://127.0.0.1:8848/web/css/main.css",
+          "type": "link",
+          "dur": 14.8,
+          "size": 20526,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/gsap.min.js",
+          "type": "script",
+          "dur": 17.1,
+          "size": 72514,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/three.min.js",
+          "type": "script",
+          "dur": 15.9,
+          "size": 670184,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/app.js",
+          "type": "script",
+          "dur": 17.6,
+          "size": 17744,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/scene.js",
+          "type": "script",
+          "dur": 16.9,
+          "size": 12539,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/ScrollTrigger.min.js",
+          "type": "script",
+          "dur": 16.8,
+          "size": 43680,
+          "thirdParty": false
+        }
+      ],
+      "request_failed": [],
+      "console_errors": [],
+      "elapsed_s": 72.83
+    },
+    {
+      "scenario": "D3-mobile-375-cold-fonts-HANG-ROUTE",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "dpr": 2,
+      "block_fonts": false,
+      "hang_mode": "route-pending",
+      "warm": false,
+      "hang_timeline": [
+        {
+          "t_wall_ms": 8,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 514,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 1025,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 1536,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 2049,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 2563,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 3077,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 3580,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 4093,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 4610,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 5126,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 5643,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 6145,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 6661,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 7166,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 7670,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 8175,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 8683,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 9197,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 9699,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 10202,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 10708,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 11225,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 11731,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 12247,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 12752,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 13256,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 13761,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 14264,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 14779,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 15297,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 15812,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 16328,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 16831,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 17344,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 17858,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 18374,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 18888,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 19392,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 19908,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 20414,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 20917,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 21424,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 21930,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 22434,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 22949,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 23467,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 23971,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 24487,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 24990,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 25493,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 25996,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 26498,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 27014,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 27528,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 28046,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 28560,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 29075,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 29592,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 30106,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 30618,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 31122,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 31637,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 32152,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 32656,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 33160,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 33677,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 34190,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 34706,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 35208,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 35724,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 36240,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 36754,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 37269,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 37786,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 38290,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 38807,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 39313,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        },
+        {
+          "t_wall_ms": 39815,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "h1": "你说的每一句都能点回"
+        }
+      ],
+      "load_state_error": "TimeoutError: Timeout 30000ms exceeded.",
+      "perf": {
+        "t0": 12.100000001490116,
+        "fcp": null,
+        "lcp": null,
+        "bootDone": null,
+        "sceneReady": null
+      },
+      "nav": {
+        "ttfb": 6.4,
+        "domContentLoaded": 0,
+        "load": 0,
+        "domInteractive": 0
+      },
+      "scene": {
+        "ok": false,
+        "reason": null,
+        "nodes": null
+      },
+      "canvas": {
+        "width": 300,
+        "height": 150,
+        "clientWidth": 375,
+        "clientHeight": 812,
+        "display": "block",
+        "pixelRatio": 0.8
+      },
+      "story": {
+        "scrollHeight": 3363,
+        "panels": 5,
+        "firstHeading": "你说的每一句都能点回原文。",
+        "loadingClass": true,
+        "statSources": "—"
+      },
+      "resources": [
+        {
+          "name": "http://127.0.0.1:8848/web/css/main.css",
+          "type": "link",
+          "dur": 7.7,
+          "size": 20526,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/gsap.min.js",
+          "type": "script",
+          "dur": 8.7,
+          "size": 72514,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/ScrollTrigger.min.js",
+          "type": "script",
+          "dur": 10,
+          "size": 43680,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/three.min.js",
+          "type": "script",
+          "dur": 9.3,
+          "size": 670184,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/scene.js",
+          "type": "script",
+          "dur": 10.1,
+          "size": 12539,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/app.js",
+          "type": "script",
+          "dur": 10,
+          "size": 17744,
+          "thirdParty": false
+        }
+      ],
+      "request_failed": [],
+      "console_errors": [],
+      "elapsed_s": 72.58
+    }
+  ],
+  "fps_runs": []
+}

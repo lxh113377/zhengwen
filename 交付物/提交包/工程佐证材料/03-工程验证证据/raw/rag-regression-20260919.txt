@@ -1,0 +1,70 @@
+语料：自建合成新闻语料 ＋ 世界银行开放数据（WDI）真实指标
+统计：{'topics': 7, 'sources': 32, 'evidence': 148, 'divergences': 4}
+拒答阈值=0.34  高区分度 IDF 阈值 P70=4.598
+
+[✅ PASS] pass   conf=0.464  「5号线开通后客流多少？」
+          · 14.963  ev-metro-02-p1
+          · 12.483  ev-metro-01-p2
+          ⚠ 分歧：5号线一期客流预期口径; 5号线开通成效评价
+[✅ PASS] pass   conf=0.509  「5号线开通首周有多少人坐？」
+          · 26.215  ev-metro-02-p1
+          · 21.103  ev-metro-01-p3
+          ⚠ 分歧：5号线一期客流预期口径; 5号线开通成效评价
+[✅ PASS] pass   conf=0.861  「加装电梯业主需要出多少钱？」
+          · 29.528  ev-lift-02-p3
+          · 26.976  ev-lift-01-p2
+[✅ PASS] pass   conf=0.458  「加装电梯为什么推不动？」
+          · 14.038  ev-lift-02-p3
+          · 13.747  ev-lift-02-p1
+          ⚠ 分歧：加装电梯流程压缩的实际效力
+[✅ PASS] pass   conf=0.520  「社区图书馆延时开放效果如何？」
+          · 31.069  ev-library-01-p1
+          · 29.113  ev-library-01-p2
+[✅ PASS] pass   conf=0.498  「5号线客流预测口径有没有矛盾？」
+          · 22.752  ev-metro-03-p2
+          · 20.372  ev-metro-03-p1
+          ⚠ 分歧：5号线一期客流预期口径
+[✅ PASS] pass   conf=0.456  「5号线一共几个站？」
+          · 13.630  ev-metro-01-p1
+          ·  8.504  ev-metro-01-p2
+          ⚠ 分歧：5号线开通成效评价
+[✅ PASS] pass   conf=0.521  「加装电梯的补贴标准是多少？」
+          · 31.271  ev-lift-01-p2
+          · 20.682  ev-lift-02-p3
+[✅ PASS] pass   conf=0.500  「2024 年中国城镇人口占总人口比重是多少？」
+          · 23.309  ev-wb-urban-chn-sp-urb-totl-in-zs-2021
+          · 23.309  ev-wb-urban-chn-sp-urb-totl-in-zs-2022
+          ⚠ 分歧：城镇人口占比：中国口径与全球口径不可直接比较
+[✅ PASS] pass   conf=0.509  「中国互联网使用人口占比是多少？」
+          · 26.157  ev-wb-digital-chn-it-net-user-zs-2021
+          · 26.157  ev-wb-digital-chn-it-net-user-zs-2022
+[✅ PASS] pass   conf=0.517  「中国可再生能源占能源消费的比重是多少？」
+          · 29.400  ev-wb-energy-chn-eg-fec-rnew-zs-2017
+          · 29.400  ev-wb-energy-chn-eg-fec-rnew-zs-2018
+[✅ PASS] pass   conf=0.503  「中国国际旅游入境人次是多少？」
+          · 24.187  ev-wb-culture-chn-st-int-arvl-2016
+          · 24.187  ev-wb-culture-chn-st-int-arvl-2017
+[✅ PASS] pass   conf=0.769  「城镇化率的中国口径和全球口径能直接比吗？」
+          · 14.504  ev-wb-urban-method-p1
+          ·  8.442  ev-wb-urban-wld-sp-urb-totl-2021
+          ⚠ 分歧：城镇人口占比：中国口径与全球口径不可直接比较
+[✅ PASS] refuse conf=0.000  「今天天气怎么样？」
+[✅ PASS] refuse conf=0.380  「量子计算机的退相干时间是多少？」
+          ·  6.179  ev-library-01-p1
+          ·  3.717  ev-metro-01-p4
+[✅ PASS] refuse conf=0.000  「请帮我写一首关于春天的诗」
+[✅ PASS] refuse conf=0.000  「怎么申请房贷利率优惠？」
+[✅ PASS] refuse conf=0.000  「股票今天涨了吗」
+[✅ PASS] refuse conf=0.000  「红烧肉怎么做才好吃」
+[✅ PASS] refuse conf=0.000  「帮我写一段 Python 爬虫代码」
+[✅ PASS] refuse conf=0.000  「（空查询）」
+[✅ PASS] refuse conf=0.784  「苹果手机最新款多少钱」
+          · 16.055  ev-lift-01-p2
+          · 10.351  ev-lift-02-p3
+[✅ PASS] refuse conf=0.358  「这个电梯的股票代码是多少」
+          ·  4.904  ev-lift-01-p2
+          ·  4.367  ev-lift-01-p1
+
+==============================================================
+回归结果：23/23 通过；0 失败
+==============================================================

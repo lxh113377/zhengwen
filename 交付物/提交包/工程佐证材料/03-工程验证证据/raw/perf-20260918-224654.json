@@ -1,0 +1,1628 @@
+{
+  "meta": {
+    "generated_at": "2026-09-18 22:42:49",
+    "target_url": "http://127.0.0.1:8848/",
+    "browser": "Microsoft Edge (playwright channel=msedge)",
+    "gl_note": "headless 走 SwiftShader 软件光栅；headed 使用真实 GPU 与合成器",
+    "health": {
+      "ok": true,
+      "model_available": false,
+      "readonly": false,
+      "sessions_tracked": 0,
+      "refuse_threshold": 0.34,
+      "min_original_hits": 2
+    },
+    "health_stats": {
+      "topics": 7,
+      "sources": 32,
+      "evidence": 148,
+      "divergences": 4
+    },
+    "headless_control_fps": 294.7,
+    "headless_unthrottled": true,
+    "fps_usage_rule": "headless 帧率仅作「每帧开销上限」证据；写入材料的滚动帧率必须取 headed-vsync 口径",
+    "perf_only": null
+  },
+  "load_matrix": [
+    {
+      "scenario": "A-desktop-1440-cold-fonts-on",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "dpr": 1,
+      "block_fonts": false,
+      "hang_mode": "none",
+      "warm": false,
+      "perf": {
+        "t0": 11.400000000372529,
+        "fcp": 256,
+        "lcp": 1400,
+        "bootDone": 153.30000000074506,
+        "sceneReady": 153.30000000074506
+      },
+      "nav": {
+        "ttfb": 4.9,
+        "domContentLoaded": 102.8,
+        "load": 1391.7,
+        "domInteractive": 98
+      },
+      "scene": {
+        "ok": true,
+        "reason": "运行中",
+        "nodes": 191
+      },
+      "canvas": {
+        "width": 1440,
+        "height": 900,
+        "clientWidth": 1440,
+        "clientHeight": 900,
+        "display": "block",
+        "pixelRatio": 1
+      },
+      "story": {
+        "scrollHeight": 6616,
+        "panels": 5,
+        "firstHeading": "你说的每一句都能点回原文。",
+        "loadingClass": false,
+        "statSources": "32"
+      },
+      "resources": [
+        {
+          "name": "http://127.0.0.1:8848/web/css/main.css",
+          "type": "link",
+          "dur": 4.8,
+          "size": 20526,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/gsap.min.js",
+          "type": "script",
+          "dur": 7.1,
+          "size": 72514,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/three.min.js",
+          "type": "script",
+          "dur": 7.6,
+          "size": 670184,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/scene.js",
+          "type": "script",
+          "dur": 6.9,
+          "size": 13531,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/app.js",
+          "type": "script",
+          "dur": 7.1,
+          "size": 17744,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/ScrollTrigger.min.js",
+          "type": "script",
+          "dur": 6.5,
+          "size": 43680,
+          "thirdParty": false
+        },
+        {
+          "name": "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,800&family=Roboto:wght@300;400;500;700&display=swap",
+          "type": "link",
+          "dur": 1366.7,
+          "size": 2183,
+          "thirdParty": true
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/health",
+          "type": "fetch",
+          "dur": 2,
+          "size": 1332,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/graph",
+          "type": "fetch",
+          "dur": 2,
+          "size": 69157,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/favicon.ico",
+          "type": "other",
+          "dur": 1.3,
+          "size": 341,
+          "thirdParty": false
+        }
+      ],
+      "request_failed": [],
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "elapsed_s": 4.23
+    },
+    {
+      "scenario": "B-mobile-375-cold-fonts-on",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "dpr": 2,
+      "block_fonts": false,
+      "hang_mode": "none",
+      "warm": false,
+      "perf": {
+        "t0": 9.900000000372529,
+        "fcp": 296,
+        "lcp": 1832,
+        "bootDone": 166.09999999962747,
+        "sceneReady": 166.09999999962747
+      },
+      "nav": {
+        "ttfb": 4.6,
+        "domContentLoaded": 109.2,
+        "load": 1819.9,
+        "domInteractive": 104.8
+      },
+      "scene": {
+        "ok": true,
+        "reason": "运行中",
+        "nodes": 191
+      },
+      "canvas": {
+        "width": 750,
+        "height": 1624,
+        "clientWidth": 375,
+        "clientHeight": 812,
+        "display": "block",
+        "pixelRatio": 2
+      },
+      "story": {
+        "scrollHeight": 6637,
+        "panels": 5,
+        "firstHeading": "你说的每一句都能点回原文。",
+        "loadingClass": false,
+        "statSources": "32"
+      },
+      "resources": [
+        {
+          "name": "http://127.0.0.1:8848/web/css/main.css",
+          "type": "link",
+          "dur": 4.1,
+          "size": 20526,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/three.min.js",
+          "type": "script",
+          "dur": 6.7,
+          "size": 670184,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/scene.js",
+          "type": "script",
+          "dur": 6.2,
+          "size": 13531,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/app.js",
+          "type": "script",
+          "dur": 6.3,
+          "size": 17744,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/ScrollTrigger.min.js",
+          "type": "script",
+          "dur": 6.1,
+          "size": 43680,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/gsap.min.js",
+          "type": "script",
+          "dur": 5.9,
+          "size": 72514,
+          "thirdParty": false
+        },
+        {
+          "name": "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,800&family=Roboto:wght@300;400;500;700&display=swap",
+          "type": "link",
+          "dur": 1795.7,
+          "size": 2183,
+          "thirdParty": true
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/health",
+          "type": "fetch",
+          "dur": 1.9,
+          "size": 1332,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/graph",
+          "type": "fetch",
+          "dur": 1.9,
+          "size": 69157,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/favicon.ico",
+          "type": "other",
+          "dur": 1.6,
+          "size": 341,
+          "thirdParty": false
+        }
+      ],
+      "request_failed": [],
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "elapsed_s": 4.51
+    },
+    {
+      "scenario": "C-desktop-1440-cold-fonts-blocked",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "dpr": 1,
+      "block_fonts": true,
+      "hang_mode": "none",
+      "warm": false,
+      "perf": {
+        "t0": 12.699999999254942,
+        "fcp": 240,
+        "lcp": 240,
+        "bootDone": 258,
+        "sceneReady": 258
+      },
+      "nav": {
+        "ttfb": 6.8,
+        "domContentLoaded": 105.7,
+        "load": 106.9,
+        "domInteractive": 101.5
+      },
+      "scene": {
+        "ok": true,
+        "reason": "运行中",
+        "nodes": 191
+      },
+      "canvas": {
+        "width": 1440,
+        "height": 900,
+        "clientWidth": 1440,
+        "clientHeight": 900,
+        "display": "block",
+        "pixelRatio": 1
+      },
+      "story": {
+        "scrollHeight": 6617,
+        "panels": 5,
+        "firstHeading": "你说的每一句都能点回原文。",
+        "loadingClass": false,
+        "statSources": "32"
+      },
+      "resources": [
+        {
+          "name": "http://127.0.0.1:8848/web/css/main.css",
+          "type": "link",
+          "dur": 6.9,
+          "size": 20526,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/gsap.min.js",
+          "type": "script",
+          "dur": 8.1,
+          "size": 72514,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/three.min.js",
+          "type": "script",
+          "dur": 8.6,
+          "size": 670184,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/app.js",
+          "type": "script",
+          "dur": 9.4,
+          "size": 17744,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/scene.js",
+          "type": "script",
+          "dur": 9.4,
+          "size": 13531,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/ScrollTrigger.min.js",
+          "type": "script",
+          "dur": 9.5,
+          "size": 43680,
+          "thirdParty": false
+        },
+        {
+          "name": "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,800&family=Roboto:wght@300;400;500;700&display=swap",
+          "type": "link",
+          "dur": 4.6,
+          "size": 0,
+          "thirdParty": true
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/health",
+          "type": "fetch",
+          "dur": 5.3,
+          "size": 1332,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/graph",
+          "type": "fetch",
+          "dur": 5.5,
+          "size": 69157,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/favicon.ico",
+          "type": "other",
+          "dur": 1,
+          "size": 0,
+          "thirdParty": false
+        }
+      ],
+      "request_failed": [
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,800&family=Roboto:wght@300;400;500;700&display=swap",
+          "err": "net::ERR_FAILED"
+        }
+      ],
+      "console_errors": [
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "elapsed_s": 2.91
+    },
+    {
+      "scenario": "D-mobile-375-cold-fonts-blocked",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "dpr": 2,
+      "block_fonts": true,
+      "hang_mode": "none",
+      "warm": false,
+      "perf": {
+        "t0": 12.099999999627471,
+        "fcp": 292,
+        "lcp": 292,
+        "bootDone": 167.19999999925494,
+        "sceneReady": 167.19999999925494
+      },
+      "nav": {
+        "ttfb": 6,
+        "domContentLoaded": 108.5,
+        "load": 109.7,
+        "domInteractive": 104.4
+      },
+      "scene": {
+        "ok": true,
+        "reason": "运行中",
+        "nodes": 191
+      },
+      "canvas": {
+        "width": 750,
+        "height": 1624,
+        "clientWidth": 375,
+        "clientHeight": 812,
+        "display": "block",
+        "pixelRatio": 2
+      },
+      "story": {
+        "scrollHeight": 6640,
+        "panels": 5,
+        "firstHeading": "你说的每一句都能点回原文。",
+        "loadingClass": false,
+        "statSources": "32"
+      },
+      "resources": [
+        {
+          "name": "http://127.0.0.1:8848/web/css/main.css",
+          "type": "link",
+          "dur": 7,
+          "size": 20526,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/three.min.js",
+          "type": "script",
+          "dur": 8,
+          "size": 670184,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/scene.js",
+          "type": "script",
+          "dur": 9.3,
+          "size": 13531,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/ScrollTrigger.min.js",
+          "type": "script",
+          "dur": 9.3,
+          "size": 43680,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/gsap.min.js",
+          "type": "script",
+          "dur": 9,
+          "size": 72514,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/app.js",
+          "type": "script",
+          "dur": 9.2,
+          "size": 17744,
+          "thirdParty": false
+        },
+        {
+          "name": "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,800&family=Roboto:wght@300;400;500;700&display=swap",
+          "type": "link",
+          "dur": 4.1,
+          "size": 0,
+          "thirdParty": true
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/health",
+          "type": "fetch",
+          "dur": 4.8,
+          "size": 1332,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/graph",
+          "type": "fetch",
+          "dur": 4.9,
+          "size": 69157,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/favicon.ico",
+          "type": "other",
+          "dur": 0.8,
+          "size": 0,
+          "thirdParty": false
+        }
+      ],
+      "request_failed": [
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,800&family=Roboto:wght@300;400;500;700&display=swap",
+          "err": "net::ERR_FAILED"
+        }
+      ],
+      "console_errors": [
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "elapsed_s": 2.79
+    },
+    {
+      "scenario": "C2-desktop-1440-cold-fonts-HANG-RESOLVER",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "dpr": 1,
+      "block_fonts": false,
+      "hang_mode": "resolver",
+      "warm": false,
+      "hang_timeline": [
+        {
+          "t_wall_ms": 6,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "panels": 5,
+          "h1_in_dom": true
+        },
+        {
+          "t_wall_ms": 519,
+          "fcp": 200,
+          "boot": 215.5,
+          "loading": false,
+          "panels": 5,
+          "h1_in_dom": true
+        }
+      ],
+      "perf": {
+        "t0": 11.200000001117587,
+        "fcp": 200,
+        "lcp": 1464,
+        "bootDone": 215.5,
+        "sceneReady": 215.5
+      },
+      "nav": {
+        "ttfb": 5,
+        "domContentLoaded": 110.4,
+        "load": 1454.6,
+        "domInteractive": 106.3
+      },
+      "scene": {
+        "ok": true,
+        "reason": "运行中",
+        "nodes": 191
+      },
+      "canvas": {
+        "width": 1440,
+        "height": 900,
+        "clientWidth": 1440,
+        "clientHeight": 900,
+        "display": "block",
+        "pixelRatio": 1
+      },
+      "story": {
+        "scrollHeight": 6616,
+        "panels": 5,
+        "firstHeading": "你说的每一句都能点回原文。",
+        "loadingClass": false,
+        "statSources": "32"
+      },
+      "resources": [
+        {
+          "name": "http://127.0.0.1:8848/web/css/main.css",
+          "type": "link",
+          "dur": 4.3,
+          "size": 20526,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/ScrollTrigger.min.js",
+          "type": "script",
+          "dur": 6.5,
+          "size": 43680,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/gsap.min.js",
+          "type": "script",
+          "dur": 6.2,
+          "size": 72514,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/three.min.js",
+          "type": "script",
+          "dur": 7,
+          "size": 670184,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/scene.js",
+          "type": "script",
+          "dur": 6.4,
+          "size": 13531,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/app.js",
+          "type": "script",
+          "dur": 6.5,
+          "size": 17744,
+          "thirdParty": false
+        },
+        {
+          "name": "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,800&family=Roboto:wght@300;400;500;700&display=swap",
+          "type": "link",
+          "dur": 1430.4,
+          "size": 2183,
+          "thirdParty": true
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/health",
+          "type": "fetch",
+          "dur": 2.2,
+          "size": 1332,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/graph",
+          "type": "fetch",
+          "dur": 2.2,
+          "size": 69157,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/favicon.ico",
+          "type": "other",
+          "dur": 1.4,
+          "size": 341,
+          "thirdParty": false
+        }
+      ],
+      "request_failed": [],
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "elapsed_s": 3.73
+    },
+    {
+      "scenario": "D2-mobile-375-cold-fonts-HANG-RESOLVER",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "dpr": 2,
+      "block_fonts": false,
+      "hang_mode": "resolver",
+      "warm": false,
+      "hang_timeline": [
+        {
+          "t_wall_ms": 9,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "panels": 5,
+          "h1_in_dom": true
+        },
+        {
+          "t_wall_ms": 519,
+          "fcp": 284,
+          "boot": 164.7000000011176,
+          "loading": false,
+          "panels": 5,
+          "h1_in_dom": true
+        }
+      ],
+      "perf": {
+        "t0": 10.5,
+        "fcp": 284,
+        "lcp": 1328,
+        "bootDone": 164.7000000011176,
+        "sceneReady": 164.7000000011176
+      },
+      "nav": {
+        "ttfb": 4.3,
+        "domContentLoaded": 110.4,
+        "load": 1311.3,
+        "domInteractive": 106
+      },
+      "scene": {
+        "ok": true,
+        "reason": "运行中",
+        "nodes": 191
+      },
+      "canvas": {
+        "width": 750,
+        "height": 1624,
+        "clientWidth": 375,
+        "clientHeight": 812,
+        "display": "block",
+        "pixelRatio": 2
+      },
+      "story": {
+        "scrollHeight": 6637,
+        "panels": 5,
+        "firstHeading": "你说的每一句都能点回原文。",
+        "loadingClass": false,
+        "statSources": "32"
+      },
+      "resources": [
+        {
+          "name": "http://127.0.0.1:8848/web/css/main.css",
+          "type": "link",
+          "dur": 5.6,
+          "size": 20526,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/scene.js",
+          "type": "script",
+          "dur": 8.1,
+          "size": 13531,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/ScrollTrigger.min.js",
+          "type": "script",
+          "dur": 8.2,
+          "size": 43680,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/gsap.min.js",
+          "type": "script",
+          "dur": 8.3,
+          "size": 72514,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/three.min.js",
+          "type": "script",
+          "dur": 9.1,
+          "size": 670184,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/app.js",
+          "type": "script",
+          "dur": 8.5,
+          "size": 17744,
+          "thirdParty": false
+        },
+        {
+          "name": "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,800&family=Roboto:wght@300;400;500;700&display=swap",
+          "type": "link",
+          "dur": 1287.2,
+          "size": 2183,
+          "thirdParty": true
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/health",
+          "type": "fetch",
+          "dur": 1.8,
+          "size": 1332,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/graph",
+          "type": "fetch",
+          "dur": 1.9,
+          "size": 69157,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/favicon.ico",
+          "type": "other",
+          "dur": 1.2,
+          "size": 341,
+          "thirdParty": false
+        }
+      ],
+      "request_failed": [],
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "elapsed_s": 3.63
+    },
+    {
+      "scenario": "C3-desktop-1440-cold-fonts-HANG-ROUTE",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "dpr": 1,
+      "block_fonts": false,
+      "hang_mode": "route-pending",
+      "warm": false,
+      "hang_timeline": [
+        {
+          "t_wall_ms": 8,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "panels": 5,
+          "h1_in_dom": true
+        },
+        {
+          "t_wall_ms": 522,
+          "fcp": 272,
+          "boot": 171,
+          "loading": false,
+          "panels": 5,
+          "h1_in_dom": true
+        }
+      ],
+      "load_state_error": "TimeoutError: Timeout 30000ms exceeded.",
+      "perf": {
+        "t0": 12.200000001117587,
+        "fcp": 272,
+        "lcp": 272,
+        "bootDone": 171,
+        "sceneReady": 171
+      },
+      "nav": {
+        "ttfb": 5.6,
+        "domContentLoaded": 120,
+        "load": 0,
+        "domInteractive": 115.8
+      },
+      "scene": {
+        "ok": true,
+        "reason": "运行中",
+        "nodes": 191
+      },
+      "canvas": {
+        "width": 1440,
+        "height": 900,
+        "clientWidth": 1440,
+        "clientHeight": 900,
+        "display": "block",
+        "pixelRatio": 1
+      },
+      "story": {
+        "scrollHeight": 6617,
+        "panels": 5,
+        "firstHeading": "你说的每一句都能点回原文。",
+        "loadingClass": false,
+        "statSources": "32"
+      },
+      "resources": [
+        {
+          "name": "http://127.0.0.1:8848/web/css/main.css",
+          "type": "link",
+          "dur": 7.9,
+          "size": 20526,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/ScrollTrigger.min.js",
+          "type": "script",
+          "dur": 9.2,
+          "size": 43680,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/gsap.min.js",
+          "type": "script",
+          "dur": 9.3,
+          "size": 72514,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/three.min.js",
+          "type": "script",
+          "dur": 8.5,
+          "size": 670184,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/scene.js",
+          "type": "script",
+          "dur": 9.5,
+          "size": 13531,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/app.js",
+          "type": "script",
+          "dur": 9.4,
+          "size": 17744,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/health",
+          "type": "fetch",
+          "dur": 3.7,
+          "size": 1332,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/graph",
+          "type": "fetch",
+          "dur": 3.8,
+          "size": 69157,
+          "thirdParty": false
+        }
+      ],
+      "request_failed": [],
+      "console_errors": [],
+      "elapsed_s": 32.94
+    },
+    {
+      "scenario": "D3-mobile-375-cold-fonts-HANG-ROUTE",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "dpr": 2,
+      "block_fonts": false,
+      "hang_mode": "route-pending",
+      "warm": false,
+      "hang_timeline": [
+        {
+          "t_wall_ms": 8,
+          "fcp": null,
+          "boot": null,
+          "loading": true,
+          "panels": 5,
+          "h1_in_dom": true
+        },
+        {
+          "t_wall_ms": 513,
+          "fcp": 288,
+          "boot": 175.2000000011176,
+          "loading": false,
+          "panels": 5,
+          "h1_in_dom": true
+        }
+      ],
+      "load_state_error": "TimeoutError: Timeout 30000ms exceeded.",
+      "perf": {
+        "t0": 12.5,
+        "fcp": 288,
+        "lcp": 288,
+        "bootDone": 175.2000000011176,
+        "sceneReady": 175.2000000011176
+      },
+      "nav": {
+        "ttfb": 5.7,
+        "domContentLoaded": 119.5,
+        "load": 0,
+        "domInteractive": 115.3
+      },
+      "scene": {
+        "ok": true,
+        "reason": "运行中",
+        "nodes": 191
+      },
+      "canvas": {
+        "width": 750,
+        "height": 1624,
+        "clientWidth": 375,
+        "clientHeight": 812,
+        "display": "block",
+        "pixelRatio": 2
+      },
+      "story": {
+        "scrollHeight": 6640,
+        "panels": 5,
+        "firstHeading": "你说的每一句都能点回原文。",
+        "loadingClass": false,
+        "statSources": "32"
+      },
+      "resources": [
+        {
+          "name": "http://127.0.0.1:8848/web/css/main.css",
+          "type": "link",
+          "dur": 7.4,
+          "size": 20526,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/ScrollTrigger.min.js",
+          "type": "script",
+          "dur": 9.2,
+          "size": 43680,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/gsap.min.js",
+          "type": "script",
+          "dur": 8,
+          "size": 72514,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/three.min.js",
+          "type": "script",
+          "dur": 8.5,
+          "size": 670184,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/scene.js",
+          "type": "script",
+          "dur": 9.3,
+          "size": 13531,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/app.js",
+          "type": "script",
+          "dur": 9.3,
+          "size": 17744,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/health",
+          "type": "fetch",
+          "dur": 4.2,
+          "size": 1332,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/graph",
+          "type": "fetch",
+          "dur": 4.3,
+          "size": 69157,
+          "thirdParty": false
+        }
+      ],
+      "request_failed": [],
+      "console_errors": [],
+      "elapsed_s": 32.84
+    },
+    {
+      "scenario": "E-desktop-1440-warm-fonts-on",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "dpr": 1,
+      "block_fonts": false,
+      "hang_mode": "none",
+      "warm": true,
+      "perf": {
+        "t0": 8.400000000372529,
+        "fcp": 20,
+        "lcp": 20,
+        "bootDone": 41.40000000037253,
+        "sceneReady": 41.40000000037253
+      },
+      "nav": {
+        "ttfb": 2.1,
+        "domContentLoaded": 26.7,
+        "load": 27.2,
+        "domInteractive": 25.3
+      },
+      "scene": {
+        "ok": true,
+        "reason": "运行中",
+        "nodes": 191
+      },
+      "canvas": {
+        "width": 1440,
+        "height": 900,
+        "clientWidth": 1440,
+        "clientHeight": 900,
+        "display": "block",
+        "pixelRatio": 1
+      },
+      "story": {
+        "scrollHeight": 6616,
+        "panels": 5,
+        "firstHeading": "你说的每一句都能点回原文。",
+        "loadingClass": false,
+        "statSources": "32"
+      },
+      "resources": [
+        {
+          "name": "http://127.0.0.1:8848/web/css/main.css",
+          "type": "link",
+          "dur": 2.4,
+          "size": 20526,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/scene.js",
+          "type": "script",
+          "dur": 4.2,
+          "size": 13531,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/app.js",
+          "type": "script",
+          "dur": 4.5,
+          "size": 17744,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/ScrollTrigger.min.js",
+          "type": "script",
+          "dur": 4.3,
+          "size": 43680,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/gsap.min.js",
+          "type": "script",
+          "dur": 4.1,
+          "size": 72514,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/three.min.js",
+          "type": "script",
+          "dur": 4.8,
+          "size": 670184,
+          "thirdParty": false
+        },
+        {
+          "name": "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,800&family=Roboto:wght@300;400;500;700&display=swap",
+          "type": "link",
+          "dur": 0,
+          "size": 0,
+          "thirdParty": true
+        },
+        {
+          "name": "https://fonts.gstatic.com/s/newsreader/v26/cY9AfjOCX1hbuyalUrK4397yjA.woff2",
+          "type": "css",
+          "dur": 0,
+          "size": 0,
+          "thirdParty": true
+        },
+        {
+          "name": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+          "type": "css",
+          "dur": 0,
+          "size": 0,
+          "thirdParty": true
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/health",
+          "type": "fetch",
+          "dur": 1.7,
+          "size": 1332,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/graph",
+          "type": "fetch",
+          "dur": 1.8,
+          "size": 69157,
+          "thirdParty": false
+        }
+      ],
+      "request_failed": [],
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "elapsed_s": 5.8
+    },
+    {
+      "scenario": "F-desktop-1440-reduced-motion",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "dpr": 1,
+      "block_fonts": false,
+      "hang_mode": "none",
+      "warm": false,
+      "perf": {
+        "t0": 10.099999999627471,
+        "fcp": 228,
+        "lcp": 1168,
+        "bootDone": 139.7999999988824,
+        "sceneReady": 139.7999999988824
+      },
+      "nav": {
+        "ttfb": 4.4,
+        "domContentLoaded": 99.8,
+        "load": 1155.8,
+        "domInteractive": 95.6
+      },
+      "scene": {
+        "ok": false,
+        "reason": "用户已开启「减少动效」→ 使用静态版面",
+        "nodes": null
+      },
+      "canvas": {
+        "width": 300,
+        "height": 150,
+        "clientWidth": 0,
+        "clientHeight": 0,
+        "display": "none",
+        "pixelRatio": null
+      },
+      "story": {
+        "scrollHeight": 6616,
+        "panels": 5,
+        "firstHeading": "你说的每一句都能点回原文。",
+        "loadingClass": false,
+        "statSources": "32"
+      },
+      "resources": [
+        {
+          "name": "http://127.0.0.1:8848/web/css/main.css",
+          "type": "link",
+          "dur": 4.9,
+          "size": 20526,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/three.min.js",
+          "type": "script",
+          "dur": 8.1,
+          "size": 670184,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/gsap.min.js",
+          "type": "script",
+          "dur": 30,
+          "size": 72514,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/scene.js",
+          "type": "script",
+          "dur": 7.4,
+          "size": 13531,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/vendor/ScrollTrigger.min.js",
+          "type": "script",
+          "dur": 7.3,
+          "size": 43680,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/web/js/app.js",
+          "type": "script",
+          "dur": 7.4,
+          "size": 17744,
+          "thirdParty": false
+        },
+        {
+          "name": "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,800&family=Roboto:wght@300;400;500;700&display=swap",
+          "type": "link",
+          "dur": 1131.9,
+          "size": 2183,
+          "thirdParty": true
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/health",
+          "type": "fetch",
+          "dur": 1.7,
+          "size": 1332,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/api/graph",
+          "type": "fetch",
+          "dur": 1.7,
+          "size": 69157,
+          "thirdParty": false
+        },
+        {
+          "name": "http://127.0.0.1:8848/favicon.ico",
+          "type": "other",
+          "dur": 1.5,
+          "size": 341,
+          "thirdParty": false
+        }
+      ],
+      "request_failed": [],
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "elapsed_s": 3.95
+    }
+  ],
+  "fps_runs": [
+    {
+      "mode": "headless-unthrottled",
+      "dpr": 1,
+      "throttle_rate": null,
+      "control": {
+        "frames": 1167,
+        "span_ms": 3957.2,
+        "avg_fps": 294.7,
+        "p50_fps": 303.0,
+        "p5_fps": 294.1,
+        "min_fps": 13.6,
+        "avg_frame_ms": 3.4,
+        "max_frame_ms": 73.3,
+        "below_30_ratio": 0.0009,
+        "below_26_ratio": 0.0009,
+        "valid": true
+      },
+      "control_interpretation": "空白页基线 295 fps ⇒ rAF 未受 vsync 约束（无头模式），帧率不可当显示帧率",
+      "scene": {
+        "ok": true,
+        "reason": "运行中",
+        "nodes": 191
+      },
+      "canvas_before": {
+        "width": 1440,
+        "height": 900,
+        "clientWidth": 1440,
+        "clientHeight": 900,
+        "display": "block",
+        "pixelRatio": 1
+      },
+      "scroll": {
+        "frames": 2101,
+        "span_ms": 7000.0,
+        "avg_fps": 300.0,
+        "p50_fps": 303.0,
+        "p5_fps": 285.7,
+        "min_fps": 270.3,
+        "avg_frame_ms": 3.3,
+        "max_frame_ms": 3.7,
+        "below_30_ratio": 0.0,
+        "below_26_ratio": 0.0,
+        "valid": true,
+        "interpretation": "unthrottled（无 vsync 约束，非显示帧率）：测得 300 fps ⇒ 单帧开销 ≤3.33 ms，可作为 60Hz 16.7ms 预算下的余量证据"
+      },
+      "canvas_after": {
+        "width": 1440,
+        "height": 900,
+        "clientWidth": 1440,
+        "clientHeight": 900,
+        "display": "block",
+        "pixelRatio": 1
+      },
+      "pixel_ratio_change": {
+        "before": 1,
+        "after": 1
+      },
+      "adaptive_downscale_triggered": false,
+      "elapsed_s": 15.3
+    },
+    {
+      "mode": "headless-unthrottled",
+      "dpr": 2,
+      "throttle_rate": 8,
+      "control": {
+        "frames": 1167,
+        "span_ms": 3958.4,
+        "avg_fps": 294.6,
+        "p50_fps": 303.0,
+        "p5_fps": 294.1,
+        "min_fps": 13.1,
+        "avg_frame_ms": 3.4,
+        "max_frame_ms": 76.6,
+        "below_30_ratio": 0.0009,
+        "below_26_ratio": 0.0009,
+        "valid": true
+      },
+      "control_interpretation": "空白页基线 295 fps ⇒ rAF 未受 vsync 约束（无头模式），帧率不可当显示帧率",
+      "scene": {
+        "ok": true,
+        "reason": "运行中",
+        "nodes": 191
+      },
+      "canvas_before": {
+        "width": 2880,
+        "height": 1800,
+        "clientWidth": 1440,
+        "clientHeight": 900,
+        "display": "block",
+        "pixelRatio": 2
+      },
+      "cpu_throttle": "applied x8",
+      "stressed_scroll": {
+        "frames": 2394,
+        "span_ms": 8006.6,
+        "avg_fps": 298.9,
+        "p50_fps": 303.0,
+        "p5_fps": 294.1,
+        "min_fps": 147.1,
+        "avg_frame_ms": 3.3,
+        "max_frame_ms": 6.8,
+        "below_30_ratio": 0.0,
+        "below_26_ratio": 0.0,
+        "valid": true
+      },
+      "canvas_after": {
+        "width": 2880,
+        "height": 1800,
+        "clientWidth": 1440,
+        "clientHeight": 900,
+        "display": "block",
+        "pixelRatio": 2
+      },
+      "pixel_ratio_change": {
+        "before": 2,
+        "after": 2
+      },
+      "adaptive_downscale_triggered": false,
+      "elapsed_s": 16.94
+    },
+    {
+      "mode": "headless-unthrottled",
+      "dpr": 2,
+      "throttle_rate": 20,
+      "control": {
+        "frames": 1165,
+        "span_ms": 3953.9,
+        "avg_fps": 294.4,
+        "p50_fps": 303.0,
+        "p5_fps": 285.7,
+        "min_fps": 13.1,
+        "avg_frame_ms": 3.4,
+        "max_frame_ms": 76.5,
+        "below_30_ratio": 0.0009,
+        "below_26_ratio": 0.0009,
+        "valid": true
+      },
+      "control_interpretation": "空白页基线 294 fps ⇒ rAF 未受 vsync 约束（无头模式），帧率不可当显示帧率",
+      "scene": {
+        "ok": true,
+        "reason": "运行中",
+        "nodes": 191
+      },
+      "canvas_before": {
+        "width": 2880,
+        "height": 1800,
+        "clientWidth": 1440,
+        "clientHeight": 900,
+        "display": "block",
+        "pixelRatio": 2
+      },
+      "cpu_throttle": "applied x20",
+      "stressed_scroll": {
+        "frames": 486,
+        "span_ms": 8049.8,
+        "avg_fps": 60.2,
+        "p50_fps": 59.9,
+        "p5_fps": 49.5,
+        "min_fps": 30.1,
+        "avg_frame_ms": 16.6,
+        "max_frame_ms": 33.2,
+        "below_30_ratio": 0.0,
+        "below_26_ratio": 0.0,
+        "valid": true
+      },
+      "canvas_after": {
+        "width": 2880,
+        "height": 1800,
+        "clientWidth": 1440,
+        "clientHeight": 900,
+        "display": "block",
+        "pixelRatio": 2
+      },
+      "pixel_ratio_change": {
+        "before": 2,
+        "after": 2
+      },
+      "adaptive_downscale_triggered": false,
+      "elapsed_s": 16.88
+    },
+    {
+      "mode": "headless-unthrottled",
+      "dpr": 2,
+      "throttle_rate": 100,
+      "control": {
+        "frames": 1168,
+        "span_ms": 3963.5,
+        "avg_fps": 294.4,
+        "p50_fps": 303.0,
+        "p5_fps": 285.7,
+        "min_fps": 13.1,
+        "avg_frame_ms": 3.4,
+        "max_frame_ms": 76.6,
+        "below_30_ratio": 0.0009,
+        "below_26_ratio": 0.0009,
+        "valid": true
+      },
+      "control_interpretation": "空白页基线 294 fps ⇒ rAF 未受 vsync 约束（无头模式），帧率不可当显示帧率",
+      "scene": {
+        "ok": true,
+        "reason": "运行中",
+        "nodes": 191
+      },
+      "canvas_before": {
+        "width": 2880,
+        "height": 1800,
+        "clientWidth": 1440,
+        "clientHeight": 900,
+        "display": "block",
+        "pixelRatio": 2
+      },
+      "cpu_throttle": "applied x100",
+      "stressed_scroll": {
+        "frames": 6,
+        "span_ms": 32156.6,
+        "avg_fps": 0.2,
+        "p50_fps": 0.1,
+        "p5_fps": 0.1,
+        "min_fps": 0.1,
+        "avg_frame_ms": 6431.3,
+        "max_frame_ms": 8790.0,
+        "below_30_ratio": 1.0,
+        "below_26_ratio": 1.0,
+        "valid": true
+      },
+      "canvas_after": {
+        "width": 1440,
+        "height": 900,
+        "clientWidth": 1440,
+        "clientHeight": 900,
+        "display": "block",
+        "pixelRatio": 1
+      },
+      "pixel_ratio_change": {
+        "before": 2,
+        "after": 1
+      },
+      "adaptive_downscale_triggered": true,
+      "elapsed_s": 76.63
+    },
+    {
+      "mode": "headed-vsync",
+      "dpr": 1,
+      "throttle_rate": null,
+      "control": {
+        "frames": 1162,
+        "span_ms": 3956.3,
+        "avg_fps": 293.5,
+        "p50_fps": 303.0,
+        "p5_fps": 285.7,
+        "min_fps": 11.1,
+        "avg_frame_ms": 3.4,
+        "max_frame_ms": 90.0,
+        "below_30_ratio": 0.0009,
+        "below_26_ratio": 0.0009,
+        "valid": true
+      },
+      "control_interpretation": "空白页基线 294 fps ⇒ rAF 未受 vsync 约束（无头模式），帧率不可当显示帧率",
+      "scene": {
+        "ok": true,
+        "reason": "运行中",
+        "nodes": 191
+      },
+      "canvas_before": {
+        "width": 1440,
+        "height": 900,
+        "clientWidth": 1425,
+        "clientHeight": 900,
+        "display": "block",
+        "pixelRatio": 1.01
+      },
+      "scroll": {
+        "frames": 2101,
+        "span_ms": 7000.0,
+        "avg_fps": 300.0,
+        "p50_fps": 303.0,
+        "p5_fps": 285.7,
+        "min_fps": 243.9,
+        "avg_frame_ms": 3.3,
+        "max_frame_ms": 4.1,
+        "below_30_ratio": 0.0,
+        "below_26_ratio": 0.0,
+        "valid": true,
+        "interpretation": "unthrottled（无 vsync 约束，非显示帧率）：测得 300 fps ⇒ 单帧开销 ≤3.33 ms，可作为 60Hz 16.7ms 预算下的余量证据"
+      },
+      "canvas_after": {
+        "width": 1440,
+        "height": 900,
+        "clientWidth": 1425,
+        "clientHeight": 900,
+        "display": "block",
+        "pixelRatio": 1.01
+      },
+      "pixel_ratio_change": {
+        "before": 1.01,
+        "after": 1.01
+      },
+      "adaptive_downscale_triggered": false,
+      "elapsed_s": 15.32
+    }
+  ],
+  "degrade_injection": {
+    "mode": "degrade-injection",
+    "dpr": 2,
+    "before": {
+      "ratio": 2,
+      "canvasWidth": 2880,
+      "clientWidth": 1440,
+      "scene": {
+        "ok": true,
+        "reason": "运行中"
+      }
+    },
+    "injection": {
+      "before": 2,
+      "patch": "THREE.Clock.prototype.getDelta -> 1.0（经 L256 clamp 后 dt=0.05s ⇒ 代码内计得 20fps < 26fps 阈值）",
+      "three": true
+    },
+    "after": {
+      "ratio": 1,
+      "canvasWidth": 1440,
+      "clientWidth": 1440,
+      "scene": {
+        "ok": true,
+        "reason": "运行中"
+      }
+    },
+    "triggered": true,
+    "elapsed_s": 6.15
+  }
+}

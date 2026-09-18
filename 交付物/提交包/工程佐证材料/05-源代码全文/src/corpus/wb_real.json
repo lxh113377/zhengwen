@@ -1,0 +1,913 @@
+{
+ "meta": {
+  "id": "WB",
+  "name": "世界银行开放数据（WDI）真实指标",
+  "kind": "open-data",
+  "license": "CC BY 4.0",
+  "license_note": "Creative Commons Attribution 4.0 International。允许复制 / 分发 / 改编 /纳入产品 / 商业使用，须署名、不得暗示世行背书、不得使用世行名称与标识。",
+  "terms_url": "https://data.worldbank.org/summary-terms-of-use",
+  "attribution_required": "The World Bank: World Development Indicators: <API URL>",
+  "badge": "公开来源",
+  "retrieved": "2026-09-18",
+  "generated_by": "src/tools/fetch_worldbank.py",
+  "raw_snapshot_dir": "src/corpus/_raw/",
+  "disclaimer": "本语料为世界银行开放数据的真实数值，按 CC BY 4.0 使用；世界银行未参与、未背书本项目，本项目不得使用世行名称与标识。数值以 API 原始返回为准，原始响应快照见 raw_snapshot_dir。",
+  "topic_labels": {
+   "urban": "城市与交通（世界银行 WDI）",
+   "digital": "数字经济（世界银行 WDI）",
+   "energy": "能源与气候（世界银行 WDI）",
+   "culture": "文旅与文化（世界银行 WDI）"
+  }
+ },
+ "documents": [
+  {
+   "id": "doc-wb-urban-sp-urb-totl-in-zs-chn",
+   "topic": "urban",
+   "title": "世界银行数据：中国 · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2025",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=CHN",
+   "api_url": "https://api.worldbank.org/v2/country/CHN/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2021",
+     "text": "2021 年，中国的城镇人口占总人口比重为 64.7%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2022",
+     "text": "2022 年，中国的城镇人口占总人口比重为 65.2%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2023",
+     "text": "2023 年，中国的城镇人口占总人口比重为 65.5%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2024",
+     "text": "2024 年，中国的城镇人口占总人口比重为 65.9%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-chn-sp-urb-totl-in-zs-2025",
+     "text": "2025 年，中国的城镇人口占总人口比重为 66.3%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-urban-sp-urb-totl-in-zs-wld",
+   "topic": "urban",
+   "title": "世界银行数据：全球（世界银行口径） · 城镇人口占总人口比重（SP.URB.TOTL.IN.ZS）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2025",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=WLD",
+   "api_url": "https://api.worldbank.org/v2/country/WLD/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/WLD/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-urban-wld-sp-urb-totl-in-zs-2021",
+     "text": "2021 年，全球（世界银行口径）的城镇人口占总人口比重为 56.8%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-wld-sp-urb-totl-in-zs-2022",
+     "text": "2022 年，全球（世界银行口径）的城镇人口占总人口比重为 57.1%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-wld-sp-urb-totl-in-zs-2023",
+     "text": "2023 年，全球（世界银行口径）的城镇人口占总人口比重为 57.3%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-wld-sp-urb-totl-in-zs-2024",
+     "text": "2024 年，全球（世界银行口径）的城镇人口占总人口比重为 57.6%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-wld-sp-urb-totl-in-zs-2025",
+     "text": "2025 年，全球（世界银行口径）的城镇人口占总人口比重为 57.8%（世界银行 WDI 指标 SP.URB.TOTL.IN.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-urban-sp-urb-grow-chn",
+   "topic": "urban",
+   "title": "世界银行数据：中国 · 城镇人口年增长率（SP.URB.GROW）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2025",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/SP.URB.GROW?locations=CHN",
+   "api_url": "https://api.worldbank.org/v2/country/CHN/indicator/SP.URB.GROW?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/SP.URB.GROW?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-urban-chn-sp-urb-grow-2021",
+     "text": "2021 年，中国的城镇人口年增长率为 2.0%（世界银行 WDI 指标 SP.URB.GROW，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-chn-sp-urb-grow-2022",
+     "text": "2022 年，中国的城镇人口年增长率为 0.8%（世界银行 WDI 指标 SP.URB.GROW，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-chn-sp-urb-grow-2023",
+     "text": "2023 年，中国的城镇人口年增长率为 0.4%（世界银行 WDI 指标 SP.URB.GROW，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-chn-sp-urb-grow-2024",
+     "text": "2024 年，中国的城镇人口年增长率为 0.4%（世界银行 WDI 指标 SP.URB.GROW，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-chn-sp-urb-grow-2025",
+     "text": "2025 年，中国的城镇人口年增长率为 0.5%（世界银行 WDI 指标 SP.URB.GROW，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-urban-sp-urb-grow-wld",
+   "topic": "urban",
+   "title": "世界银行数据：全球（世界银行口径） · 城镇人口年增长率（SP.URB.GROW）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2025",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/SP.URB.GROW?locations=WLD",
+   "api_url": "https://api.worldbank.org/v2/country/WLD/indicator/SP.URB.GROW?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/WLD/indicator/SP.URB.GROW?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-urban-wld-sp-urb-grow-2021",
+     "text": "2021 年，全球（世界银行口径）的城镇人口年增长率为 1.5%（世界银行 WDI 指标 SP.URB.GROW，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-wld-sp-urb-grow-2022",
+     "text": "2022 年，全球（世界银行口径）的城镇人口年增长率为 1.3%（世界银行 WDI 指标 SP.URB.GROW，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-wld-sp-urb-grow-2023",
+     "text": "2023 年，全球（世界银行口径）的城镇人口年增长率为 1.3%（世界银行 WDI 指标 SP.URB.GROW，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-wld-sp-urb-grow-2024",
+     "text": "2024 年，全球（世界银行口径）的城镇人口年增长率为 1.4%（世界银行 WDI 指标 SP.URB.GROW，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-wld-sp-urb-grow-2025",
+     "text": "2025 年，全球（世界银行口径）的城镇人口年增长率为 1.4%（世界银行 WDI 指标 SP.URB.GROW，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-urban-sp-urb-totl-chn",
+   "topic": "urban",
+   "title": "世界银行数据：中国 · 城镇人口总数（SP.URB.TOTL）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2025",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/SP.URB.TOTL?locations=CHN",
+   "api_url": "https://api.worldbank.org/v2/country/CHN/indicator/SP.URB.TOTL?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/SP.URB.TOTL?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-urban-chn-sp-urb-totl-2021",
+     "text": "2021 年，中国的城镇人口总数为 9.14 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-chn-sp-urb-totl-2022",
+     "text": "2022 年，中国的城镇人口总数为 9.21 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-chn-sp-urb-totl-2023",
+     "text": "2023 年，中国的城镇人口总数为 9.24 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-chn-sp-urb-totl-2024",
+     "text": "2024 年，中国的城镇人口总数为 9.28 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-chn-sp-urb-totl-2025",
+     "text": "2025 年，中国的城镇人口总数为 9.33 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-urban-sp-urb-totl-wld",
+   "topic": "urban",
+   "title": "世界银行数据：全球（世界银行口径） · 城镇人口总数（SP.URB.TOTL）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2025",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/SP.URB.TOTL?locations=WLD",
+   "api_url": "https://api.worldbank.org/v2/country/WLD/indicator/SP.URB.TOTL?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/WLD/indicator/SP.URB.TOTL?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-urban-wld-sp-urb-totl-2021",
+     "text": "2021 年，全球（世界银行口径）的城镇人口总数为 44.99 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-wld-sp-urb-totl-2022",
+     "text": "2022 年，全球（世界银行口径）的城镇人口总数为 45.59 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-wld-sp-urb-totl-2023",
+     "text": "2023 年，全球（世界银行口径）的城镇人口总数为 46.21 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-wld-sp-urb-totl-2024",
+     "text": "2024 年，全球（世界银行口径）的城镇人口总数为 46.86 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-urban-wld-sp-urb-totl-2025",
+     "text": "2025 年，全球（世界银行口径）的城镇人口总数为 47.51 亿人（世界银行 WDI 指标 SP.URB.TOTL，人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-digital-it-net-user-zs-chn",
+   "topic": "digital",
+   "title": "世界银行数据：中国 · 互联网使用人口占比（IT.NET.USER.ZS）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2025",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=CHN",
+   "api_url": "https://api.worldbank.org/v2/country/CHN/indicator/IT.NET.USER.ZS?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/IT.NET.USER.ZS?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-digital-chn-it-net-user-zs-2021",
+     "text": "2021 年，中国的互联网使用人口占比为 73.1%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-chn-it-net-user-zs-2022",
+     "text": "2022 年，中国的互联网使用人口占比为 75.6%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-chn-it-net-user-zs-2023",
+     "text": "2023 年，中国的互联网使用人口占比为 90.6%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-chn-it-net-user-zs-2024",
+     "text": "2024 年，中国的互联网使用人口占比为 92.0%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-chn-it-net-user-zs-2025",
+     "text": "2025 年，中国的互联网使用人口占比为 91.6%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-digital-it-net-user-zs-wld",
+   "topic": "digital",
+   "title": "世界银行数据：全球（世界银行口径） · 互联网使用人口占比（IT.NET.USER.ZS）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2025",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=WLD",
+   "api_url": "https://api.worldbank.org/v2/country/WLD/indicator/IT.NET.USER.ZS?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/WLD/indicator/IT.NET.USER.ZS?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-digital-wld-it-net-user-zs-2021",
+     "text": "2021 年，全球（世界银行口径）的互联网使用人口占比为 63.8%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-wld-it-net-user-zs-2022",
+     "text": "2022 年，全球（世界银行口径）的互联网使用人口占比为 67.0%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-wld-it-net-user-zs-2023",
+     "text": "2023 年，全球（世界银行口径）的互联网使用人口占比为 69.2%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-wld-it-net-user-zs-2024",
+     "text": "2024 年，全球（世界银行口径）的互联网使用人口占比为 71.2%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-wld-it-net-user-zs-2025",
+     "text": "2025 年，全球（世界银行口径）的互联网使用人口占比为 73.6%（世界银行 WDI 指标 IT.NET.USER.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-digital-it-cel-sets-p2-chn",
+   "topic": "digital",
+   "title": "世界银行数据：中国 · 每百人移动蜂窝电话订阅数（IT.CEL.SETS.P2）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2024",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=CHN",
+   "api_url": "https://api.worldbank.org/v2/country/CHN/indicator/IT.CEL.SETS.P2?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/IT.CEL.SETS.P2?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-digital-chn-it-cel-sets-p2-2020",
+     "text": "2020 年，中国的每百人移动蜂窝电话订阅数为 120.5（世界银行 WDI 指标 IT.CEL.SETS.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-chn-it-cel-sets-p2-2021",
+     "text": "2021 年，中国的每百人移动蜂窝电话订阅数为 121.5（世界银行 WDI 指标 IT.CEL.SETS.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-chn-it-cel-sets-p2-2022",
+     "text": "2022 年，中国的每百人移动蜂窝电话订阅数为 124.2（世界银行 WDI 指标 IT.CEL.SETS.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-chn-it-cel-sets-p2-2023",
+     "text": "2023 年，中国的每百人移动蜂窝电话订阅数为 128.2（世界银行 WDI 指标 IT.CEL.SETS.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-chn-it-cel-sets-p2-2024",
+     "text": "2024 年，中国的每百人移动蜂窝电话订阅数为 131.8（世界银行 WDI 指标 IT.CEL.SETS.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-digital-it-cel-sets-p2-wld",
+   "topic": "digital",
+   "title": "世界银行数据：全球（世界银行口径） · 每百人移动蜂窝电话订阅数（IT.CEL.SETS.P2）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2025",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=WLD",
+   "api_url": "https://api.worldbank.org/v2/country/WLD/indicator/IT.CEL.SETS.P2?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/WLD/indicator/IT.CEL.SETS.P2?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-digital-wld-it-cel-sets-p2-2021",
+     "text": "2021 年，全球（世界银行口径）的每百人移动蜂窝电话订阅数为 106.7（世界银行 WDI 指标 IT.CEL.SETS.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-wld-it-cel-sets-p2-2022",
+     "text": "2022 年，全球（世界银行口径）的每百人移动蜂窝电话订阅数为 108.0（世界银行 WDI 指标 IT.CEL.SETS.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-wld-it-cel-sets-p2-2023",
+     "text": "2023 年，全球（世界银行口径）的每百人移动蜂窝电话订阅数为 109.8（世界银行 WDI 指标 IT.CEL.SETS.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-wld-it-cel-sets-p2-2024",
+     "text": "2024 年，全球（世界银行口径）的每百人移动蜂窝电话订阅数为 110.4（世界银行 WDI 指标 IT.CEL.SETS.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-wld-it-cel-sets-p2-2025",
+     "text": "2025 年，全球（世界银行口径）的每百人移动蜂窝电话订阅数为 111.5（世界银行 WDI 指标 IT.CEL.SETS.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-digital-it-net-bbnd-p2-chn",
+   "topic": "digital",
+   "title": "世界银行数据：中国 · 每百人固定宽带订阅数（IT.NET.BBND.P2）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2024",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/IT.NET.BBND.P2?locations=CHN",
+   "api_url": "https://api.worldbank.org/v2/country/CHN/indicator/IT.NET.BBND.P2?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/IT.NET.BBND.P2?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-digital-chn-it-net-bbnd-p2-2020",
+     "text": "2020 年，中国的每百人固定宽带订阅数为 33.9（世界银行 WDI 指标 IT.NET.BBND.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-chn-it-net-bbnd-p2-2021",
+     "text": "2021 年，中国的每百人固定宽带订阅数为 37.6（世界银行 WDI 指标 IT.NET.BBND.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-chn-it-net-bbnd-p2-2022",
+     "text": "2022 年，中国的每百人固定宽带订阅数为 41.4（世界银行 WDI 指标 IT.NET.BBND.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-chn-it-net-bbnd-p2-2023",
+     "text": "2023 年，中国的每百人固定宽带订阅数为 44.7（世界银行 WDI 指标 IT.NET.BBND.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-chn-it-net-bbnd-p2-2024",
+     "text": "2024 年，中国的每百人固定宽带订阅数为 47.2（世界银行 WDI 指标 IT.NET.BBND.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-digital-it-net-bbnd-p2-wld",
+   "topic": "digital",
+   "title": "世界银行数据：全球（世界银行口径） · 每百人固定宽带订阅数（IT.NET.BBND.P2）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2025",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/IT.NET.BBND.P2?locations=WLD",
+   "api_url": "https://api.worldbank.org/v2/country/WLD/indicator/IT.NET.BBND.P2?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/WLD/indicator/IT.NET.BBND.P2?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-digital-wld-it-net-bbnd-p2-2021",
+     "text": "2021 年，全球（世界银行口径）的每百人固定宽带订阅数为 16.7（世界银行 WDI 指标 IT.NET.BBND.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-wld-it-net-bbnd-p2-2022",
+     "text": "2022 年，全球（世界银行口径）的每百人固定宽带订阅数为 17.7（世界银行 WDI 指标 IT.NET.BBND.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-wld-it-net-bbnd-p2-2023",
+     "text": "2023 年，全球（世界银行口径）的每百人固定宽带订阅数为 18.6（世界银行 WDI 指标 IT.NET.BBND.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-wld-it-net-bbnd-p2-2024",
+     "text": "2024 年，全球（世界银行口径）的每百人固定宽带订阅数为 19.3（世界银行 WDI 指标 IT.NET.BBND.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-digital-wld-it-net-bbnd-p2-2025",
+     "text": "2025 年，全球（世界银行口径）的每百人固定宽带订阅数为 20.1（世界银行 WDI 指标 IT.NET.BBND.P2，户/百人，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-energy-eg-fec-rnew-zs-chn",
+   "topic": "energy",
+   "title": "世界银行数据：中国 · 可再生能源占最终能源消费比重（EG.FEC.RNEW.ZS）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2021",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/EG.FEC.RNEW.ZS?locations=CHN",
+   "api_url": "https://api.worldbank.org/v2/country/CHN/indicator/EG.FEC.RNEW.ZS?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/EG.FEC.RNEW.ZS?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-energy-chn-eg-fec-rnew-zs-2017",
+     "text": "2017 年，中国的可再生能源占最终能源消费比重为 13.1%（世界银行 WDI 指标 EG.FEC.RNEW.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-chn-eg-fec-rnew-zs-2018",
+     "text": "2018 年，中国的可再生能源占最终能源消费比重为 13.5%（世界银行 WDI 指标 EG.FEC.RNEW.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-chn-eg-fec-rnew-zs-2019",
+     "text": "2019 年，中国的可再生能源占最终能源消费比重为 14.3%（世界银行 WDI 指标 EG.FEC.RNEW.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-chn-eg-fec-rnew-zs-2020",
+     "text": "2020 年，中国的可再生能源占最终能源消费比重为 14.9%（世界银行 WDI 指标 EG.FEC.RNEW.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-chn-eg-fec-rnew-zs-2021",
+     "text": "2021 年，中国的可再生能源占最终能源消费比重为 15.2%（世界银行 WDI 指标 EG.FEC.RNEW.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-energy-eg-fec-rnew-zs-wld",
+   "topic": "energy",
+   "title": "世界银行数据：全球（世界银行口径） · 可再生能源占最终能源消费比重（EG.FEC.RNEW.ZS）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2020",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/EG.FEC.RNEW.ZS?locations=WLD",
+   "api_url": "https://api.worldbank.org/v2/country/WLD/indicator/EG.FEC.RNEW.ZS?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/WLD/indicator/EG.FEC.RNEW.ZS?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-energy-wld-eg-fec-rnew-zs-2016",
+     "text": "2016 年，全球（世界银行口径）的可再生能源占最终能源消费比重为 17.6%（世界银行 WDI 指标 EG.FEC.RNEW.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-wld-eg-fec-rnew-zs-2017",
+     "text": "2017 年，全球（世界银行口径）的可再生能源占最终能源消费比重为 17.9%（世界银行 WDI 指标 EG.FEC.RNEW.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-wld-eg-fec-rnew-zs-2018",
+     "text": "2018 年，全球（世界银行口径）的可再生能源占最终能源消费比重为 18.1%（世界银行 WDI 指标 EG.FEC.RNEW.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-wld-eg-fec-rnew-zs-2019",
+     "text": "2019 年，全球（世界银行口径）的可再生能源占最终能源消费比重为 18.6%（世界银行 WDI 指标 EG.FEC.RNEW.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-wld-eg-fec-rnew-zs-2020",
+     "text": "2020 年，全球（世界银行口径）的可再生能源占最终能源消费比重为 19.7%（世界银行 WDI 指标 EG.FEC.RNEW.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-energy-eg-elc-accs-zs-chn",
+   "topic": "energy",
+   "title": "世界银行数据：中国 · 通电人口占比（EG.ELC.ACCS.ZS）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2024",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS?locations=CHN",
+   "api_url": "https://api.worldbank.org/v2/country/CHN/indicator/EG.ELC.ACCS.ZS?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/EG.ELC.ACCS.ZS?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-energy-chn-eg-elc-accs-zs-2020",
+     "text": "2020 年，中国的通电人口占比为 100.0%（世界银行 WDI 指标 EG.ELC.ACCS.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-chn-eg-elc-accs-zs-2021",
+     "text": "2021 年，中国的通电人口占比为 100.0%（世界银行 WDI 指标 EG.ELC.ACCS.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-chn-eg-elc-accs-zs-2022",
+     "text": "2022 年，中国的通电人口占比为 100.0%（世界银行 WDI 指标 EG.ELC.ACCS.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-chn-eg-elc-accs-zs-2023",
+     "text": "2023 年，中国的通电人口占比为 100.0%（世界银行 WDI 指标 EG.ELC.ACCS.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-chn-eg-elc-accs-zs-2024",
+     "text": "2024 年，中国的通电人口占比为 100.0%（世界银行 WDI 指标 EG.ELC.ACCS.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-energy-eg-elc-accs-zs-wld",
+   "topic": "energy",
+   "title": "世界银行数据：全球（世界银行口径） · 通电人口占比（EG.ELC.ACCS.ZS）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2024",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS?locations=WLD",
+   "api_url": "https://api.worldbank.org/v2/country/WLD/indicator/EG.ELC.ACCS.ZS?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/WLD/indicator/EG.ELC.ACCS.ZS?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-energy-wld-eg-elc-accs-zs-2020",
+     "text": "2020 年，全球（世界银行口径）的通电人口占比为 90.4%（世界银行 WDI 指标 EG.ELC.ACCS.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-wld-eg-elc-accs-zs-2021",
+     "text": "2021 年，全球（世界银行口径）的通电人口占比为 91.3%（世界银行 WDI 指标 EG.ELC.ACCS.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-wld-eg-elc-accs-zs-2022",
+     "text": "2022 年，全球（世界银行口径）的通电人口占比为 91.3%（世界银行 WDI 指标 EG.ELC.ACCS.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-wld-eg-elc-accs-zs-2023",
+     "text": "2023 年，全球（世界银行口径）的通电人口占比为 91.6%（世界银行 WDI 指标 EG.ELC.ACCS.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-wld-eg-elc-accs-zs-2024",
+     "text": "2024 年，全球（世界银行口径）的通电人口占比为 91.9%（世界银行 WDI 指标 EG.ELC.ACCS.ZS，%，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-energy-eg-use-pcap-kg-oe-chn",
+   "topic": "energy",
+   "title": "世界银行数据：中国 · 人均能源使用量（EG.USE.PCAP.KG.OE）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2023",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/EG.USE.PCAP.KG.OE?locations=CHN",
+   "api_url": "https://api.worldbank.org/v2/country/CHN/indicator/EG.USE.PCAP.KG.OE?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/EG.USE.PCAP.KG.OE?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-energy-chn-eg-use-pcap-kg-oe-2019",
+     "text": "2019 年，中国的人均能源使用量为 2,398（世界银行 WDI 指标 EG.USE.PCAP.KG.OE，千克油当量，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-chn-eg-use-pcap-kg-oe-2020",
+     "text": "2020 年，中国的人均能源使用量为 2,466（世界银行 WDI 指标 EG.USE.PCAP.KG.OE，千克油当量，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-chn-eg-use-pcap-kg-oe-2021",
+     "text": "2021 年，中国的人均能源使用量为 2,624（世界银行 WDI 指标 EG.USE.PCAP.KG.OE，千克油当量，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-chn-eg-use-pcap-kg-oe-2022",
+     "text": "2022 年，中国的人均能源使用量为 2,676（世界银行 WDI 指标 EG.USE.PCAP.KG.OE，千克油当量，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-chn-eg-use-pcap-kg-oe-2023",
+     "text": "2023 年，中国的人均能源使用量为 2,851（世界银行 WDI 指标 EG.USE.PCAP.KG.OE，千克油当量，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-energy-eg-use-pcap-kg-oe-wld",
+   "topic": "energy",
+   "title": "世界银行数据：全球（世界银行口径） · 人均能源使用量（EG.USE.PCAP.KG.OE）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2023",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/EG.USE.PCAP.KG.OE?locations=WLD",
+   "api_url": "https://api.worldbank.org/v2/country/WLD/indicator/EG.USE.PCAP.KG.OE?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/WLD/indicator/EG.USE.PCAP.KG.OE?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-energy-wld-eg-use-pcap-kg-oe-2019",
+     "text": "2019 年，全球（世界银行口径）的人均能源使用量为 1,830（世界银行 WDI 指标 EG.USE.PCAP.KG.OE，千克油当量，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-wld-eg-use-pcap-kg-oe-2020",
+     "text": "2020 年，全球（世界银行口径）的人均能源使用量为 1,763（世界银行 WDI 指标 EG.USE.PCAP.KG.OE，千克油当量，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-wld-eg-use-pcap-kg-oe-2021",
+     "text": "2021 年，全球（世界银行口径）的人均能源使用量为 1,853（世界银行 WDI 指标 EG.USE.PCAP.KG.OE，千克油当量，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-wld-eg-use-pcap-kg-oe-2022",
+     "text": "2022 年，全球（世界银行口径）的人均能源使用量为 1,853（世界银行 WDI 指标 EG.USE.PCAP.KG.OE，千克油当量，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-energy-wld-eg-use-pcap-kg-oe-2023",
+     "text": "2023 年，全球（世界银行口径）的人均能源使用量为 1,866（世界银行 WDI 指标 EG.USE.PCAP.KG.OE，千克油当量，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-culture-st-int-arvl-chn",
+   "topic": "culture",
+   "title": "世界银行数据：中国 · 国际旅游入境人次（ST.INT.ARVL）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2020",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/ST.INT.ARVL?locations=CHN",
+   "api_url": "https://api.worldbank.org/v2/country/CHN/indicator/ST.INT.ARVL?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/ST.INT.ARVL?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-culture-chn-st-int-arvl-2016",
+     "text": "2016 年，中国的国际旅游入境人次为 1.42 亿人次（世界银行 WDI 指标 ST.INT.ARVL，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-chn-st-int-arvl-2017",
+     "text": "2017 年，中国的国际旅游入境人次为 1.53 亿人次（世界银行 WDI 指标 ST.INT.ARVL，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-chn-st-int-arvl-2018",
+     "text": "2018 年，中国的国际旅游入境人次为 1.59 亿人次（世界银行 WDI 指标 ST.INT.ARVL，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-chn-st-int-arvl-2019",
+     "text": "2019 年，中国的国际旅游入境人次为 1.63 亿人次（世界银行 WDI 指标 ST.INT.ARVL，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-chn-st-int-arvl-2020",
+     "text": "2020 年，中国的国际旅游入境人次为 3040.2 万人次（世界银行 WDI 指标 ST.INT.ARVL，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-culture-st-int-arvl-wld",
+   "topic": "culture",
+   "title": "世界银行数据：全球（世界银行口径） · 国际旅游入境人次（ST.INT.ARVL）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2019",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/ST.INT.ARVL?locations=WLD",
+   "api_url": "https://api.worldbank.org/v2/country/WLD/indicator/ST.INT.ARVL?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/WLD/indicator/ST.INT.ARVL?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-culture-wld-st-int-arvl-2015",
+     "text": "2015 年，全球（世界银行口径）的国际旅游入境人次为 20.72 亿人次（世界银行 WDI 指标 ST.INT.ARVL，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-wld-st-int-arvl-2016",
+     "text": "2016 年，全球（世界银行口径）的国际旅游入境人次为 21.40 亿人次（世界银行 WDI 指标 ST.INT.ARVL，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-wld-st-int-arvl-2017",
+     "text": "2017 年，全球（世界银行口径）的国际旅游入境人次为 22.49 亿人次（世界银行 WDI 指标 ST.INT.ARVL，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-wld-st-int-arvl-2018",
+     "text": "2018 年，全球（世界银行口径）的国际旅游入境人次为 23.39 亿人次（世界银行 WDI 指标 ST.INT.ARVL，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-wld-st-int-arvl-2019",
+     "text": "2019 年，全球（世界银行口径）的国际旅游入境人次为 24.03 亿人次（世界银行 WDI 指标 ST.INT.ARVL，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-culture-st-int-rcpt-cd-chn",
+   "topic": "culture",
+   "title": "世界银行数据：中国 · 国际旅游收入（ST.INT.RCPT.CD）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2004",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/ST.INT.RCPT.CD?locations=CHN",
+   "api_url": "https://api.worldbank.org/v2/country/CHN/indicator/ST.INT.RCPT.CD?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/ST.INT.RCPT.CD?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-culture-chn-st-int-rcpt-cd-2000",
+     "text": "2000 年，中国的国际旅游收入为 173.2 亿美元（世界银行 WDI 指标 ST.INT.RCPT.CD，现价美元，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-chn-st-int-rcpt-cd-2001",
+     "text": "2001 年，中国的国际旅游收入为 190.1 亿美元（世界银行 WDI 指标 ST.INT.RCPT.CD，现价美元，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-chn-st-int-rcpt-cd-2002",
+     "text": "2002 年，中国的国际旅游收入为 217.4 亿美元（世界银行 WDI 指标 ST.INT.RCPT.CD，现价美元，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-chn-st-int-rcpt-cd-2003",
+     "text": "2003 年，中国的国际旅游收入为 187.1 亿美元（世界银行 WDI 指标 ST.INT.RCPT.CD，现价美元，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-chn-st-int-rcpt-cd-2004",
+     "text": "2004 年，中国的国际旅游收入为 277.6 亿美元（世界银行 WDI 指标 ST.INT.RCPT.CD，现价美元，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-culture-st-int-rcpt-cd-wld",
+   "topic": "culture",
+   "title": "世界银行数据：全球（世界银行口径） · 国际旅游收入（ST.INT.RCPT.CD）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2019",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/ST.INT.RCPT.CD?locations=WLD",
+   "api_url": "https://api.worldbank.org/v2/country/WLD/indicator/ST.INT.RCPT.CD?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/WLD/indicator/ST.INT.RCPT.CD?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-culture-wld-st-int-rcpt-cd-2015",
+     "text": "2015 年，全球（世界银行口径）的国际旅游收入为 1.52 万亿美元（世界银行 WDI 指标 ST.INT.RCPT.CD，现价美元，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-wld-st-int-rcpt-cd-2016",
+     "text": "2016 年，全球（世界银行口径）的国际旅游收入为 1.54 万亿美元（世界银行 WDI 指标 ST.INT.RCPT.CD，现价美元，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-wld-st-int-rcpt-cd-2017",
+     "text": "2017 年，全球（世界银行口径）的国际旅游收入为 1.68 万亿美元（世界银行 WDI 指标 ST.INT.RCPT.CD，现价美元，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-wld-st-int-rcpt-cd-2018",
+     "text": "2018 年，全球（世界银行口径）的国际旅游收入为 1.83 万亿美元（世界银行 WDI 指标 ST.INT.RCPT.CD，现价美元，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-wld-st-int-rcpt-cd-2019",
+     "text": "2019 年，全球（世界银行口径）的国际旅游收入为 1.86 万亿美元（世界银行 WDI 指标 ST.INT.RCPT.CD，现价美元，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-culture-st-int-dprt-chn",
+   "topic": "culture",
+   "title": "世界银行数据：中国 · 本国居民出境旅游人次（ST.INT.DPRT）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2020",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/ST.INT.DPRT?locations=CHN",
+   "api_url": "https://api.worldbank.org/v2/country/CHN/indicator/ST.INT.DPRT?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/CHN/indicator/ST.INT.DPRT?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-culture-chn-st-int-dprt-2016",
+     "text": "2016 年，中国的本国居民出境旅游人次为 1.35 亿人次（世界银行 WDI 指标 ST.INT.DPRT，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-chn-st-int-dprt-2017",
+     "text": "2017 年，中国的本国居民出境旅游人次为 1.43 亿人次（世界银行 WDI 指标 ST.INT.DPRT，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-chn-st-int-dprt-2018",
+     "text": "2018 年，中国的本国居民出境旅游人次为 1.50 亿人次（世界银行 WDI 指标 ST.INT.DPRT，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-chn-st-int-dprt-2019",
+     "text": "2019 年，中国的本国居民出境旅游人次为 1.55 亿人次（世界银行 WDI 指标 ST.INT.DPRT，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-chn-st-int-dprt-2020",
+     "text": "2020 年，中国的本国居民出境旅游人次为 2033.4 万人次（世界银行 WDI 指标 ST.INT.DPRT，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-culture-st-int-dprt-wld",
+   "topic": "culture",
+   "title": "世界银行数据：全球（世界银行口径） · 本国居民出境旅游人次（ST.INT.DPRT）",
+   "publisher": "世界银行开放数据（World Bank Open Data）",
+   "published": "2019",
+   "kind": "开放数据指标",
+   "license": "CC BY 4.0",
+   "source_url": "https://data.worldbank.org/indicator/ST.INT.DPRT?locations=WLD",
+   "api_url": "https://api.worldbank.org/v2/country/WLD/indicator/ST.INT.DPRT?format=json&per_page=200",
+   "attribution": "The World Bank: World Development Indicators: https://api.worldbank.org/v2/country/WLD/indicator/ST.INT.DPRT?format=json&per_page=200",
+   "stance": "量化事实（可逐点回溯至世行 API）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-culture-wld-st-int-dprt-2015",
+     "text": "2015 年，全球（世界银行口径）的本国居民出境旅游人次为 17.45 亿人次（世界银行 WDI 指标 ST.INT.DPRT，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-wld-st-int-dprt-2016",
+     "text": "2016 年，全球（世界银行口径）的本国居民出境旅游人次为 18.20 亿人次（世界银行 WDI 指标 ST.INT.DPRT，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-wld-st-int-dprt-2017",
+     "text": "2017 年，全球（世界银行口径）的本国居民出境旅游人次为 19.34 亿人次（世界银行 WDI 指标 ST.INT.DPRT，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-wld-st-int-dprt-2018",
+     "text": "2018 年，全球（世界银行口径）的本国居民出境旅游人次为 19.91 亿人次（世界银行 WDI 指标 ST.INT.DPRT，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    },
+    {
+     "id": "ev-wb-culture-wld-st-int-dprt-2019",
+     "text": "2019 年，全球（世界银行口径）的本国居民出境旅游人次为 20.34 亿人次（世界银行 WDI 指标 ST.INT.DPRT，人次，数据来源：世界银行开放数据，许可 CC BY 4.0）。"
+    }
+   ]
+  },
+  {
+   "id": "doc-wb-method-urban-scope",
+   "topic": "urban",
+   "title": "口径说明：城镇人口占比的跨国比较限制（依据世行 WDI 指标元数据）",
+   "publisher": "证闻项目组（依据世界银行 WDI 指标元数据撰写）",
+   "published": "2026-09-18",
+   "kind": "口径说明",
+   "license": "本项目撰写（引用世界银行 WDI 方法论，非世行原文）",
+   "source_url": "https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS",
+   "attribution": "依据 The World Bank: World Development Indicators: SP.URB.TOTL.IN.ZS 指标元数据撰写；世行未参与本项目",
+   "stance": "口径提示（提醒不可直接合并比较）",
+   "paragraphs": [
+    {
+     "id": "ev-wb-urban-method-p1",
+     "text": "世界银行 WDI 对「城镇人口占总人口比重」有方法论提示：各国对「城镇」的定义不同（行政区划、人口密度、建成区标准各异），该指标在不同国家或地区之间直接比较会引入口径差异。"
+    },
+    {
+     "id": "ev-wb-urban-method-p2",
+     "text": "证闻项目组据此标注：中国的城镇人口占比与全球合计值可以并列展示，但不应被当作「谁更城市化」的单一结论；本系统对这类跨口径比较只做并列，不做合并。"
+    }
+   ]
+  }
+ ],
+ "divergences": [
+  {
+   "id": "dv-wb-urban-scope",
+   "topic": "城镇人口占比：中国口径与全球口径不可直接比较",
+   "doc_ids": [
+    "doc-wb-urban-sp-urb-totl-in-zs-chn",
+    "doc-wb-urban-sp-urb-totl-in-zs-wld",
+    "doc-wb-method-urban-scope"
+   ],
+   "summary": "世界银行 WDI 对「城镇人口占比」有明确口径提示：各国对城镇的定义不同（行政区划、人口密度、建成区标准各异），因此中国的数值与全球合计值并列展示，但不应被当作「谁更城市化」的单一结论。系统并列两个口径并标注差异成因，由使用者自行判断。",
+   "evidence_ids": [
+    "ev-wb-urban-chn-sp-urb-totl-in-zs-2021",
+    "ev-wb-urban-chn-sp-urb-totl-in-zs-2022",
+    "ev-wb-urban-chn-sp-urb-totl-in-zs-2023",
+    "ev-wb-urban-chn-sp-urb-totl-in-zs-2024",
+    "ev-wb-urban-chn-sp-urb-totl-in-zs-2025",
+    "ev-wb-urban-wld-sp-urb-totl-in-zs-2021",
+    "ev-wb-urban-wld-sp-urb-totl-in-zs-2022",
+    "ev-wb-urban-wld-sp-urb-totl-in-zs-2023",
+    "ev-wb-urban-wld-sp-urb-totl-in-zs-2024",
+    "ev-wb-urban-wld-sp-urb-totl-in-zs-2025",
+    "ev-wb-urban-method-p1",
+    "ev-wb-urban-method-p2"
+   ]
+  }
+ ],
+ "scope_note": "本语料覆盖世界银行 WDI 四类指标：城市与交通、数字经济、能源与气候、文旅与文化。此范围之外的问题应触发拒答闸门。"
+}

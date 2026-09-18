@@ -1,0 +1,3254 @@
+{
+  "meta": {
+    "generated_at": "2026-09-19T03:46:39+08:00",
+    "base_url": "http://127.0.0.1:8848",
+    "tool": "src/tools/export_live_evidence.py",
+    "note": "只读导出：全部为 GET 与 POST /api/ask（只读问答），不修改被观测服务。"
+  },
+  "health": {
+    "ok": true,
+    "readonly": false,
+    "model_available": false,
+    "provider": null,
+    "refuse_threshold": 0.34,
+    "min_original_hits": 2,
+    "sessions_tracked": 2,
+    "stats": {
+      "topics": 7,
+      "sources": 32,
+      "evidence": 148,
+      "divergences": 4
+    },
+    "live": {
+      "enabled": true,
+      "available_sources": 12,
+      "unavailable_sources": 16,
+      "web_search_slot_configured": false,
+      "per_source_timeout_s": 8.0,
+      "total_budget_s": 13.0,
+      "strict_min_bigram_hits": 2,
+      "related_min_bigram_hits": 1,
+      "max_related": 5
+    }
+  },
+  "live_sources": {
+    "ok": true,
+    "enabled": true,
+    "per_source_timeout_s": 8.0,
+    "total_budget_s": 13.0,
+    "web_search_slot": {
+      "configured": false,
+      "provider": "通用检索"
+    },
+    "available": [
+      {
+        "id": "LIVE-GOV-GW",
+        "name": "中国政府网 · 国务院文件库",
+        "publisher": "中国政府网",
+        "kind": "policy",
+        "license": "政府网站内容：可引用，须注明来源与网址；本项目仅做短摘录与链接",
+        "terms_url": "https://www.gov.cn/",
+        "note": "实测：search-gov/data JSON 接口可用（t=zhengcelibrary_gw，关键词「加装电梯」命中 189 条，返回 50 条中 15 条正文含实词）"
+      },
+      {
+        "id": "LIVE-GOV-BM",
+        "name": "中国政府网 · 部门文件库",
+        "publisher": "中国政府网（各部委）",
+        "kind": "policy",
+        "license": "政府网站内容：可引用，须注明来源与网址；本项目仅做短摘录与链接",
+        "terms_url": "https://www.gov.cn/",
+        "note": "实测：同上接口 t=zhengcelibrary_bm，命中 214 条（同一问题）"
+      },
+      {
+        "id": "LIVE-CCTV-SEARCH",
+        "name": "央视网 · 站内检索",
+        "publisher": "央视网",
+        "kind": "news",
+        "license": "央视网内容版权归央视所有：本项目仅引用标题与原文链接，不转载正文",
+        "terms_url": "https://search.cctv.com/",
+        "note": "2026-09-19 第二轮实测更正：search.cctv.com/search.php?qtext= 为**服务端渲染**，可稳定抽出结果（10 条/页、支持翻页、带日期），覆盖 news.cctv.com 与 energy.cctv.com 等子域；结果链接形如 link_p.php?targetpage=<urlencoded 原文地址>，须解码后再回链原文。⚠️ 此前登记的「JS 渲染、无可用 XHR」系误判，已更正。实证：「英伟达」7 条、「新能源汽车出口」6 条（含 2026-09-11 条目）"
+      },
+      {
+        "id": "LIVE-CCTV",
+        "name": "央视网 · 新闻频道最新条目",
+        "publisher": "央视网",
+        "kind": "news",
+        "license": "央视网内容版权归央视所有：本项目仅引用标题与原文链接，不转载正文",
+        "terms_url": "https://news.cctv.com/",
+        "note": "实测：news.cctv.com 列表页服务端渲染，可抽到当日条目（09-18，6 条）；站内检索见 LIVE-CCTV-SEARCH（可用，承担关键词检索职责）"
+      },
+      {
+        "id": "LIVE-CHINANEWS-ROLL",
+        "name": "中国新闻网 · 滚动新闻",
+        "publisher": "中国新闻网",
+        "kind": "news",
+        "license": "中国新闻网内容版权归中新社所有：本项目仅引用标题与原文链接，不转载正文",
+        "terms_url": "https://www.chinanews.com.cn/",
+        "note": "实测：scroll-news/news{n}.html 服务端渲染，每页 145 条**带日期**条目（最新当日），支持翻页 → 池规模由「首页几十条」提升到数百条"
+      },
+      {
+        "id": "LIVE-CHINADAILY",
+        "name": "中国日报中文网 · 滚动条目",
+        "publisher": "中国日报",
+        "kind": "news",
+        "license": "中国日报内容版权归中国日报所有：本项目仅引用标题与原文链接，不转载正文",
+        "terms_url": "https://cn.chinadaily.com.cn/",
+        "note": "实测：首页可抽 136—145 条带日期条目（含当日）"
+      },
+      {
+        "id": "LIVE-YOUTH",
+        "name": "中国青年网 · 滚动条目",
+        "publisher": "中国青年网",
+        "kind": "news",
+        "license": "中国青年网内容版权归中青网所有：本项目仅引用标题与原文链接，不转载正文",
+        "terms_url": "https://www.youth.cn/",
+        "note": "实测：首页可抽 129—143 条带日期条目（含当日）"
+      },
+      {
+        "id": "LIVE-CE",
+        "name": "中国经济网 · 滚动条目",
+        "publisher": "中国经济网",
+        "kind": "news",
+        "license": "中国经济网内容版权归经济日报社所有：本项目仅引用标题与原文链接，不转载正文",
+        "terms_url": "http://www.ce.cn/",
+        "note": "实测：首页可抽 142—155 条带日期条目（含当日）"
+      },
+      {
+        "id": "LIVE-PEOPLE-HOME",
+        "name": "人民网 · 首页最新条目",
+        "publisher": "人民网",
+        "kind": "news",
+        "license": "人民网内容版权归人民网所有：本项目仅引用标题与原文链接，不转载正文",
+        "terms_url": "http://www.people.com.cn/",
+        "note": "实测：人民网首页服务端渲染，可抽 82 条带日期的文章链接（最新 2026-09-14）；但其 RSS 停更（最新 2025-06-05）、站内检索被反爬拦截 → 只走「最新条目池 + 关键词过滤」"
+      },
+      {
+        "id": "LIVE-XINHUA-HOME",
+        "name": "新华网 · 首页最新条目",
+        "publisher": "新华网",
+        "kind": "news",
+        "license": "新华网内容版权归新华社所有：本项目仅引用标题与原文链接，不转载正文",
+        "terms_url": "https://www.news.cn/",
+        "note": "实测：新华网首页可抽 14 条当日文章链接（2026-09-18）；站内检索 so.news.cn 全组合 405、RSS 无 pubDate → 只走「最新条目池 + 关键词过滤」"
+      },
+      {
+        "id": "LIVE-UN",
+        "name": "联合国新闻（中文）",
+        "publisher": "联合国新闻",
+        "kind": "news",
+        "license": "联合国新闻：可引用，须注明来源；本项目仅引用标题与链接",
+        "terms_url": "https://news.un.org/zh/",
+        "note": "实测：中文 RSS 可用且新鲜（最新条目 2026-09-18）"
+      },
+      {
+        "id": "LIVE-WHO",
+        "name": "世界卫生组织 WHO · 新闻",
+        "publisher": "世界卫生组织",
+        "kind": "org",
+        "license": "WHO 内容：允许非商业引用，须注明来源",
+        "terms_url": "https://www.who.int/news",
+        "note": "实测：https://www.who.int/api/news/newsitems?top=N JSON 可用（返回 50 条带日期）"
+      }
+    ],
+    "unavailable": [
+      {
+        "id": "LIVE-XINHUA-SEARCH",
+        "name": "新华网 · 站内检索",
+        "note": "实测 so.news.cn/getNews 在 GET/POST、带 Referer/X-Requested-With 各组合下均返回 HTTP 405 → 降级为由「新华网首页最新条目池」承担（见 LIVE-XINHUA-HOME）"
+      },
+      {
+        "id": "LIVE-XINHUA-RSS",
+        "name": "新华网 · 时政 RSS",
+        "note": "实测可下载 300 条，但 XML 无 pubDate 字段 → 无法核验时效，故不采用（不拿旧闻冒充实时）"
+      },
+      {
+        "id": "LIVE-PEOPLE-RSS",
+        "name": "人民网 · 时政 RSS",
+        "note": "实测 100 条且日期齐全，但最新条目停在 2025-06-05（停更一年多）→ 不作为实时源；改由「人民网首页最新条目池」承担（见 LIVE-PEOPLE-HOME）"
+      },
+      {
+        "id": "LIVE-PEOPLE-SEARCH",
+        "name": "人民网 · 站内检索",
+        "note": "实测 search.people.cn 返回 3.4KB 空壳页（被反爬拦截）、politics.people.com.cn 频道页 403 → 无法做全站关键词检索，只走首页最新条目池"
+      },
+      {
+        "id": "LIVE-CCTV-SEARCH-OLD",
+        "name": "央视网 · 站内检索（原登记已更正）",
+        "note": "⚠️ 2026-09-19 更正：原登记为「仅返回检索表单壳、结果由 JS 异步加载」系**误判** —— 第二轮实测确认 search.cctv.com 结果为**服务端渲染**且可稳定抽取，已升级为可用源 LIVE-CCTV-SEARCH（保留本条以留痕「曾误判、后更正」，不删改历史结论）"
+      },
+      {
+        "id": "LIVE-BAIDU-NEWS",
+        "name": "百度 · 新闻搜索（免 key）",
+        "note": "实测 2026-09-19：https://www.baidu.com/s?tn=news&word= 返回 532KB，但页面内 **0 个结果 <a> 标签**，为纯 JS 壳（仅含 window.T.perf 等框架脚本）→ 无法抽取结果"
+      },
+      {
+        "id": "LIVE-TOUTIAO",
+        "name": "头条搜索（免 key）",
+        "note": "实测 2026-09-19：so.toutiao.com 确实返回结果（内嵌 JSON 含「中汽协：汽车出口连续三个月破百万辆」等），**但**为聚合检索、混入自媒体且多数条目的来源字段不可辨 → 不满足「权威来源可核验」要求，故**不纳入白名单**（宁少不假：拿来源不明的条目当依据等于把作品做成假查证）"
+      },
+      {
+        "id": "LIVE-GMW-SEARCH",
+        "name": "光明网 · 站内检索",
+        "note": "实测 so.gmw.cn DNS 解析失败（getaddrinfo failed）→ 本机网络不可达，不可用"
+      },
+      {
+        "id": "LIVE-GOV-OTHER-T",
+        "name": "中国政府网 · 其他检索频道",
+        "note": "实测 t=zhengce / govall / site / zcjd / zhengcejd 均返回 97—135KB 但 listVO 为空（0 条）→ 只有 t=zhengcelibrary_gw / _bm 两个文件库可用于关键词检索"
+      },
+      {
+        "id": "LIVE-SINA-ROLL",
+        "name": "新浪 · 滚动新闻 JSON API",
+        "note": "实测 feed.mix.sina.com.cn/api/roll/get 返回 103KB，但 result.data 条数为 0（lid=2509/2510/2511/2669/1 均试）→ 接口参数已变更，不可用"
+      },
+      {
+        "id": "LIVE-TENCENT-HUANQIU",
+        "name": "腾讯新闻 / 环球网 · 首页",
+        "note": "实测返回 18KB / 987B 空壳（无结果锚点）→ 客户端渲染，不可用"
+      },
+      {
+        "id": "LIVE-THEPAPER",
+        "name": "澎湃新闻 · 站内检索",
+        "note": "实测 api.thepaper.cn 返回 code 99998「系统繁忙」；searchResult 为 Next.js 客户端渲染，_next/data 路由 404"
+      },
+      {
+        "id": "LIVE-STATS",
+        "name": "国家统计局 · 站内检索",
+        "note": "实测底层为 p.so-gov.cn 政府检索 SaaS，页面仅表单壳；data.stats.gov.cn easyquery 返回 403"
+      },
+      {
+        "id": "LIVE-BING-KEYLESS",
+        "name": "Bing · 免 key 通用检索",
+        "note": "实测三次查询（含 site: 限定）返回的 10 条结果完全相同 → site: 与关键词均被忽略，不可靠"
+      },
+      {
+        "id": "LIVE-SOGOU",
+        "name": "搜狗 · 免 key 通用检索",
+        "note": "实测返回验证码页（5.6KB）"
+      },
+      {
+        "id": "LIVE-WIKI-BBC-REUTERS",
+        "name": "维基百科 / BBC / Reuters",
+        "note": "实测 TCP 连接超时（本机网络不可达）→ 白名单未纳入"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "label": "应命中·政策法规",
+      "query": "加装电梯需要什么手续？",
+      "refused": false,
+      "mode": "rule",
+      "confidence": 0.4521,
+      "threshold": 0.34,
+      "corpus_result": {
+        "hits": 4,
+        "confidence": 0.4521,
+        "refused": false,
+        "refuse_reason": ""
+      },
+      "live": {
+        "enabled": true,
+        "offline": false,
+        "note": "已实时检索 12 个权威源，命中 6 条可核实依据；另有 5 条相关线索（未核实）",
+        "hits": 6,
+        "strict_hits": 6,
+        "related_hits": 5,
+        "queried": 12,
+        "sources": [
+          {
+            "id": "LIVE-CHINADAILY",
+            "name": "中国日报中文网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 142.3,
+            "error": null
+          },
+          {
+            "id": "LIVE-YOUTH",
+            "name": "中国青年网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 160.5,
+            "error": null
+          },
+          {
+            "id": "LIVE-PEOPLE-HOME",
+            "name": "人民网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 1,
+            "ms": 164.4,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV",
+            "name": "央视网 · 新闻频道最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 182.4,
+            "error": null
+          },
+          {
+            "id": "LIVE-CE",
+            "name": "中国经济网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 192.4,
+            "error": null
+          },
+          {
+            "id": "LIVE-XINHUA-HOME",
+            "name": "新华网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 1,
+            "ms": 370.8,
+            "error": null
+          },
+          {
+            "id": "LIVE-CHINANEWS-ROLL",
+            "name": "中国新闻网 · 滚动新闻",
+            "ok": true,
+            "hits": 1,
+            "related": 0,
+            "ms": 568.8,
+            "error": null
+          },
+          {
+            "id": "LIVE-WHO",
+            "name": "世界卫生组织 WHO · 新闻",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 732.8,
+            "error": null
+          },
+          {
+            "id": "LIVE-UN",
+            "name": "联合国新闻（中文）",
+            "ok": true,
+            "hits": 0,
+            "related": 1,
+            "ms": 818.9,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-BM",
+            "name": "中国政府网 · 部门文件库",
+            "ok": true,
+            "hits": 6,
+            "related": 18,
+            "ms": 993.7,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV-SEARCH",
+            "name": "央视网 · 站内检索",
+            "ok": true,
+            "hits": 21,
+            "related": 0,
+            "ms": 1607.7,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-GW",
+            "name": "中国政府网 · 国务院文件库",
+            "ok": true,
+            "hits": 9,
+            "related": 17,
+            "ms": 2305.1,
+            "error": null
+          }
+        ],
+        "fetched_at": "2026-09-19 03:46:39"
+      },
+      "refuse_reason": "",
+      "citations": [
+        {
+          "id": "live-gov-bm-04",
+          "doc_title": "国家发展改革委 财政部关于2026年实施大规模设备更新和消费品以旧换新政策的通知",
+          "publisher": "中国政府网（各部委）",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-02",
+          "doc_title": "关注老楼加装电梯 ：老楼加装电梯人性化智慧设计",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-03",
+          "doc_title": "二手房售出后加装电梯的权益该归谁？（以案说法）",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-04",
+          "doc_title": "关注老楼加装电梯北京：老楼加装电梯人性化智慧设计",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-05",
+          "doc_title": "北京老楼加装电梯目前加装近90部",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-06",
+          "doc_title": "关注老楼加装电梯 ：北京目前加装近90部",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "ev-lift-01-p1",
+          "doc_title": "老旧小区加装电梯实施细则发布",
+          "publisher": "市住房与建设局（合成）",
+          "score": 13.0996
+        },
+        {
+          "id": "ev-lift-01-p2",
+          "doc_title": "老旧小区加装电梯实施细则发布",
+          "publisher": "市住房与建设局（合成）",
+          "score": 10.9211
+        }
+      ],
+      "evidence": [
+        {
+          "id": "live-gov-bm-04",
+          "live": true,
+          "publisher": "中国政府网（各部委）",
+          "published": "2025.12.30",
+          "fetched_at": "2026-09-19 03:46:39",
+          "source_url": "https://www.gov.cn/zhengce/zhengceku/202512/content_7053236.htm",
+          "score": null,
+          "matched": [
+            "加装",
+            "电梯",
+            "需要"
+          ],
+          "text_head": "发改环资〔2025〕1745号 ｜ 国家发展改革委 财政部 ｜ 工业、交通 / 机械制造与重工业 ｜ 项目的基础上，将老旧小区 加装 电梯 、养老机构、消防救援设施、检验检测等领域设备更新纳入支持范围，更好满足民生和安全需要。支持商业综合体"
+        },
+        {
+          "id": "live-cctv-search-02",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2017-08-21",
+          "fetched_at": "2026-09-19 03:46:39",
+          "source_url": "http://news.cctv.com/2017/08/21/ARTIYmlIu4cL7ykPXUXful00170821.shtml",
+          "score": null,
+          "matched": [
+            "加装",
+            "装电",
+            "电梯"
+          ],
+          "text_head": "关注老楼加装电梯：老楼加装电梯 人性化智慧设计_新闻频道_央视网(cctv.com) --> 央视新闻客户端点击或扫描下载 央视网首页 新闻 视频 经济 体育 军事 更多 科技 法治 农业 评论 人物 图片 文娱 书画 公益 熊猫频道 直播"
+        },
+        {
+          "id": "live-cctv-search-03",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2026-05-21",
+          "fetched_at": "2026-09-19 03:46:39",
+          "source_url": "https://news.cctv.com/2026/05/21/ARTIVhTvlL5CTI8RsF83a5bg260521.shtml",
+          "score": null,
+          "matched": [
+            "加装",
+            "装电",
+            "电梯"
+          ],
+          "text_head": "二手房售出后加装电梯的权益该归谁？（以案说法）_新闻频道_央视网(cctv.com) --> 新闻 新闻频道 > 法治新闻 二手房售出后加装电梯的权益该归谁？（以案说法） 来源： 人民日报 | 2026年05月21日 06:49:00 人民"
+        },
+        {
+          "id": "live-cctv-search-04",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2017-08-21",
+          "fetched_at": "2026-09-19 03:46:39",
+          "source_url": "http://news.cctv.com/2017/08/21/ARTI2cZe6NOWx8tpQTNZ3xHz170821.shtml",
+          "score": null,
+          "matched": [
+            "加装",
+            "装电",
+            "电梯"
+          ],
+          "text_head": "关注老楼加装电梯 北京：老楼加装电梯 人性化智慧设计_新闻频道_央视网(cctv.com) --> 央视新闻客户端点击或扫描下载 央视网首页 新闻 视频 经济 体育 军事 更多 科技 法治 农业 评论 人物 图片 文娱 书画 公益 熊猫频道"
+        },
+        {
+          "id": "live-cctv-search-05",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2017-08-21",
+          "fetched_at": "2026-09-19 03:46:39",
+          "source_url": "http://news.cctv.com/2017/08/21/ARTIxSEnUbxDzuBzNUPbFBGa170821.shtml",
+          "score": null,
+          "matched": [
+            "加装",
+            "装电",
+            "电梯"
+          ],
+          "text_head": "北京老楼加装电梯目前加装近90部"
+        },
+        {
+          "id": "live-cctv-search-06",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2017-08-21",
+          "fetched_at": "2026-09-19 03:46:39",
+          "source_url": "http://news.cctv.com/2017/08/21/ARTItloTI5TiJiRhwFgdPHEJ170821.shtml",
+          "score": null,
+          "matched": [
+            "加装",
+            "装电",
+            "电梯"
+          ],
+          "text_head": "关注老楼加装电梯 ：北京目前加装近90部"
+        },
+        {
+          "id": "ev-lift-01-p1",
+          "live": false,
+          "publisher": "市住房与建设局（合成）",
+          "published": "2026-04-08",
+          "fetched_at": "",
+          "source_url": "",
+          "score": 13.0996,
+          "matched": [
+            "加装",
+            "电梯",
+            "装电"
+          ],
+          "text_head": "本市发布老旧小区加装电梯实施细则，适用于2000年以前建成、未列入征收计划的住宅小区。"
+        },
+        {
+          "id": "ev-lift-01-p2",
+          "live": false,
+          "publisher": "市住房与建设局（合成）",
+          "published": "2026-04-08",
+          "fetched_at": "",
+          "source_url": "",
+          "score": 10.9211,
+          "matched": [
+            "加装",
+            "电梯",
+            "装电"
+          ],
+          "text_head": "财政补贴标准为每部电梯不超过20万元，补贴资金由市、区两级按6:4分担；单部电梯建安成本通常在45万至60万元区间。"
+        }
+      ],
+      "related_count": 5,
+      "related": [
+        {
+          "id": "live-people-home-01",
+          "title": "从粗糙石头到精美玉镯需要几步？",
+          "source_name": "人民网 · 首页最新条目",
+          "published": "日期未标注",
+          "fetched_at": "2026-09-19 03:46:40",
+          "url": "http://v.people.cn/n1/2026/0918/c431305-40801207.html",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-xinhua-home-01",
+          "title": "生命不需要选择题：一位淋巴瘤孕妈的“两全”答案",
+          "source_name": "新华网 · 首页最新条目",
+          "published": "日期未标注",
+          "fetched_at": "2026-09-19 03:46:40",
+          "url": "https://www.news.cn/20260917/a19df72c787f4a5bb603ec8db465050f/c.html",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-un-01",
+          "title": "联合国：加强宗教间和文化间对话 共同打击仇恨言论",
+          "source_name": "联合国新闻（中文）",
+          "published": "Thu, 17 Sep 2026 12:00",
+          "fetched_at": "2026-09-19 03:46:40",
+          "url": "https://news.un.org/feed/view/zh/story/2026/09/1142808",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-gov-bm-01",
+          "title": "商务部等7部门关于推动商品消费扩容升级的实施意见",
+          "source_name": "中国政府网 · 部门文件库",
+          "published": "2026.08.31",
+          "fetched_at": "2026-09-19 03:46:39",
+          "url": "https://www.gov.cn/zhengce/zhengceku/202608/content_7079705.htm",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-gov-bm-03",
+          "title": "商务部等9部门关于实施绿色消费推进行动的通知",
+          "source_name": "中国政府网 · 部门文件库",
+          "published": "2026.01.05",
+          "fetched_at": "2026-09-19 03:46:39",
+          "url": "https://www.gov.cn/zhengce/zhengceku/202601/content_7053876.htm",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        }
+      ],
+      "evidence_ids": [
+        "live-gov-bm-04",
+        "live-cctv-search-02",
+        "live-cctv-search-03",
+        "live-cctv-search-04",
+        "live-cctv-search-05",
+        "live-cctv-search-06",
+        "ev-lift-01-p1",
+        "ev-lift-01-p2"
+      ],
+      "related_ids": [
+        "live-people-home-01",
+        "live-xinhua-home-01",
+        "live-un-01",
+        "live-gov-bm-01",
+        "live-gov-bm-03"
+      ],
+      "live_graph_stats": {
+        "topics": 1,
+        "sources": 2,
+        "evidence": 6,
+        "divergences": 0
+      },
+      "timing": {
+        "server_total_ms": 2444.76,
+        "generate_ms": 0.03
+      },
+      "trace": [
+        {
+          "step": "查询理解",
+          "detail": "归一化出 8 个检索词：加装 / 装电 / 电梯 / 梯需 / 需要 / 要什 / 么手 / 手续",
+          "ms": 0.01
+        },
+        {
+          "step": "语料范围检查",
+          "detail": "3/8 个检索词存在于语料词表",
+          "ms": 0.0
+        },
+        {
+          "step": "语义检索",
+          "detail": "倒排索引命中 8 条候选证据（3/3 个有效检索词得到匹配）",
+          "ms": 0.01
+        },
+        {
+          "step": "区分度检查",
+          "detail": "仅命中 0 个高区分度实词（要求 ≥2，IDF 阈值 P70 = 4.60） → 置信度按 0.6 折算",
+          "ms": 0.0
+        },
+        {
+          "step": "依据充分性闸门",
+          "detail": "查询原始词命中 3 个（≥2）→ 通过：加装 / 装电 / 电梯",
+          "ms": 0.0
+        },
+        {
+          "step": "拒答闸门",
+          "detail": "置信度 0.45 ≥ 阈值 0.34 → 放行",
+          "ms": 0.0
+        },
+        {
+          "step": "多源一致性比对",
+          "detail": "检出 1 组多源分歧",
+          "ms": 0.01
+        },
+        {
+          "step": "实时核证",
+          "detail": "已实时检索 12 个权威源，命中 6 条可核实依据；另有 5 条相关线索（未核实）（中国日报中文网（最新池64条）:0(未命中) / 中国青年网（最新池132条）:0(未命中) / 人民网（最新池82条）:0＋1线索 / 央视网（最新池6条）:0(未命中) / 中国经济网（最新池138条）:0(未命中) / 新华网（最新池36条）:0＋1线索 / 中国新闻网（最新池245条）:1 / 世界卫生组织 WHO:0(未命中) / 联合国新闻（中文）:0＋1线索 / 中国政府网:6＋18线索 / 央视网:21 / 中国政府网:9＋17线索）",
+          "ms": 2444.5
+        },
+        {
+          "step": "双轨合并判定",
+          "detail": "离线语料：命中 4 条（置信度 0.45）｜ 实时核证：可核实 6 条 / 线索 5 条 → 放行（证据 8 条，其中实时 6 条）",
+          "ms": 0.0
+        }
+      ],
+      "answer_head": "以下内容全部来自检索到的原文片段，未做改写：\n1. 发改环资〔2025〕1745号 ｜ 国家发展改革委 财政部 ｜ 工业、交通 / 机械制造与重工业 ｜ 项目的基础上，将老旧小区 加装 电梯 、养老机构、消防救援设施、检验检测等领域设备更新纳入支持范围，更好满足民生和安全需要。支持商业综合体、购物中心、百货店、大型超市等线下消费商业设施设备更新。优化申报条件和［live-gov-bm-04］\n2. 关注老楼加装电梯：老楼加装电梯 人性化智慧设计_新闻频道_央视网(cctv.com) --> 央视新闻客户端点击或扫描下载 央视网首页 新闻 视频 经济 体育 军事 更多 科技 法治 农业 评论 人"
+    },
+    {
+      "label": "应命中·政策法规(口语长句)",
+      "query": "加装电梯业主需要出多少钱？",
+      "refused": false,
+      "mode": "rule",
+      "confidence": 0.8614,
+      "threshold": 0.34,
+      "corpus_result": {
+        "hits": 4,
+        "confidence": 0.8614,
+        "refused": false,
+        "refuse_reason": ""
+      },
+      "live": {
+        "enabled": true,
+        "offline": false,
+        "note": "已实时检索 12 个权威源，命中 6 条可核实依据；另有 5 条相关线索（未核实）",
+        "hits": 6,
+        "strict_hits": 6,
+        "related_hits": 5,
+        "queried": 12,
+        "sources": [
+          {
+            "id": "LIVE-CHINADAILY",
+            "name": "中国日报中文网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 139.0,
+            "error": null
+          },
+          {
+            "id": "LIVE-PEOPLE-HOME",
+            "name": "人民网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 1,
+            "ms": 144.6,
+            "error": null
+          },
+          {
+            "id": "LIVE-CE",
+            "name": "中国经济网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 147.8,
+            "error": null
+          },
+          {
+            "id": "LIVE-YOUTH",
+            "name": "中国青年网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 155.2,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV",
+            "name": "央视网 · 新闻频道最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 175.7,
+            "error": null
+          },
+          {
+            "id": "LIVE-XINHUA-HOME",
+            "name": "新华网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 1,
+            "ms": 296.2,
+            "error": null
+          },
+          {
+            "id": "LIVE-CHINANEWS-ROLL",
+            "name": "中国新闻网 · 滚动新闻",
+            "ok": true,
+            "hits": 1,
+            "related": 0,
+            "ms": 421.9,
+            "error": null
+          },
+          {
+            "id": "LIVE-WHO",
+            "name": "世界卫生组织 WHO · 新闻",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 714.7,
+            "error": null
+          },
+          {
+            "id": "LIVE-UN",
+            "name": "联合国新闻（中文）",
+            "ok": true,
+            "hits": 0,
+            "related": 1,
+            "ms": 814.9,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV-SEARCH",
+            "name": "央视网 · 站内检索",
+            "ok": true,
+            "hits": 20,
+            "related": 0,
+            "ms": 1353.0,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-BM",
+            "name": "中国政府网 · 部门文件库",
+            "ok": true,
+            "hits": 9,
+            "related": 9,
+            "ms": 2578.0,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-GW",
+            "name": "中国政府网 · 国务院文件库",
+            "ok": true,
+            "hits": 10,
+            "related": 20,
+            "ms": 3379.3,
+            "error": null
+          }
+        ],
+        "fetched_at": "2026-09-19 03:46:42"
+      },
+      "refuse_reason": "",
+      "citations": [
+        {
+          "id": "live-cctv-search-01",
+          "doc_title": "上海调整加装电梯业主表决比例",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-02",
+          "doc_title": "小区加装电梯业主起争执低层喊话：补偿一楼30万",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-03",
+          "doc_title": "关注老楼加装电梯 ：老楼加装电梯人性化智慧设计",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-04",
+          "doc_title": "关注老楼加装电梯北京：老楼加装电梯人性化智慧设计",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-05",
+          "doc_title": "北京老楼加装电梯目前加装近90部",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-06",
+          "doc_title": "关注老楼加装电梯 ：北京目前加装近90部",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "ev-lift-02-p3",
+          "doc_title": "加装电梯落地难：钱从哪来，低层为什么不同意",
+          "publisher": "城市观察周刊（合成）",
+          "score": 29.5277
+        },
+        {
+          "id": "ev-lift-01-p2",
+          "doc_title": "老旧小区加装电梯实施细则发布",
+          "publisher": "市住房与建设局（合成）",
+          "score": 26.9765
+        }
+      ],
+      "evidence": [
+        {
+          "id": "live-cctv-search-01",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2021-01-06",
+          "fetched_at": "2026-09-19 03:46:42",
+          "source_url": "https://sh.cctv.com/2021/01/06/ARTIhvg7rXlRfbKV5YbMDQkn210106.shtml",
+          "score": null,
+          "matched": [
+            "加装",
+            "装电",
+            "电梯",
+            "梯业",
+            "业主"
+          ],
+          "text_head": "上海调整加装电梯业主表决比例_上海频道_央视网 上海 上海频道 > 今日上海 上海调整加装电梯业主表决比例 来源： 文汇报 | 2021年01月06日 13:58 文汇报 | 2021年01月06日 13:58 原标题：上海调整加装电梯业主"
+        },
+        {
+          "id": "live-cctv-search-02",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2018-12-10",
+          "fetched_at": "2026-09-19 03:46:42",
+          "source_url": "http://news.cctv.com/2018/12/10/ARTIGrYliT1OMNkj2PRIpI3j181210.shtml",
+          "score": null,
+          "matched": [
+            "加装",
+            "装电",
+            "电梯",
+            "梯业",
+            "业主"
+          ],
+          "text_head": "小区加装电梯业主起争执 低层喊话：补偿一楼30万_新闻频道_央视网(cctv.com) --> 央视新闻客户端点击或扫描下载 央视网首页 新闻 视频 经济 体育 军事 更多 科技 法治 农业 评论 人物 图片 文娱 书画 公益 熊猫频道 直"
+        },
+        {
+          "id": "live-cctv-search-03",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2017-08-21",
+          "fetched_at": "2026-09-19 03:46:42",
+          "source_url": "http://news.cctv.com/2017/08/21/ARTIYmlIu4cL7ykPXUXful00170821.shtml",
+          "score": null,
+          "matched": [
+            "加装",
+            "装电",
+            "电梯"
+          ],
+          "text_head": "关注老楼加装电梯：老楼加装电梯 人性化智慧设计_新闻频道_央视网(cctv.com) --> 央视新闻客户端点击或扫描下载 央视网首页 新闻 视频 经济 体育 军事 更多 科技 法治 农业 评论 人物 图片 文娱 书画 公益 熊猫频道 直播"
+        },
+        {
+          "id": "live-cctv-search-04",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2017-08-21",
+          "fetched_at": "2026-09-19 03:46:42",
+          "source_url": "http://news.cctv.com/2017/08/21/ARTI2cZe6NOWx8tpQTNZ3xHz170821.shtml",
+          "score": null,
+          "matched": [
+            "加装",
+            "装电",
+            "电梯"
+          ],
+          "text_head": "关注老楼加装电梯北京：老楼加装电梯人性化智慧设计"
+        },
+        {
+          "id": "live-cctv-search-05",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2017-08-21",
+          "fetched_at": "2026-09-19 03:46:42",
+          "source_url": "http://news.cctv.com/2017/08/21/ARTIxSEnUbxDzuBzNUPbFBGa170821.shtml",
+          "score": null,
+          "matched": [
+            "加装",
+            "装电",
+            "电梯"
+          ],
+          "text_head": "北京老楼加装电梯目前加装近90部"
+        },
+        {
+          "id": "live-cctv-search-06",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2017-08-21",
+          "fetched_at": "2026-09-19 03:46:42",
+          "source_url": "http://news.cctv.com/2017/08/21/ARTItloTI5TiJiRhwFgdPHEJ170821.shtml",
+          "score": null,
+          "matched": [
+            "加装",
+            "装电",
+            "电梯"
+          ],
+          "text_head": "关注老楼加装电梯 ：北京目前加装近90部"
+        },
+        {
+          "id": "ev-lift-02-p3",
+          "live": false,
+          "publisher": "城市观察周刊（合成）",
+          "published": "2026-05-14",
+          "fetched_at": "",
+          "source_url": "",
+          "score": 29.5277,
+          "matched": [
+            "万元",
+            "业主",
+            "加装",
+            "梯业",
+            "电梯",
+            "补贴",
+            "装电"
+          ],
+          "text_head": "扣除20万元补贴后，单部电梯业主自筹部分仍需25万至40万元；按楼层系数分摊，六层住户单户负担约4万至8万元。"
+        },
+        {
+          "id": "ev-lift-01-p2",
+          "live": false,
+          "publisher": "市住房与建设局（合成）",
+          "published": "2026-04-08",
+          "fetched_at": "",
+          "source_url": "",
+          "score": 26.9765,
+          "matched": [
+            "万元",
+            "加装",
+            "成本",
+            "电梯",
+            "补贴",
+            "装电"
+          ],
+          "text_head": "财政补贴标准为每部电梯不超过20万元，补贴资金由市、区两级按6:4分担；单部电梯建安成本通常在45万至60万元区间。"
+        }
+      ],
+      "related_count": 5,
+      "related": [
+        {
+          "id": "live-people-home-01",
+          "title": "从粗糙石头到精美玉镯需要几步？",
+          "source_name": "人民网 · 首页最新条目",
+          "published": "日期未标注",
+          "fetched_at": "2026-09-19 03:46:42",
+          "url": "http://v.people.cn/n1/2026/0918/c431305-40801207.html",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-xinhua-home-01",
+          "title": "生命不需要选择题：一位淋巴瘤孕妈的“两全”答案",
+          "source_name": "新华网 · 首页最新条目",
+          "published": "日期未标注",
+          "fetched_at": "2026-09-19 03:46:42",
+          "url": "https://www.news.cn/20260917/a19df72c787f4a5bb603ec8db465050f/c.html",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-un-01",
+          "title": "联合国：加强宗教间和文化间对话 共同打击仇恨言论",
+          "source_name": "联合国新闻（中文）",
+          "published": "Thu, 17 Sep 2026 12:00",
+          "fetched_at": "2026-09-19 03:46:43",
+          "url": "https://news.un.org/feed/view/zh/story/2026/09/1142808",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-gov-bm-02",
+          "title": "农业农村部关于加快农业全产业链培育发展的指导意见",
+          "source_name": "中国政府网 · 部门文件库",
+          "published": "2021.06.02",
+          "fetched_at": "2026-09-19 03:46:42",
+          "url": "https://www.gov.cn/zhengce/zhengceku/2021-06/02/content_5614905.htm",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-gov-bm-03",
+          "title": "商务部等7部门关于推动商品消费扩容升级的实施意见",
+          "source_name": "中国政府网 · 部门文件库",
+          "published": "2026.08.31",
+          "fetched_at": "2026-09-19 03:46:42",
+          "url": "https://www.gov.cn/zhengce/zhengceku/202608/content_7079705.htm",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        }
+      ],
+      "evidence_ids": [
+        "live-cctv-search-01",
+        "live-cctv-search-02",
+        "live-cctv-search-03",
+        "live-cctv-search-04",
+        "live-cctv-search-05",
+        "live-cctv-search-06",
+        "ev-lift-02-p3",
+        "ev-lift-01-p2"
+      ],
+      "related_ids": [
+        "live-people-home-01",
+        "live-xinhua-home-01",
+        "live-un-01",
+        "live-gov-bm-02",
+        "live-gov-bm-03"
+      ],
+      "live_graph_stats": {
+        "topics": 1,
+        "sources": 1,
+        "evidence": 6,
+        "divergences": 0
+      },
+      "timing": {
+        "server_total_ms": 3708.05,
+        "generate_ms": 0.02
+      },
+      "trace": [
+        {
+          "step": "查询理解",
+          "detail": "归一化出 10 个检索词：加装 / 装电 / 电梯 / 梯业 / 业主 / 主需 / 需要 / 要出 / 出多 / 少钱",
+          "ms": 0.03
+        },
+        {
+          "step": "同义扩展",
+          "detail": "补充 4 个书面表达检索词：万元 / 补贴 / 成本 / 票价",
+          "ms": 0.0
+        },
+        {
+          "step": "语料范围检查",
+          "detail": "9/14 个检索词存在于语料词表",
+          "ms": 0.0
+        },
+        {
+          "step": "语义检索",
+          "detail": "倒排索引命中 10 条候选证据（9/9 个有效检索词得到匹配）",
+          "ms": 0.06
+        },
+        {
+          "step": "区分度检查",
+          "detail": "命中 3 个高区分度实词（≥2）→ 通过",
+          "ms": 0.0
+        },
+        {
+          "step": "依据充分性闸门",
+          "detail": "查询原始词命中 5 个（≥2）→ 通过：加装 / 装电 / 电梯 / 梯业 / 业主",
+          "ms": 0.0
+        },
+        {
+          "step": "拒答闸门",
+          "detail": "置信度 0.86 ≥ 阈值 0.34 → 放行",
+          "ms": 0.0
+        },
+        {
+          "step": "多源一致性比对",
+          "detail": "未检出多源分歧",
+          "ms": 0.01
+        },
+        {
+          "step": "实时核证",
+          "detail": "已实时检索 12 个权威源，命中 6 条可核实依据；另有 5 条相关线索（未核实）（中国日报中文网（最新池64条）:0(未命中) / 人民网（最新池82条）:0＋1线索 / 中国经济网（最新池138条）:0(未命中) / 中国青年网（最新池132条）:0(未命中) / 央视网（最新池6条）:0(未命中) / 新华网（最新池36条）:0＋1线索 / 中国新闻网（最新池245条）:1 / 世界卫生组织 WHO:0(未命中) / 联合国新闻（中文）:0＋1线索 / 央视网:20 / 中国政府网:9＋9线索 / 中国政府网:10＋20线索）",
+          "ms": 3707.7
+        },
+        {
+          "step": "双轨合并判定",
+          "detail": "离线语料：命中 4 条（置信度 0.86）｜ 实时核证：可核实 6 条 / 线索 5 条 → 放行（证据 8 条，其中实时 6 条）",
+          "ms": 0.0
+        }
+      ],
+      "answer_head": "以下内容全部来自检索到的原文片段，未做改写：\n1. 上海调整加装电梯业主表决比例_上海频道_央视网 上海 上海频道 > 今日上海 上海调整加装电梯业主表决比例 来源： 文汇报 | 2021年01月06日 13:58 文汇报 | 2021年01月06日 13:58 原标题：上海调整加装电梯业主表决比例 正在加载 本报讯 （记者史博臻）近日，上海市住房和城乡建设管理委员会、上海市房屋管理局联合发布《关于调整本市既有多层住宅加装电梯业主表决比例的通知》。 在加装电梯方面，上海此前实行的是《关于进一步做好本市既有多层住宅加装电梯工作的若干意见》。其中，有关业主表决比例的规定，与今年起施行的《民法典》第"
+    },
+    {
+      "label": "应命中·离线语料命中但实时可能未命中",
+      "query": "5号线开通后客流多少？",
+      "refused": false,
+      "mode": "rule",
+      "confidence": 0.4641,
+      "threshold": 0.34,
+      "corpus_result": {
+        "hits": 4,
+        "confidence": 0.4641,
+        "refused": false,
+        "refuse_reason": ""
+      },
+      "live": {
+        "enabled": true,
+        "offline": false,
+        "note": "已实时检索 12 个权威源，命中 6 条可核实依据；另有 5 条相关线索（未核实）",
+        "hits": 6,
+        "strict_hits": 6,
+        "related_hits": 5,
+        "queried": 12,
+        "sources": [
+          {
+            "id": "LIVE-YOUTH",
+            "name": "中国青年网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 125.4,
+            "error": null
+          },
+          {
+            "id": "LIVE-CHINADAILY",
+            "name": "中国日报中文网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 127.2,
+            "error": null
+          },
+          {
+            "id": "LIVE-PEOPLE-HOME",
+            "name": "人民网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 132.4,
+            "error": null
+          },
+          {
+            "id": "LIVE-CE",
+            "name": "中国经济网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 186.9,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV",
+            "name": "央视网 · 新闻频道最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 188.4,
+            "error": null
+          },
+          {
+            "id": "LIVE-XINHUA-HOME",
+            "name": "新华网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 270.1,
+            "error": null
+          },
+          {
+            "id": "LIVE-CHINANEWS-ROLL",
+            "name": "中国新闻网 · 滚动新闻",
+            "ok": true,
+            "hits": 0,
+            "related": 1,
+            "ms": 527.0,
+            "error": null
+          },
+          {
+            "id": "LIVE-WHO",
+            "name": "世界卫生组织 WHO · 新闻",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 683.2,
+            "error": null
+          },
+          {
+            "id": "LIVE-UN",
+            "name": "联合国新闻（中文）",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 786.9,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV-SEARCH",
+            "name": "央视网 · 站内检索",
+            "ok": true,
+            "hits": 9,
+            "related": 6,
+            "ms": 1487.8,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-BM",
+            "name": "中国政府网 · 部门文件库",
+            "ok": true,
+            "hits": 0,
+            "related": 4,
+            "ms": 1587.9,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-GW",
+            "name": "中国政府网 · 国务院文件库",
+            "ok": true,
+            "hits": 0,
+            "related": 1,
+            "ms": 3130.1,
+            "error": null
+          }
+        ],
+        "fetched_at": "2026-09-19 03:46:46"
+      },
+      "refuse_reason": "",
+      "citations": [
+        {
+          "id": "live-cctv-search-01",
+          "doc_title": "北京地铁新线开通近半月 1 号线八通线客流降1成",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-02",
+          "doc_title": "北京10 号线成最挤地铁 \"结环\" 后客流连日超过1 号线",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-06",
+          "doc_title": "徐州地铁1 号线开通江苏省内地铁城市数量增至 5 城",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-03",
+          "doc_title": "广州地铁二十二号线后通段开通运营线网运营总里程接近780公里",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-04",
+          "doc_title": "北京14 号线西段将于 5 月开通 7座车站站名已确定",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-05",
+          "doc_title": "春节不停工！大连地铁 5号线建设者坚守一线保开通",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "ev-metro-02-p1",
+          "doc_title": "5号线开通首周：换乘接驳仍是主要痛点",
+          "publisher": "城市观察周刊（合成）",
+          "score": 14.9632
+        },
+        {
+          "id": "ev-metro-01-p2",
+          "doc_title": "滨江市轨道交通5号线一期开通试运营",
+          "publisher": "滨江日报（合成）",
+          "score": 12.4834
+        }
+      ],
+      "evidence": [
+        {
+          "id": "live-cctv-search-01",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2013-01-13",
+          "fetched_at": "2026-09-19 03:46:46",
+          "source_url": "http://news.cntv.cn/2013/01/13/ARTI1358026810520961.shtml",
+          "score": null,
+          "matched": [
+            "号线",
+            "线开",
+            "开通",
+            "客流"
+          ],
+          "text_head": "北京地铁新线开通近半月 1号线八通线客流降1成_新闻频道_央视网 央视网 | 视频 | 网站地图 客服 设为首页 您好，帐号未激活 马上激活 退出 您好， VIP邮箱 免费邮箱 微博 社区 博客 播客 论坛 观看记录 退出 选择去向 VIP"
+        },
+        {
+          "id": "live-cctv-search-02",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2013-01-06",
+          "fetched_at": "2026-09-19 03:46:46",
+          "source_url": "http://news.cntv.cn/2013/01/06/ARTI1357462189578258.shtml",
+          "score": null,
+          "matched": [
+            "号线",
+            "后客",
+            "客流"
+          ],
+          "text_head": "北京10号线成最挤地铁 \"结环\"后客流连日超过1号线_新闻频道_央视网 央视网 | 视频 | 网站地图 客服 设为首页 您好，帐号未激活 马上激活 退出 您好， VIP邮箱 免费邮箱 微博 社区 博客 播客 论坛 观看记录 退出 选择去向 "
+        },
+        {
+          "id": "live-cctv-search-06",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2019-09-29",
+          "fetched_at": "2026-09-19 03:46:46",
+          "source_url": "http://news.cctv.com/2019/09/29/ARTIOWjyByTzRRffe95WRoI3190929.shtml",
+          "score": null,
+          "matched": [
+            "号线",
+            "线开",
+            "开通"
+          ],
+          "text_head": "徐州地铁1号线开通 江苏省内地铁城市数量增至5城_新闻频道_央视网(cctv.com) 新闻 新闻频道 > 社会新闻 徐州地铁1号线开通 江苏省内地铁城市数量增至5城 来源： 中国新闻网 | 2019年09月29日 04:52 中国新闻网 "
+        },
+        {
+          "id": "live-cctv-search-03",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2025-12-29",
+          "fetched_at": "2026-09-19 03:46:46",
+          "source_url": "https://local.cctv.com/2025/12/29/ARTIHNKZQboeYA5i6TanhmfF251229.shtml",
+          "score": null,
+          "matched": [
+            "号线",
+            "开通"
+          ],
+          "text_head": "广州地铁二十二号线后通段开通运营线网运营总里程接近780公里"
+        },
+        {
+          "id": "live-cctv-search-04",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2013-01-08",
+          "fetched_at": "2026-09-19 03:46:46",
+          "source_url": "http://news.cntv.cn/2013/01/08/ARTI1357588052840236.shtml",
+          "score": null,
+          "matched": [
+            "号线",
+            "开通"
+          ],
+          "text_head": "北京14 号线西段将于 5 月开通 7座车站站名已确定"
+        },
+        {
+          "id": "live-cctv-search-05",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2023-01-23",
+          "fetched_at": "2026-09-19 03:46:46",
+          "source_url": "https://dbzx.cctv.com/2023/01/23/ARTI8q1Zse91wJ6L6akxofQ8230123.shtml",
+          "score": null,
+          "matched": [
+            "号线",
+            "开通"
+          ],
+          "text_head": "春节不停工！大连地铁 5号线建设者坚守一线保开通"
+        },
+        {
+          "id": "ev-metro-02-p1",
+          "live": false,
+          "publisher": "城市观察周刊（合成）",
+          "published": "2026-03-19",
+          "fetched_at": "",
+          "source_url": "",
+          "score": 14.9632,
+          "matched": [
+            "号线",
+            "客流",
+            "开通",
+            "线开"
+          ],
+          "text_head": "5号线一期开通首周，线路日均客流约21.3万人次，与官方公布数据一致；但乘客反馈集中在换乘接驳环节。"
+        },
+        {
+          "id": "ev-metro-01-p2",
+          "live": false,
+          "publisher": "滨江日报（合成）",
+          "published": "2026-03-12",
+          "fetched_at": "",
+          "source_url": "",
+          "score": 12.4834,
+          "matched": [
+            "号线",
+            "开通",
+            "通后"
+          ],
+          "text_head": "市交通研究院预测，5号线一期开通后，早高峰主干道平均车速可提升约12%，城东产业园通勤时间平均缩短约18分钟。"
+        }
+      ],
+      "related_count": 5,
+      "related": [
+        {
+          "id": "live-chinanews-roll-01",
+          "title": "广东举办面向澳门创新主体开通专利预审服务主题活动",
+          "source_name": "中国新闻网 · 滚动新闻",
+          "published": "日期未标注",
+          "fetched_at": "2026-09-19 03:46:46",
+          "url": "https://www.chinanews.com.cn/dwq/2026/09-18/10699158.shtml",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-cctv-search-08",
+          "title": "北京10 号线可与10条地铁线路实现换乘",
+          "source_name": "央视网 · 站内检索",
+          "published": "2013-04-30",
+          "fetched_at": "2026-09-19 03:46:46",
+          "url": "http://news.cntv.cn/2013/04/30/ARTI1367314707452323.shtml",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-cctv-search-09",
+          "title": "北京：地铁日客流首破1200万大关创历史纪录",
+          "source_name": "央视网 · 站内检索",
+          "published": "2016-03-27",
+          "fetched_at": "2026-09-19 03:46:46",
+          "url": "http://news.cctv.com/2016/03/27/ARTIeQ9SLdBxIoxoJrqHCqy8160327.shtml",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-cctv-search-10",
+          "title": "北京地铁日客流首破1200万大关创运营以来最高纪录",
+          "source_name": "央视网 · 站内检索",
+          "published": "2016-03-27",
+          "fetched_at": "2026-09-19 03:46:46",
+          "url": "http://news.cctv.com/2016/03/27/ARTI1ypKhkJRrxKXLnzf57n6160327.shtml",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-cctv-search-11",
+          "title": "成都地铁3 号线一期工程试运营线网“米字骨架”成型",
+          "source_name": "央视网 · 站内检索",
+          "published": "2016-07-31",
+          "fetched_at": "2026-09-19 03:46:46",
+          "url": "http://news.cctv.com/2016/07/31/ARTILxRdfoxgLfaQBMSUUjR8160731.shtml",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        }
+      ],
+      "evidence_ids": [
+        "live-cctv-search-01",
+        "live-cctv-search-02",
+        "live-cctv-search-06",
+        "live-cctv-search-03",
+        "live-cctv-search-04",
+        "live-cctv-search-05",
+        "ev-metro-02-p1",
+        "ev-metro-01-p2"
+      ],
+      "related_ids": [
+        "live-chinanews-roll-01",
+        "live-cctv-search-08",
+        "live-cctv-search-09",
+        "live-cctv-search-10",
+        "live-cctv-search-11"
+      ],
+      "live_graph_stats": {
+        "topics": 1,
+        "sources": 1,
+        "evidence": 6,
+        "divergences": 0
+      },
+      "timing": {
+        "server_total_ms": 3479.89,
+        "generate_ms": 0.03
+      },
+      "trace": [
+        {
+          "step": "查询理解",
+          "detail": "归一化出 7 个检索词：号线 / 线开 / 开通 / 通后 / 后客 / 客流 / 流多",
+          "ms": 0.01
+        },
+        {
+          "step": "语料范围检查",
+          "detail": "5/7 个检索词存在于语料词表",
+          "ms": 0.0
+        },
+        {
+          "step": "语义检索",
+          "detail": "倒排索引命中 12 条候选证据（5/5 个有效检索词得到匹配）",
+          "ms": 0.02
+        },
+        {
+          "step": "区分度检查",
+          "detail": "仅命中 1 个高区分度实词（要求 ≥2，IDF 阈值 P70 = 4.60） → 置信度按 0.6 折算",
+          "ms": 0.0
+        },
+        {
+          "step": "依据充分性闸门",
+          "detail": "查询原始词命中 5 个（≥2）→ 通过：号线 / 线开 / 开通 / 通后 / 客流",
+          "ms": 0.0
+        },
+        {
+          "step": "拒答闸门",
+          "detail": "置信度 0.46 ≥ 阈值 0.34 → 放行",
+          "ms": 0.0
+        },
+        {
+          "step": "多源一致性比对",
+          "detail": "检出 2 组多源分歧",
+          "ms": 0.01
+        },
+        {
+          "step": "实时核证",
+          "detail": "已实时检索 12 个权威源，命中 6 条可核实依据；另有 5 条相关线索（未核实）（中国青年网（最新池132条）:0(未命中) / 中国日报中文网（最新池64条）:0(未命中) / 人民网（最新池82条）:0(未命中) / 中国经济网（最新池138条）:0(未命中) / 央视网（最新池6条）:0(未命中) / 新华网（最新池36条）:0(未命中) / 中国新闻网（最新池245条）:0＋1线索 / 世界卫生组织 WHO:0(未命中) / 联合国新闻（中文）:0(未命中) / 央视网:9＋6线索 / 中国政府网:0＋4线索 / 中国政府网:0＋1线索）",
+          "ms": 3479.6
+        },
+        {
+          "step": "双轨合并判定",
+          "detail": "离线语料：命中 4 条（置信度 0.46）｜ 实时核证：可核实 6 条 / 线索 5 条 → 放行（证据 8 条，其中实时 6 条）",
+          "ms": 0.0
+        }
+      ],
+      "answer_head": "以下内容全部来自检索到的原文片段，未做改写：\n1. 北京地铁新线开通近半月 1号线八通线客流降1成_新闻频道_央视网 央视网 | 视频 | 网站地图 客服 设为首页 您好，帐号未激活 马上激活 退出 您好， VIP邮箱 免费邮箱 微博 社区 博客 播客 论坛 观看记录 退出 选择去向 VIP邮箱 免费邮箱 微博 社区 博客 播客 论坛 登录 新闻 经济 军事 评论 图片 体育 娱乐 科教 综艺 戏曲 音乐 少儿 书画 公益 旅游 汽车 时尚 历史 农业 健康 微博 博客 论坛 彩票 商城 邮箱 游戏 电视 频道大全 栏目大全 节目大全 直播中国 赛事直播 央视影音客户端 | 高清 电影 电视剧"
+    },
+    {
+      "label": "应命中·企业财经(改造前 0 命中)",
+      "query": "英伟达最新财报",
+      "refused": false,
+      "mode": "rule",
+      "confidence": 0.0,
+      "threshold": 0.34,
+      "corpus_result": {
+        "hits": 0,
+        "confidence": 0.0,
+        "refused": true,
+        "refuse_reason": "查询中的 6 个检索词均不在语料词表内，判定为超出语料范围"
+      },
+      "live": {
+        "enabled": true,
+        "offline": false,
+        "note": "已实时检索 12 个权威源，命中 3 条可核实依据；另有 2 条相关线索（未核实）；⚠️ 命中条目最新发布日为 2019-07-31，均早于 30 天前（提问含时效词，请注意属旧闻）",
+        "hits": 3,
+        "strict_hits": 3,
+        "related_hits": 2,
+        "queried": 12,
+        "sources": [
+          {
+            "id": "LIVE-PEOPLE-HOME",
+            "name": "人民网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 116.6,
+            "error": null
+          },
+          {
+            "id": "LIVE-YOUTH",
+            "name": "中国青年网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 122.5,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV",
+            "name": "央视网 · 新闻频道最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 138.2,
+            "error": null
+          },
+          {
+            "id": "LIVE-CHINADAILY",
+            "name": "中国日报中文网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 142.7,
+            "error": null
+          },
+          {
+            "id": "LIVE-CE",
+            "name": "中国经济网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 149.6,
+            "error": null
+          },
+          {
+            "id": "LIVE-XINHUA-HOME",
+            "name": "新华网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 275.8,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-BM",
+            "name": "中国政府网 · 部门文件库",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 321.0,
+            "error": null
+          },
+          {
+            "id": "LIVE-CHINANEWS-ROLL",
+            "name": "中国新闻网 · 滚动新闻",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 530.8,
+            "error": null
+          },
+          {
+            "id": "LIVE-WHO",
+            "name": "世界卫生组织 WHO · 新闻",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 621.2,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV-SEARCH",
+            "name": "央视网 · 站内检索",
+            "ok": true,
+            "hits": 3,
+            "related": 2,
+            "ms": 763.4,
+            "error": null
+          },
+          {
+            "id": "LIVE-UN",
+            "name": "联合国新闻（中文）",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 809.0,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-GW",
+            "name": "中国政府网 · 国务院文件库",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 1072.1,
+            "error": null
+          }
+        ],
+        "fetched_at": "2026-09-19 03:46:49"
+      },
+      "refuse_reason": "",
+      "citations": [
+        {
+          "id": "live-cctv-search-02",
+          "doc_title": "美国人造肉上市公司公布最新财报净营收增长287%",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-03",
+          "doc_title": "艺龙发布最新财报业务量强劲增长反亏损1.68亿",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-04",
+          "doc_title": "拜仁最新财报 :营业额达4.328亿欧连续21年盈利",
+          "publisher": "央视网",
+          "score": -1.0
+        }
+      ],
+      "evidence": [
+        {
+          "id": "live-cctv-search-02",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2019-07-31",
+          "fetched_at": "2026-09-19 03:46:49",
+          "source_url": "http://news.cctv.com/2019/07/31/ARTI6rZ6eoRzNwnKCvn2muCC190731.shtml",
+          "score": null,
+          "matched": [
+            "新财",
+            "财报"
+          ],
+          "text_head": "美国人造肉上市公司公布最新财报 净营收增长287%_新闻频道_央视网(cctv.com) --> 央视新闻客户端点击或扫描下载 央视网首页 新闻 视频 经济 体育 军事 更多 科技 法治 农业 评论 人物 图片 文娱 书画 公益 熊猫频道 "
+        },
+        {
+          "id": "live-cctv-search-03",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2014-02-21",
+          "fetched_at": "2026-09-19 03:46:49",
+          "source_url": "http://jingji.cntv.cn/2014/02/21/ARTI1392989458400150.shtml",
+          "score": null,
+          "matched": [
+            "新财",
+            "财报"
+          ],
+          "text_head": "艺龙发布最新财报 业务量强劲增长反亏损1.68亿_经济_央视网(cctv.com) 央视网首页 新闻 视频 经济 体育 军事 更多 科技 法治 农业 评论 人物 图片 文娱 书画 公益 熊猫频道 直播中国 节目官网 直播 栏目 频道大全 欢"
+        },
+        {
+          "id": "live-cctv-search-04",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2013-11-14",
+          "fetched_at": "2026-09-19 03:46:49",
+          "source_url": "http://sports.cntv.cn/2013/11/14/ARTI1384398543945185.shtml",
+          "score": null,
+          "matched": [
+            "新财",
+            "财报"
+          ],
+          "text_head": "拜仁最新财报:营业额达4.328亿欧 连续21年盈利_体育_央视网 央视网 | 视频 | 网站地图 客服 设为首页 您好，帐号未激活 马上激活 退出 您好， VIP邮箱 免费邮箱 微博 社区 博客 播客 论坛 观看记录 退出 选择去向 VI"
+        }
+      ],
+      "related_count": 2,
+      "related": [
+        {
+          "id": "live-cctv-search-01",
+          "title": "财报透视｜江苏银行最新业绩出炉：“稳底盘”与“强锐度”",
+          "source_name": "央视网 · 站内检索",
+          "published": "2026-05-22",
+          "fetched_at": "2026-09-19 03:46:49",
+          "url": "https://finance.cctv.com/2026/05/22/ARTIR64dZRP7yC8OdonKskYn260522.shtml",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-cctv-search-05",
+          "title": "全球财经资讯最新出炉企业财报提振市场信心 8日美国三大股指集体收涨",
+          "source_name": "央视网 · 站内检索",
+          "published": "2022-02-09",
+          "fetched_at": "2026-09-19 03:46:49",
+          "url": "https://finance.cctv.com/2022/02/09/ARTIlAVZoIGmrzFMH4Z9A1b6220209.shtml",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        }
+      ],
+      "evidence_ids": [
+        "live-cctv-search-02",
+        "live-cctv-search-03",
+        "live-cctv-search-04"
+      ],
+      "related_ids": [
+        "live-cctv-search-01",
+        "live-cctv-search-05"
+      ],
+      "live_graph_stats": {
+        "topics": 1,
+        "sources": 1,
+        "evidence": 3,
+        "divergences": 0
+      },
+      "timing": {
+        "server_total_ms": 1243.65,
+        "generate_ms": 0.01
+      },
+      "trace": [
+        {
+          "step": "查询理解",
+          "detail": "归一化出 6 个检索词：英伟 / 伟达 / 达最 / 最新 / 新财 / 财报",
+          "ms": 0.02
+        },
+        {
+          "step": "拒答闸门",
+          "detail": "查询中的 6 个检索词均不在语料词表内，判定为超出语料范围 → 明确拒答，不生成回答",
+          "ms": 0.0
+        },
+        {
+          "step": "实时核证",
+          "detail": "已实时检索 12 个权威源，命中 3 条可核实依据；另有 2 条相关线索（未核实）；⚠️ 命中条目最新发布日为 2019-07-31，均早于 30 天前（提问含时效词，请注意属旧闻）（人民网（最新池82条）:0(未命中) / 中国青年网（最新池132条）:0(未命中) / 央视网（最新池6条）:0(未命中) / 中国日报中文网（最新池64条）:0(未命中) / 中国经济网（最新池138条）:0(未命中) / 新华网（最新池36条）:0(未命中) / 中国政府网:0(未命中) / 中国新闻网（最新池245条）:0(未命中) / 世界卫生组织 WHO:0(未命中) / 央视网:3＋2线索 / 联合国新闻（中文）:0(未命中) / 中国政府网:0(未命中)）",
+          "ms": 1243.5
+        },
+        {
+          "step": "双轨合并判定",
+          "detail": "离线语料：无依据（置信度 0.00）｜ 实时核证：可核实 3 条 / 线索 2 条 → 放行（证据 3 条，其中实时 3 条）",
+          "ms": 0.0
+        }
+      ],
+      "answer_head": "以下内容全部来自检索到的原文片段，未做改写：\n1. 美国人造肉上市公司公布最新财报 净营收增长287%_新闻频道_央视网(cctv.com) --> 央视新闻客户端点击或扫描下载 央视网首页 新闻 视频 经济 体育 军事 更多 科技 法治 农业 评论 人物 图片 文娱 书画 公益 熊猫频道 直播中国 节目官网 直播 栏目 频道大全 欢迎您， 央视网友 退出 帮助 应用 央视影音 央视新闻 央视财经 熊猫频道 登录 × 登录 下次自动登录 忘记密码 立即注册 使用合作网站账号登录 国内 国际 图片 生活 军事 人物 科技 文娱 经济 评论 美国人造肉上市公司公布最新财报 净营收增长287% 国际"
+    },
+    {
+      "label": "应命中·国际文化(改造前 0 命中)",
+      "query": "2026年诺贝尔文学奖得主",
+      "refused": false,
+      "mode": "rule",
+      "confidence": 0.0,
+      "threshold": 0.34,
+      "corpus_result": {
+        "hits": 0,
+        "confidence": 0.0,
+        "refused": true,
+        "refuse_reason": "查询中的 8 个检索词均不在语料词表内，判定为超出语料范围"
+      },
+      "live": {
+        "enabled": true,
+        "offline": false,
+        "note": "已实时检索 12 个权威源，命中 6 条可核实依据；另有 3 条相关线索（未核实）",
+        "hits": 6,
+        "strict_hits": 6,
+        "related_hits": 3,
+        "queried": 12,
+        "sources": [
+          {
+            "id": "LIVE-YOUTH",
+            "name": "中国青年网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 2,
+            "ms": 95.7,
+            "error": null
+          },
+          {
+            "id": "LIVE-PEOPLE-HOME",
+            "name": "人民网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 144.5,
+            "error": null
+          },
+          {
+            "id": "LIVE-CE",
+            "name": "中国经济网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 148.2,
+            "error": null
+          },
+          {
+            "id": "LIVE-CHINADAILY",
+            "name": "中国日报中文网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 159.3,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV",
+            "name": "央视网 · 新闻频道最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 162.4,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-BM",
+            "name": "中国政府网 · 部门文件库",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 234.9,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-GW",
+            "name": "中国政府网 · 国务院文件库",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 234.9,
+            "error": null
+          },
+          {
+            "id": "LIVE-XINHUA-HOME",
+            "name": "新华网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 293.2,
+            "error": null
+          },
+          {
+            "id": "LIVE-CHINANEWS-ROLL",
+            "name": "中国新闻网 · 滚动新闻",
+            "ok": true,
+            "hits": 0,
+            "related": 1,
+            "ms": 462.7,
+            "error": null
+          },
+          {
+            "id": "LIVE-WHO",
+            "name": "世界卫生组织 WHO · 新闻",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 746.7,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV-SEARCH",
+            "name": "央视网 · 站内检索",
+            "ok": true,
+            "hits": 9,
+            "related": 0,
+            "ms": 791.1,
+            "error": null
+          },
+          {
+            "id": "LIVE-UN",
+            "name": "联合国新闻（中文）",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 803.1,
+            "error": null
+          }
+        ],
+        "fetched_at": "2026-09-19 03:46:50"
+      },
+      "refuse_reason": "",
+      "citations": [
+        {
+          "id": "live-cctv-search-01",
+          "doc_title": "2017 年诺贝尔文学奖得主呼吁文学多元化",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-02",
+          "doc_title": "2002 年诺贝尔文学奖得主凯尔泰斯·伊姆雷去世",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-06",
+          "doc_title": "德国诺贝尔文学奖得主格拉斯去世享年87岁",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-07",
+          "doc_title": "2016 诺贝尔文学奖得主传记《鲍勃·迪伦传》掌阅首发",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-03",
+          "doc_title": "诺贝尔文学奖 10日揭晓两年得主 “双黄蛋”会给谁？",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-04",
+          "doc_title": "双倍放送！ 诺贝尔文学奖缺席一年今回归两届得主同揭晓",
+          "publisher": "央视网",
+          "score": -1.0
+        }
+      ],
+      "evidence": [
+        {
+          "id": "live-cctv-search-01",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2017-12-08",
+          "fetched_at": "2026-09-19 03:46:50",
+          "source_url": "http://news.cctv.com/2017/12/08/ARTI0bqpepiAQY7ryd53G7zO171208.shtml",
+          "score": null,
+          "matched": [
+            "年诺",
+            "诺贝",
+            "贝尔",
+            "尔文",
+            "文学",
+            "学奖",
+            "奖得",
+            "得主"
+          ],
+          "text_head": "2017年诺贝尔文学奖得主呼吁文学多元化_新闻频道_央视网(cctv.com) --> 央视新闻客户端点击或扫描下载 央视网首页 新闻 视频 经济 体育 军事 更多 科技 法治 农业 评论 人物 图片 文娱 书画 公益 熊猫频道 直播中国 "
+        },
+        {
+          "id": "live-cctv-search-02",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2016-03-31",
+          "fetched_at": "2026-09-19 03:46:50",
+          "source_url": "http://news.cctv.com/2016/03/31/ARTIcEkZcrC1blECShBUTx3W160331.shtml",
+          "score": null,
+          "matched": [
+            "年诺",
+            "诺贝",
+            "贝尔",
+            "尔文",
+            "文学",
+            "学奖",
+            "奖得",
+            "得主"
+          ],
+          "text_head": "2002年诺贝尔文学奖得主凯尔泰斯·伊姆雷去世_新闻频道_央视网(cctv.com) --> 央视新闻客户端点击或扫描下载 央视网首页 新闻 视频 经济 体育 军事 更多 科技 法治 农业 评论 人物 图片 文娱 书画 公益 熊猫频道 直播"
+        },
+        {
+          "id": "live-cctv-search-06",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2015-04-13",
+          "fetched_at": "2026-09-19 03:46:50",
+          "source_url": "http://news.cntv.cn/2015/04/13/ARTI1428925878315196.shtml",
+          "score": null,
+          "matched": [
+            "诺贝",
+            "贝尔",
+            "尔文",
+            "文学",
+            "学奖",
+            "奖得",
+            "得主"
+          ],
+          "text_head": "å¾·å½è¯ºè´å°æå­¦å¥å¾ä¸»æ ¼ææ¯å»ä¸ äº«å¹´87å²_æ°é»_å¤®è§ç½(cctv.com) --> å¤®è§æ°é»å®¢æ·ç«¯ç¹å»ææ"
+        },
+        {
+          "id": "live-cctv-search-07",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2016-10-17",
+          "fetched_at": "2026-09-19 03:46:50",
+          "source_url": "http://ent.cctv.com/2016/10/17/ARTIXl8itcQJ7XTf3GWCVYI0161017.shtml",
+          "score": null,
+          "matched": [
+            "诺贝",
+            "贝尔",
+            "尔文",
+            "文学",
+            "学奖",
+            "奖得",
+            "得主"
+          ],
+          "text_head": "2016 诺贝尔文学奖得主传记《鲍勃·迪伦传》掌阅首发"
+        },
+        {
+          "id": "live-cctv-search-03",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2019-10-07",
+          "fetched_at": "2026-09-19 03:46:50",
+          "source_url": "http://news.cctv.com/2019/10/07/ARTIgvaAA7OzBqsinVPYU3Fn191007.shtml",
+          "score": null,
+          "matched": [
+            "诺贝",
+            "贝尔",
+            "尔文",
+            "文学",
+            "学奖",
+            "得主"
+          ],
+          "text_head": "诺贝尔文学奖 10日揭晓两年得主 “双黄蛋”会给谁？"
+        },
+        {
+          "id": "live-cctv-search-04",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2019-10-10",
+          "fetched_at": "2026-09-19 03:46:50",
+          "source_url": "http://news.cctv.com/2019/10/10/ARTIuwVGAgmOq3Phc0qXXs0y191010.shtml",
+          "score": null,
+          "matched": [
+            "诺贝",
+            "贝尔",
+            "尔文",
+            "文学",
+            "学奖",
+            "得主"
+          ],
+          "text_head": "双倍放送！ 诺贝尔文学奖缺席一年今回归两届得主同揭晓"
+        }
+      ],
+      "related_count": 3,
+      "related": [
+        {
+          "id": "live-youth-01",
+          "title": "第11届北京十月文学月即将启幕",
+          "source_name": "中国青年网 · 滚动条目",
+          "published": "日期未标注",
+          "fetched_at": "2026-09-19 03:46:50",
+          "url": "https://book.youth.cn/zx/202609/t20260917_16874078.htm",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-youth-02",
+          "title": "第一届“百工文学榜”获奖名单揭晓",
+          "source_name": "中国青年网 · 滚动条目",
+          "published": "日期未标注",
+          "fetched_at": "2026-09-19 03:46:50",
+          "url": "https://book.youth.cn/zx/202609/t20260918_16875986.htm",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-chinanews-roll-01",
+          "title": "大陆历史学者葛兆光在台北获颁“唐奖”汉学奖",
+          "source_name": "中国新闻网 · 滚动新闻",
+          "published": "日期未标注",
+          "fetched_at": "2026-09-19 03:46:51",
+          "url": "https://www.chinanews.com.cn/gn/2026/09-18/10699260.shtml",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        }
+      ],
+      "evidence_ids": [
+        "live-cctv-search-01",
+        "live-cctv-search-02",
+        "live-cctv-search-06",
+        "live-cctv-search-07",
+        "live-cctv-search-03",
+        "live-cctv-search-04"
+      ],
+      "related_ids": [
+        "live-youth-01",
+        "live-youth-02",
+        "live-chinanews-roll-01"
+      ],
+      "live_graph_stats": {
+        "topics": 1,
+        "sources": 1,
+        "evidence": 6,
+        "divergences": 0
+      },
+      "timing": {
+        "server_total_ms": 978.65,
+        "generate_ms": 0.01
+      },
+      "trace": [
+        {
+          "step": "查询理解",
+          "detail": "归一化出 8 个检索词：年诺 / 诺贝 / 贝尔 / 尔文 / 文学 / 学奖 / 奖得 / 得主",
+          "ms": 0.01
+        },
+        {
+          "step": "拒答闸门",
+          "detail": "查询中的 8 个检索词均不在语料词表内，判定为超出语料范围 → 明确拒答，不生成回答",
+          "ms": 0.0
+        },
+        {
+          "step": "实时核证",
+          "detail": "已实时检索 12 个权威源，命中 6 条可核实依据；另有 3 条相关线索（未核实）（中国青年网（最新池132条）:0＋2线索 / 人民网（最新池82条）:0(未命中) / 中国经济网（最新池138条）:0(未命中) / 中国日报中文网（最新池64条）:0(未命中) / 央视网（最新池6条）:0(未命中) / 中国政府网:0(未命中) / 中国政府网:0(未命中) / 新华网（最新池36条）:0(未命中) / 中国新闻网（最新池245条）:0＋1线索 / 世界卫生组织 WHO:0(未命中) / 央视网:9 / 联合国新闻（中文）:0(未命中)）",
+          "ms": 978.5
+        },
+        {
+          "step": "双轨合并判定",
+          "detail": "离线语料：无依据（置信度 0.00）｜ 实时核证：可核实 6 条 / 线索 3 条 → 放行（证据 6 条，其中实时 6 条）",
+          "ms": 0.0
+        }
+      ],
+      "answer_head": "以下内容全部来自检索到的原文片段，未做改写：\n1. 2017年诺贝尔文学奖得主呼吁文学多元化_新闻频道_央视网(cctv.com) --> 央视新闻客户端点击或扫描下载 央视网首页 新闻 视频 经济 体育 军事 更多 科技 法治 农业 评论 人物 图片 文娱 书画 公益 熊猫频道 直播中国 节目官网 直播 栏目 频道大全 欢迎您， 央视网友 退出 帮助 应用 央视影音 央视新闻 央视财经 熊猫频道 登录 × 登录 下次自动登录 忘记密码 立即注册 使用合作网站账号登录 国内 国际 图片 生活 军事 人物 科技 文娱 经济 评论 2017年诺贝尔文学奖得主呼吁文学多元化 国际新闻 来源： 新华网"
+    },
+    {
+      "label": "行为变更留痕·天气类(改造前应拒答)",
+      "query": "今天天气怎么样？",
+      "refused": false,
+      "mode": "rule",
+      "confidence": 0.0,
+      "threshold": 0.34,
+      "corpus_result": {
+        "hits": 0,
+        "confidence": 0.0,
+        "refused": true,
+        "refuse_reason": "查询中的 5 个检索词均不在语料词表内，判定为超出语料范围"
+      },
+      "live": {
+        "enabled": true,
+        "offline": false,
+        "note": "已实时检索 12 个权威源，命中 6 条可核实依据；另有 3 条相关线索（未核实）；命中条目最新发布日 2026-09-14",
+        "hits": 6,
+        "strict_hits": 6,
+        "related_hits": 3,
+        "queried": 12,
+        "sources": [
+          {
+            "id": "LIVE-CHINADAILY",
+            "name": "中国日报中文网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 89.9,
+            "error": null
+          },
+          {
+            "id": "LIVE-PEOPLE-HOME",
+            "name": "人民网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 119.5,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV",
+            "name": "央视网 · 新闻频道最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 150.6,
+            "error": null
+          },
+          {
+            "id": "LIVE-CE",
+            "name": "中国经济网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 174.7,
+            "error": null
+          },
+          {
+            "id": "LIVE-YOUTH",
+            "name": "中国青年网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 2,
+            "ms": 252.1,
+            "error": null
+          },
+          {
+            "id": "LIVE-XINHUA-HOME",
+            "name": "新华网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 276.2,
+            "error": null
+          },
+          {
+            "id": "LIVE-CHINANEWS-ROLL",
+            "name": "中国新闻网 · 滚动新闻",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 536.6,
+            "error": null
+          },
+          {
+            "id": "LIVE-WHO",
+            "name": "世界卫生组织 WHO · 新闻",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 602.9,
+            "error": null
+          },
+          {
+            "id": "LIVE-UN",
+            "name": "联合国新闻（中文）",
+            "ok": true,
+            "hits": 0,
+            "related": 1,
+            "ms": 776.0,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV-SEARCH",
+            "name": "央视网 · 站内检索",
+            "ok": true,
+            "hits": 20,
+            "related": 0,
+            "ms": 812.2,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-BM",
+            "name": "中国政府网 · 部门文件库",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 1712.0,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-GW",
+            "name": "中国政府网 · 国务院文件库",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 4601.7,
+            "error": null
+          }
+        ],
+        "fetched_at": "2026-09-19 03:46:51"
+      },
+      "refuse_reason": "",
+      "citations": [
+        {
+          "id": "live-cctv-search-01",
+          "doc_title": "“五一”假期天气预报来了！快来看看你家天气怎么样",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-02",
+          "doc_title": "元旦假期天气怎么样 ？出行必看",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-03",
+          "doc_title": "【8点见】“五一” 天气预报来了！快看看你家天气怎么样",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-04",
+          "doc_title": "这些地区有明显降雨！今年高考天气怎么样 ？",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-05",
+          "doc_title": "今年高考天气怎么样 ？华北黄淮高温多地有降雨",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-06",
+          "doc_title": "今天华南部分地区雨势仍强中东部未来一周天气晴好气温偏高",
+          "publisher": "央视网",
+          "score": -1.0
+        }
+      ],
+      "evidence": [
+        {
+          "id": "live-cctv-search-01",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2019-04-29",
+          "fetched_at": "2026-09-19 03:46:51",
+          "source_url": "http://news.cctv.com/2019/04/29/ARTIl8HhmN68dU8yBrh6Y4Y1190429.shtml",
+          "score": null,
+          "matched": [
+            "天气",
+            "气怎",
+            "么样"
+          ],
+          "text_head": "“五一”假期天气预报来了！快来看看你家天气怎么样_新闻频道_央视网(cctv.com) --> 央视新闻客户端点击或扫描下载 央视网首页 新闻 视频 经济 体育 军事 更多 科技 法治 农业 评论 人物 图片 文娱 书画 公益 熊猫频道 直"
+        },
+        {
+          "id": "live-cctv-search-02",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2017-12-29",
+          "fetched_at": "2026-09-19 03:46:51",
+          "source_url": "http://news.cctv.com/2017/12/29/ARTINBoS0xfB2WRIYQXY8PlV171229.shtml",
+          "score": null,
+          "matched": [
+            "今天",
+            "天气",
+            "气怎",
+            "么样"
+          ],
+          "text_head": "到正常水平。 冷空气来袭 雾霾将自北向南逐渐减弱 今晨，北京部分地区遭遇大雾，能见度较低，部分高速公路一度封闭。在山东，今天早上6点，山东省气象台发布大雾红色预警。聊城、德州、滨州、东营、济南、淄博、潍坊、济宁、枣庄和日照等市的部分地区均出"
+        },
+        {
+          "id": "live-cctv-search-03",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2019-04-30",
+          "fetched_at": "2026-09-19 03:46:51",
+          "source_url": "http://news.cctv.com/2019/04/30/ARTI812M3uDJfTB2FM1MRjOD190430.shtml",
+          "score": null,
+          "matched": [
+            "天气",
+            "气怎",
+            "么样"
+          ],
+          "text_head": "【8点见】“五一” 天气预报来了！快看看你家天气怎么样"
+        },
+        {
+          "id": "live-cctv-search-04",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2021-06-03",
+          "fetched_at": "2026-09-19 03:46:51",
+          "source_url": "https://news.cctv.com/2021/06/03/ARTIGsX7j2LRqhf0XdUVuwa0210603.shtml",
+          "score": null,
+          "matched": [
+            "天气",
+            "气怎",
+            "么样"
+          ],
+          "text_head": "这些地区有明显降雨！今年高考天气怎么样 ？"
+        },
+        {
+          "id": "live-cctv-search-05",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2021-06-03",
+          "fetched_at": "2026-09-19 03:46:51",
+          "source_url": "https://news.cctv.com/2021/06/03/ARTIIFRn192WVU6hVX0b5vFC210603.shtml",
+          "score": null,
+          "matched": [
+            "天气",
+            "气怎",
+            "么样"
+          ],
+          "text_head": "今年高考天气怎么样 ？华北黄淮高温多地有降雨"
+        },
+        {
+          "id": "live-cctv-search-06",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2026-09-14",
+          "fetched_at": "2026-09-19 03:46:51",
+          "source_url": "https://news.cctv.com/2026/09/14/ARTItrV3Mth1wGADtfxu6MZy260914.shtml",
+          "score": null,
+          "matched": [
+            "今天",
+            "天气"
+          ],
+          "text_head": "今天华南部分地区雨势仍强中东部未来一周天气晴好气温偏高"
+        }
+      ],
+      "related_count": 3,
+      "related": [
+        {
+          "id": "live-youth-01",
+          "title": "今天，我们铭记历史、缅怀先烈",
+          "source_name": "中国青年网 · 滚动条目",
+          "published": "日期未标注",
+          "fetched_at": "2026-09-19 03:46:52",
+          "url": "https://news.youth.cn/gn/202609/t20260918_16875751.htm",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-youth-02",
+          "title": "第七批国家组织医用耗材集采今天开标",
+          "source_name": "中国青年网 · 滚动条目",
+          "published": "日期未标注",
+          "fetched_at": "2026-09-19 03:46:52",
+          "url": "https://finance.youth.cn/finance_gdxw/202609/t20260910_16861743.htm",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-un-01",
+          "title": "【子午播报】2026年9月18日",
+          "source_name": "联合国新闻（中文）",
+          "published": "Fri, 18 Sep 2026 12:00",
+          "fetched_at": "2026-09-19 03:46:52",
+          "url": "https://news.un.org/feed/view/zh/story/2026/09/1142816",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        }
+      ],
+      "evidence_ids": [
+        "live-cctv-search-01",
+        "live-cctv-search-02",
+        "live-cctv-search-03",
+        "live-cctv-search-04",
+        "live-cctv-search-05",
+        "live-cctv-search-06"
+      ],
+      "related_ids": [
+        "live-youth-01",
+        "live-youth-02",
+        "live-un-01"
+      ],
+      "live_graph_stats": {
+        "topics": 1,
+        "sources": 1,
+        "evidence": 6,
+        "divergences": 0
+      },
+      "timing": {
+        "server_total_ms": 4721.15,
+        "generate_ms": 0.01
+      },
+      "trace": [
+        {
+          "step": "查询理解",
+          "detail": "归一化出 5 个检索词：今天 / 天天 / 天气 / 气怎 / 么样",
+          "ms": 0.01
+        },
+        {
+          "step": "拒答闸门",
+          "detail": "查询中的 5 个检索词均不在语料词表内，判定为超出语料范围 → 明确拒答，不生成回答",
+          "ms": 0.0
+        },
+        {
+          "step": "实时核证",
+          "detail": "已实时检索 12 个权威源，命中 6 条可核实依据；另有 3 条相关线索（未核实）；命中条目最新发布日 2026-09-14（中国日报中文网（最新池64条）:0(未命中) / 人民网（最新池82条）:0(未命中) / 央视网（最新池6条）:0(未命中) / 中国经济网（最新池138条）:0(未命中) / 中国青年网（最新池132条）:0＋2线索 / 新华网（最新池36条）:0(未命中) / 中国新闻网（最新池245条）:0(未命中) / 世界卫生组织 WHO:0(未命中) / 联合国新闻（中文）:0＋1线索 / 央视网:20 / 中国政府网:0(未命中) / 中国政府网:0(未命中)）",
+          "ms": 4721.0
+        },
+        {
+          "step": "双轨合并判定",
+          "detail": "离线语料：无依据（置信度 0.00）｜ 实时核证：可核实 6 条 / 线索 3 条 → 放行（证据 6 条，其中实时 6 条）",
+          "ms": 0.0
+        }
+      ],
+      "answer_head": "以下内容全部来自检索到的原文片段，未做改写：\n1. “五一”假期天气预报来了！快来看看你家天气怎么样_新闻频道_央视网(cctv.com) --> 央视新闻客户端点击或扫描下载 央视网首页 新闻 视频 经济 体育 军事 更多 科技 法治 农业 评论 人物 图片 文娱 书画 公益 熊猫频道 直播中国 节目官网 直播 栏目 频道大全 欢迎您， 央视网友 退出 帮助 应用 央视影音 央视新闻 央视财经 熊猫频道 登录 × 登录 下次自动登录 忘记密码 立即注册 使用合作网站账号登录 国内 国际 图片 生活 军事 人物 科技 文娱 经济 评论 “五一”假期天气预报来了！快来看看你家天气怎么样 新闻频道"
+    },
+    {
+      "label": "对照·应无依据(非新闻请求)",
+      "query": "帮我给这只猫起个名字吧",
+      "refused": true,
+      "mode": "rule",
+      "confidence": 0.0,
+      "threshold": 0.34,
+      "corpus_result": {
+        "hits": 0,
+        "confidence": 0.0,
+        "refused": true,
+        "refuse_reason": "查询中的 10 个检索词均不在语料词表内，判定为超出语料范围"
+      },
+      "live": {
+        "enabled": true,
+        "offline": false,
+        "note": "已实时检索 12 个权威源，未找到与本问题相关的公开条目",
+        "hits": 0,
+        "strict_hits": 0,
+        "related_hits": 0,
+        "queried": 12,
+        "sources": [
+          {
+            "id": "LIVE-YOUTH",
+            "name": "中国青年网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 131.4,
+            "error": null
+          },
+          {
+            "id": "LIVE-PEOPLE-HOME",
+            "name": "人民网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 155.3,
+            "error": null
+          },
+          {
+            "id": "LIVE-CHINADAILY",
+            "name": "中国日报中文网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 166.2,
+            "error": null
+          },
+          {
+            "id": "LIVE-CE",
+            "name": "中国经济网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 185.9,
+            "error": null
+          },
+          {
+            "id": "LIVE-XINHUA-HOME",
+            "name": "新华网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 365.8,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV",
+            "name": "央视网 · 新闻频道最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 378.3,
+            "error": null
+          },
+          {
+            "id": "LIVE-CHINANEWS-ROLL",
+            "name": "中国新闻网 · 滚动新闻",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 652.3,
+            "error": null
+          },
+          {
+            "id": "LIVE-WHO",
+            "name": "世界卫生组织 WHO · 新闻",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 666.0,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-BM",
+            "name": "中国政府网 · 部门文件库",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 792.5,
+            "error": null
+          },
+          {
+            "id": "LIVE-UN",
+            "name": "联合国新闻（中文）",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 818.4,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-GW",
+            "name": "中国政府网 · 国务院文件库",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 853.1,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV-SEARCH",
+            "name": "央视网 · 站内检索",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 1035.8,
+            "error": null
+          }
+        ],
+        "fetched_at": ""
+      },
+      "refuse_reason": "离线语料：查询中的 10 个检索词均不在语料词表内，判定为超出语料范围；实时核证：已实时检索 12 个权威源，未找到与本问题相关的公开条目",
+      "citations": [],
+      "evidence": [],
+      "related_count": 0,
+      "related": [],
+      "evidence_ids": [],
+      "related_ids": [],
+      "live_graph_stats": {
+        "topics": 1,
+        "sources": 0,
+        "evidence": 0,
+        "divergences": 0
+      },
+      "timing": {
+        "server_total_ms": 1036.48,
+        "generate_ms": 0.0
+      },
+      "trace": [
+        {
+          "step": "查询理解",
+          "detail": "归一化出 10 个检索词：帮我 / 我给 / 给这 / 这只 / 只猫 / 猫起 / 起个 / 个名 / 名字 / 字吧",
+          "ms": 0.03
+        },
+        {
+          "step": "拒答闸门",
+          "detail": "查询中的 10 个检索词均不在语料词表内，判定为超出语料范围 → 明确拒答，不生成回答",
+          "ms": 0.0
+        },
+        {
+          "step": "实时核证",
+          "detail": "已实时检索 12 个权威源，未找到与本问题相关的公开条目（中国青年网（最新池132条）:0(未命中) / 人民网（最新池82条）:0(未命中) / 中国日报中文网（最新池64条）:0(未命中) / 中国经济网（最新池138条）:0(未命中) / 新华网（最新池36条）:0(未命中) / 央视网（最新池6条）:0(未命中) / 中国新闻网（最新池245条）:0(未命中) / 世界卫生组织 WHO:0(未命中) / 中国政府网:0(未命中) / 联合国新闻（中文）:0(未命中) / 中国政府网:0(未命中) / 央视网:0(未命中)）",
+          "ms": 1036.3
+        },
+        {
+          "step": "双轨合并判定",
+          "detail": "离线语料：无依据（置信度 0.00）｜ 实时核证：可核实 0 条 / 线索 0 条 → 拒答（两条路均无可核实依据；线索不参与判定）",
+          "ms": 0.0
+        }
+      ],
+      "answer_head": "未检索到与本问题相关的可核实依据，因此不作回答。\n（本次已实时检索 12 个权威源，未取得可核实依据；网络与逐源结果见下方「实时核证」区块）\n（拒答依据：离线语料：查询中的 10 个检索词均不在语料词表内，判定为超出语料范围；实时核证：已实时检索 12 个权威源，未找到与本问题相关的公开条目）"
+    },
+    {
+      "label": "对照·应无依据(代码请求)",
+      "query": "请帮我写一段 Python 爬虫代码",
+      "refused": true,
+      "mode": "rule",
+      "confidence": 0.0,
+      "threshold": 0.34,
+      "corpus_result": {
+        "hits": 0,
+        "confidence": 0.0,
+        "refused": true,
+        "refuse_reason": "查询中的 9 个检索词均不在语料词表内，判定为超出语料范围"
+      },
+      "live": {
+        "enabled": true,
+        "offline": false,
+        "note": "已实时检索 12 个权威源，未找到可核实依据；另有 1 条相关线索（未核实，仅供参考）",
+        "hits": 0,
+        "strict_hits": 0,
+        "related_hits": 1,
+        "queried": 12,
+        "sources": [
+          {
+            "id": "LIVE-CHINADAILY",
+            "name": "中国日报中文网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 127.5,
+            "error": null
+          },
+          {
+            "id": "LIVE-CE",
+            "name": "中国经济网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 144.5,
+            "error": null
+          },
+          {
+            "id": "LIVE-PEOPLE-HOME",
+            "name": "人民网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 149.1,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV",
+            "name": "央视网 · 新闻频道最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 167.0,
+            "error": null
+          },
+          {
+            "id": "LIVE-YOUTH",
+            "name": "中国青年网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 186.1,
+            "error": null
+          },
+          {
+            "id": "LIVE-XINHUA-HOME",
+            "name": "新华网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 260.2,
+            "error": null
+          },
+          {
+            "id": "LIVE-CHINANEWS-ROLL",
+            "name": "中国新闻网 · 滚动新闻",
+            "ok": true,
+            "hits": 0,
+            "related": 1,
+            "ms": 579.3,
+            "error": null
+          },
+          {
+            "id": "LIVE-WHO",
+            "name": "世界卫生组织 WHO · 新闻",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 659.2,
+            "error": null
+          },
+          {
+            "id": "LIVE-UN",
+            "name": "联合国新闻（中文）",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 791.9,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-BM",
+            "name": "中国政府网 · 部门文件库",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 883.1,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-GW",
+            "name": "中国政府网 · 国务院文件库",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 964.0,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV-SEARCH",
+            "name": "央视网 · 站内检索",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 989.2,
+            "error": null
+          }
+        ],
+        "fetched_at": "2026-09-19 03:46:58"
+      },
+      "refuse_reason": "离线语料：查询中的 9 个检索词均不在语料词表内，判定为超出语料范围；实时核证：已实时检索 12 个权威源，未找到可核实依据；另有 1 条相关线索（未核实，仅供参考）",
+      "citations": [],
+      "evidence": [],
+      "related_count": 1,
+      "related": [
+        {
+          "id": "live-chinanews-roll-01",
+          "title": "公交站“搬”出新便利 杭州破解地铁接驳“最后一段路”",
+          "source_name": "中国新闻网 · 滚动新闻",
+          "published": "日期未标注",
+          "fetched_at": "2026-09-19 03:46:58",
+          "url": "https://www.chinanews.com.cn/sh/2026/09-18/10699296.shtml",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        }
+      ],
+      "evidence_ids": [],
+      "related_ids": [
+        "live-chinanews-roll-01"
+      ],
+      "live_graph_stats": {
+        "topics": 1,
+        "sources": 0,
+        "evidence": 0,
+        "divergences": 0
+      },
+      "timing": {
+        "server_total_ms": 989.8,
+        "generate_ms": 0.0
+      },
+      "trace": [
+        {
+          "step": "查询理解",
+          "detail": "归一化出 9 个检索词：python / 请帮 / 帮我 / 我写 / 写一 / 一段 / 爬虫 / 虫代 / 代码",
+          "ms": 0.01
+        },
+        {
+          "step": "拒答闸门",
+          "detail": "查询中的 9 个检索词均不在语料词表内，判定为超出语料范围 → 明确拒答，不生成回答",
+          "ms": 0.0
+        },
+        {
+          "step": "实时核证",
+          "detail": "已实时检索 12 个权威源，未找到可核实依据；另有 1 条相关线索（未核实，仅供参考）（中国日报中文网（最新池64条）:0(未命中) / 中国经济网（最新池138条）:0(未命中) / 人民网（最新池82条）:0(未命中) / 央视网（最新池6条）:0(未命中) / 中国青年网（最新池132条）:0(未命中) / 新华网（最新池36条）:0(未命中) / 中国新闻网（最新池245条）:0＋1线索 / 世界卫生组织 WHO:0(未命中) / 联合国新闻（中文）:0(未命中) / 中国政府网:0(未命中) / 中国政府网:0(未命中) / 央视网:0(未命中)）",
+          "ms": 989.7
+        },
+        {
+          "step": "双轨合并判定",
+          "detail": "离线语料：无依据（置信度 0.00）｜ 实时核证：可核实 0 条 / 线索 1 条 → 拒答（两条路均无可核实依据；线索不参与判定）",
+          "ms": 0.0
+        }
+      ],
+      "answer_head": "未检索到与本问题相关的可核实依据，因此不作回答。\n（本次已实时检索 12 个权威源，未取得可核实依据；网络与逐源结果见下方「实时核证」区块）\n（另有 1 条**主题相关但未经核实**的条目，已列在下方「相关线索」区，仅可作为找线索的起点，不构成依据）\n（拒答依据：离线语料：查询中的 9 个检索词均不在语料词表内，判定为超出语料范围；实时核证：已实时检索 12 个权威源，未找到可核实依据；另有 1 条相关线索（未核实，仅供参考））"
+    },
+    {
+      "label": "边界留痕·生活服务类(改造前拒答/现取回条目)",
+      "query": "红烧肉怎么做才好吃",
+      "refused": false,
+      "mode": "rule",
+      "confidence": 0.0,
+      "threshold": 0.34,
+      "corpus_result": {
+        "hits": 0,
+        "confidence": 0.0,
+        "refused": true,
+        "refuse_reason": "查询中的 7 个检索词均不在语料词表内，判定为超出语料范围"
+      },
+      "live": {
+        "enabled": true,
+        "offline": false,
+        "note": "已实时检索 12 个权威源，命中 6 条可核实依据；另有 2 条相关线索（未核实）",
+        "hits": 6,
+        "strict_hits": 6,
+        "related_hits": 2,
+        "queried": 12,
+        "sources": [
+          {
+            "id": "LIVE-CHINADAILY",
+            "name": "中国日报中文网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 136.5,
+            "error": null
+          },
+          {
+            "id": "LIVE-PEOPLE-HOME",
+            "name": "人民网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 144.2,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV",
+            "name": "央视网 · 新闻频道最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 177.4,
+            "error": null
+          },
+          {
+            "id": "LIVE-CE",
+            "name": "中国经济网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 185.0,
+            "error": null
+          },
+          {
+            "id": "LIVE-YOUTH",
+            "name": "中国青年网 · 滚动条目",
+            "ok": true,
+            "hits": 0,
+            "related": 1,
+            "ms": 222.5,
+            "error": null
+          },
+          {
+            "id": "LIVE-XINHUA-HOME",
+            "name": "新华网 · 首页最新条目",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 285.4,
+            "error": null
+          },
+          {
+            "id": "LIVE-CHINANEWS-ROLL",
+            "name": "中国新闻网 · 滚动新闻",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 439.3,
+            "error": null
+          },
+          {
+            "id": "LIVE-WHO",
+            "name": "世界卫生组织 WHO · 新闻",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 636.9,
+            "error": null
+          },
+          {
+            "id": "LIVE-UN",
+            "name": "联合国新闻（中文）",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 780.1,
+            "error": null
+          },
+          {
+            "id": "LIVE-CCTV-SEARCH",
+            "name": "央视网 · 站内检索",
+            "ok": true,
+            "hits": 12,
+            "related": 1,
+            "ms": 811.7,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-BM",
+            "name": "中国政府网 · 部门文件库",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 1776.0,
+            "error": null
+          },
+          {
+            "id": "LIVE-GOV-GW",
+            "name": "中国政府网 · 国务院文件库",
+            "ok": true,
+            "hits": 0,
+            "related": 0,
+            "ms": 1998.0,
+            "error": null
+          }
+        ],
+        "fetched_at": "2026-09-19 03:46:58"
+      },
+      "refuse_reason": "",
+      "citations": [
+        {
+          "id": "live-cctv-search-02",
+          "doc_title": "吃泡面吃出个“世界第一”，方便面怎么做才好吃 ？",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-01",
+          "doc_title": "谢霆锋做红烧肉太好吃杜海涛夸赞：有初恋感觉",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-03",
+          "doc_title": "财经年度盘点短视频， 怎么做才好看？",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-08",
+          "doc_title": "帮孩子备战高考，家长怎么做才好",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-04",
+          "doc_title": "南瓜能降糖降体重怎么做更好吃 ？",
+          "publisher": "央视网",
+          "score": -1.0
+        },
+        {
+          "id": "live-cctv-search-05",
+          "doc_title": "哪种虾的营养高？ 怎么做最好吃 ？",
+          "publisher": "央视网",
+          "score": -1.0
+        }
+      ],
+      "evidence": [
+        {
+          "id": "live-cctv-search-02",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2019-08-09",
+          "fetched_at": "2026-09-19 03:46:58",
+          "source_url": "http://news.cctv.com/2019/08/09/ARTIyd0UU5xsOEPN8x441k40190809.shtml",
+          "score": null,
+          "matched": [
+            "红烧",
+            "么做",
+            "做才",
+            "才好",
+            "好吃"
+          ],
+          "text_head": "、北京、杭州、深圳、广州、武汉、南京、苏州、重庆、郑州的吃货最为凶猛，位居top10。 如果你对方便面的口味认知还停留在红烧牛肉面、香菇炖鸡面和鲜虾鱼板面，那就已经out了。跟十年前相比，人们在对方便面的口味上也拥有了更多选择。除了香菜口味"
+        },
+        {
+          "id": "live-cctv-search-01",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2016-11-29",
+          "fetched_at": "2026-09-19 03:46:58",
+          "source_url": "http://news.cctv.com/2016/11/29/ARTIZDiIs240V45iUOcFcqUO161129.shtml",
+          "score": null,
+          "matched": [
+            "红烧",
+            "烧肉",
+            "好吃"
+          ],
+          "text_head": "谢霆锋做红烧肉太好吃 杜海涛夸赞：有初恋感觉_新闻频道_央视网(cctv.com) --> 央视新闻客户端点击或扫描下载 央视网首页 新闻 视频 经济 体育 军事 更多 科技 法治 农业 评论 人物 图片 文娱 书画 公益 熊猫频道 直播中"
+        },
+        {
+          "id": "live-cctv-search-03",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2026-01-07",
+          "fetched_at": "2026-09-19 03:46:58",
+          "source_url": "https://xwzs.cctv.com/2026/01/07/ARTI67KveJZFvZdpi6xXB2wM260107.shtml",
+          "score": null,
+          "matched": [
+            "么做",
+            "做才",
+            "才好"
+          ],
+          "text_head": "财经年度盘点短视频，怎么做才好看？_象舞指数_央视网(cctv.com) 象舞指数 央视网 > 象舞指数 财经年度盘点短视频，怎么做才好看？ 来源：象舞指数 | 2026年01月07日 15:24 象舞指数 | 2026年01月07日 15"
+        },
+        {
+          "id": "live-cctv-search-08",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2015-04-01",
+          "fetched_at": "2026-09-19 03:46:58",
+          "source_url": "http://shaoer.cntv.cn/2015/04/01/ARTI1427857540412674.shtml",
+          "score": null,
+          "matched": [
+            "么做",
+            "做才",
+            "才好"
+          ],
+          "text_head": "帮孩子备战高考，家长怎么做才好"
+        },
+        {
+          "id": "live-cctv-search-04",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2018-11-28",
+          "fetched_at": "2026-09-19 03:46:58",
+          "source_url": "https://culture-travel.cctv.com/2018/11/28/ARTIDfYLq2JdEcRjyyjjaEi0181128.shtml",
+          "score": null,
+          "matched": [
+            "么做",
+            "好吃"
+          ],
+          "text_head": "南瓜能降糖降体重怎么做更好吃 ？"
+        },
+        {
+          "id": "live-cctv-search-05",
+          "live": true,
+          "publisher": "央视网",
+          "published": "2017-04-01",
+          "fetched_at": "2026-09-19 03:46:58",
+          "source_url": "http://food.cctv.com/2017/04/01/ARTIz9wLyHH5DU4tN5flDYw4170401.shtml",
+          "score": null,
+          "matched": [
+            "么做",
+            "好吃"
+          ],
+          "text_head": "哪种虾的营养高？ 怎么做最好吃 ？"
+        }
+      ],
+      "related_count": 2,
+      "related": [
+        {
+          "id": "live-youth-01",
+          "title": "文牧野：好好吃饭 别让战火碾碎寻常烟火",
+          "source_name": "中国青年网 · 滚动条目",
+          "published": "日期未标注",
+          "fetched_at": "2026-09-19 03:46:58",
+          "url": "https://fun.youth.cn/gnzx/202609/t20260918_16875715.htm",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        },
+        {
+          "id": "live-cctv-search-09",
+          "title": "怎么做县委书记才能让习近平点赞",
+          "source_name": "央视网 · 站内检索",
+          "published": "2015-01-14",
+          "fetched_at": "2026-09-19 03:46:58",
+          "url": "http://news.cntv.cn/2015/01/14/ARTI1421214241250595.shtml",
+          "verified": false,
+          "related_score": 1,
+          "live": true
+        }
+      ],
+      "evidence_ids": [
+        "live-cctv-search-02",
+        "live-cctv-search-01",
+        "live-cctv-search-03",
+        "live-cctv-search-08",
+        "live-cctv-search-04",
+        "live-cctv-search-05"
+      ],
+      "related_ids": [
+        "live-youth-01",
+        "live-cctv-search-09"
+      ],
+      "live_graph_stats": {
+        "topics": 1,
+        "sources": 1,
+        "evidence": 6,
+        "divergences": 0
+      },
+      "timing": {
+        "server_total_ms": 2567.17,
+        "generate_ms": 0.02
+      },
+      "trace": [
+        {
+          "step": "查询理解",
+          "detail": "归一化出 7 个检索词：红烧 / 烧肉 / 肉怎 / 么做 / 做才 / 才好 / 好吃",
+          "ms": 0.01
+        },
+        {
+          "step": "拒答闸门",
+          "detail": "查询中的 7 个检索词均不在语料词表内，判定为超出语料范围 → 明确拒答，不生成回答",
+          "ms": 0.0
+        },
+        {
+          "step": "实时核证",
+          "detail": "已实时检索 12 个权威源，命中 6 条可核实依据；另有 2 条相关线索（未核实）（中国日报中文网（最新池64条）:0(未命中) / 人民网（最新池82条）:0(未命中) / 央视网（最新池6条）:0(未命中) / 中国经济网（最新池138条）:0(未命中) / 中国青年网（最新池132条）:0＋1线索 / 新华网（最新池36条）:0(未命中) / 中国新闻网（最新池245条）:0(未命中) / 世界卫生组织 WHO:0(未命中) / 联合国新闻（中文）:0(未命中) / 央视网:12＋1线索 / 中国政府网:0(未命中) / 中国政府网:0(未命中)）",
+          "ms": 2567.0
+        },
+        {
+          "step": "双轨合并判定",
+          "detail": "离线语料：无依据（置信度 0.00）｜ 实时核证：可核实 6 条 / 线索 2 条 → 放行（证据 6 条，其中实时 6 条）",
+          "ms": 0.0
+        }
+      ],
+      "answer_head": "以下内容全部来自检索到的原文片段，未做改写：\n1. 、北京、杭州、深圳、广州、武汉、南京、苏州、重庆、郑州的吃货最为凶猛，位居top10。 如果你对方便面的口味认知还停留在红烧牛肉面、香菇炖鸡面和鲜虾鱼板面，那就已经out了。跟十年前相比，人们在对方便面的口味上也拥有了更多选择。除了香菜口味、咸蛋黄口味、西红柿鸡蛋口味这样的“入门级”，还有鸭脖子口味、小龙虾味、酸辣肥肠味、花雕醉鸡味甚至奶酪芝士口味等奇葩进阶版，各种方便面的“奇葩口味”可谓应有尽有。 不过，相比这些小众口味外，更主流的海鲜口味和老坛酸菜口味仍是国人对泡面的最主流选择。南海鲜、北酸菜，从地域分布看，一条长江成为划分南北口味的地理"
+    }
+  ]
+}
