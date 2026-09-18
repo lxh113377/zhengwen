@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.cloudbase.net/cli/cloudbaserc.schema.json",
+  "envId": "qwer-d4gf2r76o8829463b",
+  "functionRoot": "src/build",
+  "functions": [
+    {
+      "name": "zhengwen-api",
+      "handler": "index.main_handler",
+      "runtime": "Python3.9",
+      "timeout": 60,
+      "memorySize": 512,
+      "installDependency": false,
+      "envVariables": { "READONLY": "1" },
+      "ignore": ["__pycache__/**", "*.pyc"]
+    }
+  ]
+}
