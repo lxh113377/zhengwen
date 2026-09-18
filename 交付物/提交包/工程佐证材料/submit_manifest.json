@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-19T05:49:16+08:00",
+  "generated_at": "2026-09-19T05:55:11+08:00",
   "root": "C:\\Users\\37533\\Desktop\\workspace\\项目\\新闻\\交付物\\提交包",
   "count": 113,
-  "total_bytes": 5695049,
+  "total_bytes": 5700770,
   "files": [
     {
       "path": "00-可运行链接与源码说明.md",
-      "bytes": 13349,
-      "sha256": "062dec8276a21b9b72070e62a264405cfb903eb2bbb701c96e4e751d524a298f"
+      "bytes": 15469,
+      "sha256": "5baafb36dde9a8132367941167f3fb70d66654f798ace4a9b421e76ad435d0e1"
     },
     {
       "path": "参赛口径-单一真相源.md",
@@ -146,8 +146,8 @@
     },
     {
       "path": "工程佐证材料/04-部署方案/部署方案.md",
-      "bytes": 6972,
-      "sha256": "05d4e6c8758541423a76b79dc1db83a7a5e14746e610bdb68c498ee5a81e773f"
+      "bytes": 8297,
+      "sha256": "73aedb133e8788c5a0aad726ef71d9c348af47d1c41c2edc8c9e11bf1f7d7e3d"
     },
     {
       "path": "工程佐证材料/05-源代码全文/src/app.py",
@@ -526,8 +526,8 @@
     },
     {
       "path": "提交清单与验收状态.md",
-      "bytes": 17965,
-      "sha256": "d7fdac62eb04ea4e76ad317d5598dd9576b8af82544f9cf63071cfa56463578d"
+      "bytes": 20241,
+      "sha256": "2732b22fefb6c473ed0514b868180296d79332f0bfea327f2e8ff91b7db63055"
     },
     {
       "path": "材料数字对照表.md",
